@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListChecks, Clock, ShoppingCart, SaltShaker, Thermometer } from 'lucide-react';
+import { ListChecks, Clock, ShoppingCart, CookingPot, Thermometer } from 'lucide-react';
 import SectionWrapper from './SectionWrapper';
 import { cn } from '@/lib/utils';
 
@@ -34,7 +34,7 @@ const CrispMethodSection: React.FC = () => {
           <CrispStep icon={<ListChecks />} title="CLASIFICAR" description="Recetas por objetivo para decidir sin pensar" />
           <CrispStep icon={<Clock />} title="RELOJ" description="Tiempos exactos por alimento + ajustes por capacidad" />
           <CrispStep icon={<ShoppingCart />} title="INGREDIENTE" description="Sustitutos simples del súper" />
-          <CrispStep icon={<SaltShaker />} title="SAZONAR" description="Combinaciones probadas con menos aceite" />
+          <CrispStep icon={<CookingPot />} title="SAZONAR" description="Combinaciones probadas con menos aceite" />
           <CrispStep icon={<Thermometer />} title="PRECALENTAR" description="Protocolo 3-5 min para crocancia consistente" />
         </div>
 
