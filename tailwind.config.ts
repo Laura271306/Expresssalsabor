@@ -18,6 +18,12 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        // Baskervville 400 (nobreza) -> using serif
+        serif: ['Baskervville', 'Georgia', 'serif'],
+        // Arial 600/700 (autoridade/CTA) -> using sans
+        sans: ['Arial', 'Roboto', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -62,6 +68,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom Sales Page Colors
+        'cta-primary': "hsl(var(--color-cta-primary))",
+        'highlight-gold': "hsl(var(--color-highlight))",
+        'dark-bg': "hsl(var(--color-dark-bg))",
+        'light-bg': "hsl(var(--color-light-bg))",
+        'body-text': "hsl(var(--color-body-text))",
+        'urgency-red': "hsl(var(--color-urgency))",
+        'mint-green': "hsl(var(--color-mint-green))",
       },
       borderRadius: {
         lg: "var(--radius)",
