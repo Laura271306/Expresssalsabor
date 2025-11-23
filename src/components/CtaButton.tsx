@@ -9,9 +9,10 @@ interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, variant = 'primary', ...props }) => {
-  const baseClasses = "font-sans font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl text-white uppercase tracking-wider";
+  const baseClasses = "font-sans font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl text-white uppercase tracking-wider inline-flex items-center justify-center text-center";
 
   // Usando colores definidos: cta-primary (verde) y urgency-red (final)
+  // La animación de pulso se aplica solo al primary
   const primaryClasses = "bg-cta-primary hover:bg-green-600 shadow-cta-primary/50 animate-pulse-shadow";
   const finalClasses = "bg-urgency-red hover:bg-red-700 shadow-urgency-red/50";
 
@@ -22,16 +23,27 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
   );
 
   if (href) {
-    // Filter out button-specific props for anchor tag
-    const anchorProps = Object.fromEntries(
-      Object.entries(props).filter(([key]) => !key.startsWith('on') && key !== 'type' && key !== 'disabled')
-    ) as React.AnchorHTMLAttributes<HTMLAnchorElement>;
+    // Extraemos TODAS las props específicas de botón para evitar el error de TS al pasarlas a <a>
+    const { 
+      type, 
+      disabled, 
+      form, 
+      formAction, 
+      formEncType, 
+      formMethod, 
+      formNoValidate, 
+      formTarget, 
+      name, 
+      value, 
+      ...anchorProps 
+    } = props;
     
+    // Usamos 'a' tag para navegación
     return (
       <a
         href={href}
         className={buttonClasses}
-        {...anchorProps}
+        {...(anchorProps as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {children}
       </a>
@@ -41,7 +53,7 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
   return (
     <button
       className={buttonClasses}
-      {...props}
+      {...(props as React.ButtonHTMLAttributes<HTMLButtonElement>)}
     >
       {children}
     </button>
