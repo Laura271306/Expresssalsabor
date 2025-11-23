@@ -6,22 +6,22 @@ import CtaButton from './CtaButton';
 const NoChefNeededSection: React.FC = () => {
   const features = [
     {
-      icon: <BookOpen className="w-6 h-6" />,
+      icon: <BookOpen className="w-7 h-7" />,
       title: "Recetas simples",
       description: "Instrucciones fáciles de seguir"
     },
     {
-      icon: <ListOrdered className="w-6 h-6" />,
+      icon: <ListOrdered className="w-7 h-7" />,
       title: "Pasos claros",
       description: "Cada paso detallado y explicado"
     },
     {
-      icon: <ShoppingBag className="w-6 h-6" />,
+      icon: <ShoppingBag className="w-7 h-7" />,
       title: "Ingredientes comunes",
       description: "Productos que encuentras en cualquier supermercado"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
+      icon: <Zap className="w-7 h-7" />,
       title: "Zero complicación",
       description: "Sin estrés, sin problemas"
     }
@@ -37,7 +37,7 @@ const NoChefNeededSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-xl border-t-4 border-highlight-gold transition-transform hover:scale-[1.02]">
-              <div className="w-12 h-12 bg-highlight-gold/10 rounded-full flex items-center justify-start mb-4 text-highlight-gold">
+              <div className="w-14 h-14 bg-highlight-gold/10 rounded-full flex items-center justify-center mb-4 text-highlight-gold">
                 {feature.icon}
               </div>
               <h3 className="font-sans text-xl font-bold mb-2 text-dark-bg">{feature.title}</h3>

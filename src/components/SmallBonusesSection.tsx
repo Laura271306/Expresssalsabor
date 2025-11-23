@@ -44,7 +44,7 @@ const SmallBonusesSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {bonuses.map((bonus, index) => (
             <div key={index} className="bg-[#282425] rounded-xl p-6 shadow-2xl border-2 border-highlight-gold transition-transform hover:scale-[1.02]">
-              <div className="text-4xl text-highlight-gold mb-4 flex items-center justify-start w-12 h-12 bg-highlight-gold/10 rounded-full">
+              <div className="text-4xl text-highlight-gold mb-4 flex items-center justify-center w-14 h-14 bg-highlight-gold/10 rounded-full">
                 {bonus.icon}
               </div>
               <h3 className="font-sans text-xl font-bold mb-2 text-white">{bonus.title}</h3>

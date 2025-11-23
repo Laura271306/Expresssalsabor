@@ -19,7 +19,8 @@ const BenefitImageCard: React.FC<BenefitImageCardProps> = ({ imagePlaceholder, i
       {/* Content Area */}
       <div className="p-5">
         <div className="flex items-center mb-3">
-          <div className="w-8 h-8 flex items-center justify-center text-highlight-gold mr-3">
+          {/* Icon Container Styling */}
+          <div className="w-10 h-10 flex items-center justify-center bg-highlight-gold/10 rounded-full text-highlight-gold mr-3">
             {icon}
           </div>
           <h3 className="font-sans text-xl font-bold text-dark-bg">{title}</h3>

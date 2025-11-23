@@ -4,9 +4,9 @@ import { CheckCircle, Zap, CookingPot, Scale } from 'lucide-react';
 
 const CompatibilitySection: React.FC = () => {
   const models = [
-    { title: "Grandes o pequeñas", description: "Funciona en cualquier tamaño", icon: <Scale /> },
-    { title: "Analógicas o digitales", description: "Compatible con todos los tipos", icon: <Zap /> },
-    { title: "Canasta simple o doble", description: "Adaptable a tu freidora", icon: <CookingPot /> }
+    { title: "Grandes o pequeñas", description: "Funciona en cualquier tamaño", icon: <Scale className="w-7 h-7" /> },
+    { title: "Analógicas o digitales", description: "Compatible con todos los tipos", icon: <Zap className="w-7 h-7" /> },
+    { title: "Canasta simple o doble", description: "Adaptable a tu freidora", icon: <CookingPot className="w-7 h-7" /> }
   ];
 
   return (
@@ -22,7 +22,7 @@ const CompatibilitySection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {models.map((model, index) => (
             <div key={index} className="bg-[#282425] rounded-xl p-6 shadow-xl border border-gray-700 transition-transform hover:scale-[1.02] text-left">
-              <div className="text-3xl mb-4 flex justify-start text-highlight-gold">
+              <div className="w-14 h-14 mb-4 flex justify-center items-center text-highlight-gold bg-highlight-gold/10 rounded-full">
                 {model.icon}
               </div>
               <h3 className="font-sans text-xl font-bold text-white mb-1">{model.title}</h3>

@@ -11,7 +11,7 @@ interface CrispStepProps {
 
 const CrispStep: React.FC<CrispStepProps> = ({ icon, title, description }) => (
   <div className="bg-light-bg p-6 rounded-xl text-left shadow-md">
-    <div className="w-12 h-12 flex items-center justify-center bg-cta-primary/10 rounded-full mb-4 text-cta-primary">
+    <div className="w-14 h-14 flex items-center justify-center bg-cta-primary/10 rounded-full mb-4 text-cta-primary">
       {icon}
     </div>
     <h4 className="font-sans font-bold text-dark-bg text-lg mb-1">{title}</h4>
@@ -31,11 +31,11 @@ const CrispMethodSection: React.FC = () => {
         </h3>
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
-          <CrispStep icon={<ListChecks />} title="CLASIFICAR" description="Recetas por objetivo para decidir sin pensar" />
-          <CrispStep icon={<Clock />} title="RELOJ" description="Tiempos exactos por alimento + ajustes por capacidad" />
-          <CrispStep icon={<ShoppingCart />} title="INGREDIENTE" description="Sustitutos simples del súper" />
-          <CrispStep icon={<CookingPot />} title="SAZONAR" description="Combinaciones probadas con menos aceite" />
-          <CrispStep icon={<Thermometer />} title="PRECALENTAR" description="Protocolo 3-5 min para crocancia consistente" />
+          <CrispStep icon={<ListChecks className="w-7 h-7" />} title="CLASIFICAR" description="Recetas por objetivo para decidir sin pensar" />
+          <CrispStep icon={<Clock className="w-7 h-7" />} title="RELOJ" description="Tiempos exactos por alimento + ajustes por capacidad" />
+          <CrispStep icon={<ShoppingCart className="w-7 h-7" />} title="INGREDIENTE" description="Sustitutos simples del súper" />
+          <CrispStep icon={<CookingPot className="w-7 h-7" />} title="SAZONAR" description="Combinaciones probadas con menos aceite" />
+          <CrispStep icon={<Thermometer className="w-7 h-7" />} title="PRECALENTAR" description="Protocolo 3-5 min para crocancia consistente" />
         </div>
 
         <div className="mt-10 bg-mint-green p-6 rounded-lg max-w-xl">
