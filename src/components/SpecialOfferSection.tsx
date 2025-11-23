@@ -17,16 +17,6 @@ const SpecialOfferSection: React.FC = () => {
         {/* Main Offer Card (Light interior) */}
         <div className="bg-white rounded-xl p-8 mb-8 shadow-[0_0_40px_rgba(0,170,84,0.3)] border-4 border-cta-primary text-dark-bg text-center">
           
-          {/* Contador de Urgencia (Placeholder) */}
-          <div className="bg-urgency-red text-white p-3 rounded-lg mb-6 shadow-lg">
-            <p className="font-sans font-bold text-xl">
-              ¡LA OFERTA TERMINA EN!
-            </p>
-            <p className="font-serif text-3xl font-bold mt-1">
-              [00:00:00]
-            </p>
-          </div>
-
           {/* Image Placeholder */}
           <img 
             src="/images/kit-mockup-main.jpeg" 
