@@ -1,30 +1,30 @@
 import React from 'react';
-import SectionWrapper from './SectionWrapper';
+import { cn } from '@/lib/utils';
 
 const CompatibilitySection: React.FC = () => {
-  return (
-    <SectionWrapper bgColor="dark">
-      <div className="text-center">
-        {/* Compatibility Box */}
-        <div className="bg-mint-green p-5 rounded-lg max-w-3xl mx-auto mb-10">
-          <p className="font-sans font-bold text-dark-bg text-lg">
-            ⚡ Compatible con <span className="font-extrabold">TODAS</span> las marcas:
-            <br className="md:hidden" />
-            Philips, Ninja, Cosori, Instant Pot y más.
-          </p>
-        </div>
+  const models = [
+    "Modelos grandes y pequeños",
+    "Analógicos y digitales",
+    "Económicos o de gama alta"
+  ];
 
-        <h2 className="font-serif text-white text-2xl md:text-3xl mb-6 max-w-4xl mx-auto">
-          Imagina tener más de 600 recetas que ya fueron probadas y ajustadas para cada modelo de AirFryer.
+  return (
+    <section className="bg-light-bg text-dark-bg py-20 px-6">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="font-sans text-4xl md:text-5xl font-bold mb-12">
+          COMPATIBLE CON CUALQUIER MODELO
         </h2>
 
-        <p className="font-sans text-highlight-gold text-lg leading-relaxed max-w-3xl mx-auto">
-          Sin desperdiciar ingredientes ni frustrarte con resultados mediocres.
-          <br /><br />
-          Mientras otros gastan horas buscando recetas que no funcionan, tú tendrás en minutos un plan probado que garantiza resultados deliciosos.
-        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {models.map((model, index) => (
+            <div key={index} className="bg-white rounded-lg p-6 shadow-lg border-2 border-yellow-500">
+              <div className="text-3xl mb-4">✅</div>
+              <h3 className="font-sans text-xl font-bold">{model}</h3>
+            </div>
+          ))}
+        </div>
       </div>
-    </SectionWrapper>
+    </section>
   );
 };
 
