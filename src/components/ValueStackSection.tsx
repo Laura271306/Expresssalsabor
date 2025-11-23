@@ -20,9 +20,12 @@ const ValueStackSection: React.FC = () => {
         <div className="w-full max-w-[450px] bg-light-bg rounded-xl shadow-2xl p-5 md:p-8">
           
           {/* Image Top Placeholder */}
-          <div className="h-48 bg-gray-300 mb-[-30px] rounded-t-xl flex items-center justify-center text-gray-600">
-            [Placeholder: Logo/Produto Image]
-          </div>
+          <img 
+            src="/images/kit-mockup-small.webp" 
+            alt="Mockup del Kit Completo AirFryer" 
+            className="w-full h-48 object-cover rounded-t-xl mb-[-30px]"
+            loading="lazy"
+          />
 
           <div className="bg-white p-4 rounded-b-xl">
             <h3 className="font-sans font-semibold text-[#4F4F4F] text-3xl md:text-4xl text-left mt-4">

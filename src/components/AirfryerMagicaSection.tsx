@@ -53,14 +53,13 @@ const AirfryerMagicaSection: React.FC = () => {
         {/* Image (40% desktop) */}
         <div className="flex justify-center lg:justify-end">
           <div className="relative w-full max-w-md">
-            {/* Realistic Image Placeholder: Air Fryer with crispy food */}
-            <div className="bg-gray-300 h-[500px] rounded-xl shadow-2xl border-4 border-gray-400 flex items-center justify-center p-8">
-              <div className="text-center">
-                <CookingPot className="w-16 h-16 text-dark-bg mx-auto mb-4" />
-                <h3 className="font-sans text-2xl font-bold text-dark-bg mb-2">Comida Crocante</h3>
-                <p className="font-sans text-lg text-gray-700">Placeholder: Foto de Air Fryer con batatas fritas doradas</p>
-              </div>
-            </div>
+            {/* Mockup Image */}
+            <img 
+              src="/images/airfryer-magica-mockup.webp" 
+              alt="Mockup del libro de recetas Airfryer Mágica" 
+              className="w-full h-auto rounded-xl shadow-2xl border-4 border-highlight-gold/50 object-cover"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

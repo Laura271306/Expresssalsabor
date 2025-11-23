@@ -28,9 +28,12 @@ const SpecialOfferSection: React.FC = () => {
           </div>
 
           {/* Image Placeholder */}
-          <div className="h-48 bg-gray-300 rounded-lg mb-6 flex items-center justify-center text-gray-600">
-            [Placeholder: Mockup del Kit]
-          </div>
+          <img 
+            src="/images/kit-mockup-small.webp" 
+            alt="Mockup del Kit Completo AirFryer" 
+            className="w-full h-48 object-cover rounded-lg mb-6"
+            loading="lazy"
+          />
 
           <h3 className="font-sans text-2xl font-bold mb-2">KIT COMPLETO AirFryer</h3>
           <p className="font-sans text-lg mb-4">+600 recetas sin gluten + bonificaciones incluidas</p>

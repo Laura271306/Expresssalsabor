@@ -51,13 +51,13 @@ const HeroSection: React.FC = () => {
         <div className="flex justify-center lg:justify-end">
           <div className="relative w-full max-w-md">
             {/* High-quality image placeholder - Simulating the image of the family with the air fryer */}
-            <div className="bg-gray-700 h-80 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-highlight-gold/50 flex items-center justify-center p-8">
-              <div className="text-center">
-                <BookOpen className="w-16 h-16 text-highlight-gold mx-auto mb-4" />
-                <h3 className="font-serif text-3xl font-bold text-white mb-2">Placeholder: Foto Familiar con Air Fryer</h3>
-                <p className="font-sans text-xl text-gray-300">+600 Recetas</p>
-              </div>
-            </div>
+            <img 
+              src="/images/hero-airfryer-meal.webp" 
+              alt="Air Fryer con comida crujiente y deliciosa" 
+              className="w-full h-auto rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-highlight-gold/50 object-cover"
+              style={{ height: '400px' }}
+              loading="lazy"
+            />
             {/* Floating element for "+600 recetas" - Now visible */}
             <div className="absolute -top-4 -right-4 bg-urgency-red text-white rounded-full p-3 px-6 font-bold text-lg shadow-xl rotate-3">
                 +600 Recetas
