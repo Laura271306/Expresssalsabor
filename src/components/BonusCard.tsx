@@ -7,7 +7,7 @@ interface BonusCardProps {
   description: string;
   originalPrice: string;
   imagePosition: 'left' | 'right';
-  icon: React.ReactNode; // Used for the content area, but we simulate the gift box image
+  icon: React.ReactNode; // Keeping icon prop but not using it for the visual, only for potential future use
 }
 
 const BonusCard: React.FC<BonusCardProps> = ({ title, description, originalPrice, imagePosition, icon }) => {
@@ -19,13 +19,16 @@ const BonusCard: React.FC<BonusCardProps> = ({ title, description, originalPrice
       imagePosition === 'right' ? 'flex-row-reverse' : 'flex-row',
       "max-w-3xl mx-auto"
     )}>
-      {/* Image Placeholder (Simulating Gift Box) */}
+      {/* Image Placeholder (Now using the uploaded image) */}
       <div className={cn(
-        "w-1/3 h-40 flex items-center justify-center flex-shrink-0 rounded-lg",
-        "bg-highlight-gold/10 text-highlight-gold"
+        "w-1/3 h-40 flex items-center justify-center flex-shrink-0 rounded-lg overflow-hidden",
+        "bg-transparent" // Remove background color as the image has its own dark background
       )}>
-        <Gift className="w-16 h-16" />
-        {/* Placeholder: Imagen Caja de Regalo Dorada */}
+        <img 
+          src="/images/bonus-gift.jpeg" 
+          alt="Caja de regalo dorada" 
+          className="w-full h-full object-cover"
+        />
       </div>
 
       {/* Content */}
