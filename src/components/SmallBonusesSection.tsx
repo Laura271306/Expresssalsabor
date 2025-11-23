@@ -2,7 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import { ListChecks, Cake, ShoppingCart, Leaf, Gift } from 'lucide-react';
 
-const BonusesSection: React.FC = () => {
+const SmallBonusesSection: React.FC = () => {
   const bonuses = [
     {
       icon: <ListChecks className="w-8 h-8" />,
@@ -34,9 +34,12 @@ const BonusesSection: React.FC = () => {
   return (
     <section className="bg-dark-bg text-white py-20 px-6 border-t border-gray-800">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold text-center mb-12 text-highlight-gold">
+        <h2 className="font-sans text-4xl md:text-5xl font-bold text-center mb-4 text-highlight-gold">
           BONOS EXCLUSIVOS INCLUIDOS
         </h2>
+        <p className="font-sans text-xl text-gray-400 text-center mb-12">
+          Acceso a recursos valiosos que potencian tus resultados
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {bonuses.map((bonus, index) => (
@@ -54,4 +57,4 @@ const BonusesSection: React.FC = () => {
   );
 };
 
-export default BonusesSection;
+export default SmallBonusesSection;

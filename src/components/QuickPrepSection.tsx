@@ -1,13 +1,13 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Timer } from 'lucide-react';
+import { Timer, Pizza, Cookie, Beef } from 'lucide-react';
 
 const QuickPrepSection: React.FC = () => {
   const recipes = [
-    "Cenas completas",
-    "Pizzas sin gluten",
-    "Postres rápidos",
-    "Carnes jugosas por dentro y doradas por fuera"
+    { title: "Cenas completas", icon: <Beef className="text-highlight-gold w-6 h-6" /> },
+    { title: "Pizzas sin gluten", icon: <Pizza className="text-highlight-gold w-6 h-6" /> },
+    { title: "Postres rápidos", icon: <Cookie className="text-highlight-gold w-6 h-6" /> },
+    { title: "Carnes jugosas y doradas", icon: <Timer className="text-highlight-gold w-6 h-6" /> }
   ];
 
   return (
@@ -19,11 +19,11 @@ const QuickPrepSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {recipes.map((recipe, index) => (
-            <div key={index} className="bg-[#282425] rounded-xl p-6 shadow-xl border border-gray-700 transition-transform hover:scale-[1.02]">
-              <div className="w-12 h-12 bg-cta-primary rounded-full flex items-center justify-center mb-4 mx-auto">
-                <Timer className="text-white w-6 h-6" />
+            <div key={index} className="bg-[#282425] rounded-xl p-6 shadow-xl border border-gray-700 flex items-center gap-4 transition-transform hover:scale-[1.02]">
+              <div className="w-10 h-10 flex items-center justify-center flex-shrink-0">
+                {recipe.icon}
               </div>
-              <h3 className="font-sans text-xl font-bold text-white">{recipe}</h3>
+              <h3 className="font-sans text-xl font-bold text-white text-left">{recipe.title}</h3>
             </div>
           ))}
         </div>

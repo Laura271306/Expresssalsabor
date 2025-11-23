@@ -1,54 +1,56 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import CtaButton from './CtaButton';
-import { Salad, DollarSign, Clock, Heart } from 'lucide-react';
+import { Salad, DollarSign, Clock, Heart, Utensils, Users } from 'lucide-react';
+import BenefitImageCard from './BenefitImageCard';
 
 const BenefitsSection: React.FC = () => {
   const benefits = [
     {
-      icon: <Salad className="w-8 h-8" />,
-      title: "Comer saludable",
-      description: "Reduce grasas hasta un 80% sin sacrificar sabor"
+      icon: <Utensils className="w-6 h-6" />,
+      title: "Cocina Saludable",
+      description: "Reduce hasta un 80% las calorías al cocinar sin aceite, disfrutando de platos crujientes y sabrosos sin culpa.",
+      imagePlaceholder: <p>Placeholder: Comida Fit</p>
     },
     {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: "Ahorro en familia",
-      description: "Ahorra hasta $200 semanales en comida"
+      icon: <Users className="w-6 h-6" />,
+      title: "Aprobación Familiar",
+      description: "Recetas que conquistan a todos: desde los más pequeños hasta los más exigentes, con versiones saludables de sus platos favoritos.",
+      imagePlaceholder: <p>Placeholder: Familia Feliz</p>
     },
     {
-      icon: <Clock className="w-8 h-8" />,
+      icon: <Clock className="w-6 h-6" />,
       title: "Ahorro de tiempo",
-      description: "Prepara cenas en 10-15 minutos"
+      description: "Prepara comidas completas en 15-25 minutos, perfectas para un estilo de vida moderno y sin complicaciones.",
+      imagePlaceholder: <p>Placeholder: Reloj de Arena</p>
     },
     {
-      icon: <Heart className="w-8 h-8" />,
-      title: "Comidas familiares deliciosas",
-      description: "Platos que toda la familia amará"
+      icon: <DollarSign className="w-6 h-6" />,
+      title: "Economía Familiar",
+      description: "Recetas con ingredientes económicos que pueden ahorrarte hasta $200 semanales, evitando el gasto en comida rápida.",
+      imagePlaceholder: <p>Placeholder: Ahorro Dinero</p>
     }
   ];
 
   return (
-    <section className="bg-light-bg text-dark-bg py-20 px-6">
+    <section className="bg-dark-bg text-white py-20 px-6 border-t border-gray-800">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2 className="font-sans text-4xl md:text-5xl font-bold text-center mb-4 text-highlight-gold">
           BENEFICIOS EXCLUSIVOS
         </h2>
+        <p className="font-sans text-xl text-gray-400 text-center mb-12">
+          Descubre cómo este recetario profesional puede transformar tu forma de cocinar y mejorar la vida de toda tu familia.
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 shadow-xl text-center border-b-4 border-highlight-gold transition-shadow duration-300 hover:shadow-2xl">
-              <div className="w-12 h-12 bg-highlight-gold/10 text-highlight-gold rounded-full flex items-center justify-center mb-4 mx-auto">
-                {benefit.icon}
-              </div>
-              <h3 className="font-sans text-xl font-bold mb-2">{benefit.title}</h3>
-              <p className="font-sans text-gray-700">{benefit.description}</p>
-            </div>
+            <BenefitImageCard key={index} {...benefit} />
           ))}
         </div>
 
         <div className="text-center mt-12">
           <CtaButton href="#link-ancoragem" className="text-xl px-8 py-4">
-            💚 QUIERO ESTA GUÍA YA
+            💚 SÍ, QUIERO LAS RECETAS
           </CtaButton>
         </div>
       </div>

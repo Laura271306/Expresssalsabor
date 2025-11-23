@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { BookOpen, ListOrdered, ShoppingBag, ChefHat } from 'lucide-react';
+import { BookOpen, ListOrdered, ShoppingBag, Zap } from 'lucide-react';
+import CtaButton from './CtaButton';
 
 const NoChefNeededSection: React.FC = () => {
   const features = [
@@ -20,38 +21,39 @@ const NoChefNeededSection: React.FC = () => {
       description: "Productos que encuentras en cualquier supermercado"
     },
     {
-      icon: <ChefHat className="w-6 h-6" />,
-      title: "Resultados profesionales",
-      description: "Platos que parecen de un chef experto"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Zero complicación",
+      description: "Sin estrés, sin problemas"
     }
   ];
 
   return (
-    <section className="bg-dark-bg text-white py-20 px-6 border-t border-gray-800">
+    <section className="bg-light-bg text-dark-bg py-20 px-6 border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+        <h2 className="font-sans text-4xl md:text-5xl font-bold text-center mb-12 text-dark-bg">
           NO NECESITAS SER CHEF
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="bg-[#282425] rounded-xl p-6 shadow-xl border border-gray-700 transition-transform hover:scale-[1.02]">
+            <div key={index} className="bg-white rounded-xl p-6 shadow-xl border-t-4 border-highlight-gold transition-transform hover:scale-[1.02]">
               <div className="w-12 h-12 bg-highlight-gold/10 rounded-full flex items-center justify-center mb-4 text-highlight-gold">
                 {feature.icon}
               </div>
-              <h3 className="font-sans text-xl font-bold mb-2 text-white">{feature.title}</h3>
-              <p className="font-sans text-gray-300">{feature.description}</p>
+              <h3 className="font-sans text-xl font-bold mb-2 text-dark-bg">{feature.title}</h3>
+              <p className="font-sans text-gray-700">{feature.description}</p>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <a 
+          <CtaButton 
             href="#link-ancoragem"
-            className="bg-highlight-gold hover:bg-yellow-600 text-dark-bg font-sans font-bold text-xl px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-highlight-gold/50 inline-block uppercase tracking-wider"
+            variant="primary" 
+            className="bg-highlight-gold hover:bg-yellow-600 text-dark-bg text-xl px-8 py-4 shadow-highlight-gold/50"
           >
-            ✨ Descubre el método hoy
-          </a>
+            ✨ Resultados profesionales sin esfuerzo
+          </CtaButton>
         </div>
       </div>
     </section>

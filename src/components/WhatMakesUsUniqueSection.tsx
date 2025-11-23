@@ -35,8 +35,8 @@ const WhatMakesUsUniqueSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 shadow-xl border-t-4 border-cta-primary transition-shadow duration-300 hover:shadow-2xl">
-              <div className="w-12 h-12 bg-cta-primary/10 rounded-full flex items-center justify-center mb-4 text-cta-primary">
+            <div key={index} className="bg-white rounded-xl p-6 shadow-xl border-t-4 border-highlight-gold transition-shadow duration-300 hover:shadow-2xl">
+              <div className="w-12 h-12 bg-highlight-gold/10 rounded-full flex items-center justify-center mb-4 text-highlight-gold">
                 {feature.icon}
               </div>
               <h3 className="font-sans text-xl font-bold mb-2">{feature.title}</h3>

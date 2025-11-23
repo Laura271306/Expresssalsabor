@@ -29,14 +29,14 @@ const bonuses = [
 
 const BonusSection: React.FC = () => {
   return (
-    <SectionWrapper bgColor="light" border>
+    <SectionWrapper bgColor="dark" border>
       <h2 className="font-serif text-highlight-gold text-4xl md:text-5xl mb-10 text-center md:text-left">
         🎁 Bonos Exclusivos
       </h2>
 
-      <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 md:gap-8">
+      <div className="flex flex-col flex-wrap justify-center gap-6 md:gap-8">
         {bonuses.map((bonus, index) => (
-          <div key={index} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)]">
+          <div key={index} className="w-full mx-auto max-w-3xl">
             <BonusCard {...bonus} />
           </div>
         ))}

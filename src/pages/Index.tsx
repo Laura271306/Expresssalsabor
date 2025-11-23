@@ -7,10 +7,13 @@ import QuickPrepSection from "@/components/QuickPrepSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
-import BonusesSection from "@/components/BonusesSection";
+import SmallBonusesSection from "@/components/SmallBonusesSection";
+import BonusSection from "@/components/BonusSection";
 import CompatibilitySection from "@/components/CompatibilitySection";
 import NoChefNeededSection from "@/components/NoChefNeededSection";
 import SpecialOfferSection from "@/components/SpecialOfferSection";
+import FaqSection from "@/components/FaqSection";
+import FinalCtaSection from "@/components/FinalCtaSection";
 
 const Index = () => {
   return (
@@ -27,10 +30,16 @@ const Index = () => {
       <BenefitsSection />
       <TestimonialsSection />
       <BeforeAfterSection />
-      <BonusesSection />
+      
+      {/* Bonos */}
+      <SmallBonusesSection />
+      <BonusSection />
+      
       <CompatibilitySection />
       <NoChefNeededSection />
       <SpecialOfferSection />
+      <FaqSection />
+      <FinalCtaSection />
     </div>
   );
 };
