@@ -1,23 +1,23 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Quote } from 'lucide-react';
+import WhatsappTestimonialCard from './WhatsappTestimonialCard';
 
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
       name: "María G.",
       text: "Mis hijos ahora piden que cocine con la Air Fryer todos los días. ¡Las recetas son increíbles!",
-      rating: "⭐⭐⭐⭐⭐"
+      time: "10:35 AM"
     },
     {
       name: "Carlos R.",
-      text: "Ahorro 2 horas diarias en la cocina. Las cenas están listas en 15 minutos.",
-      rating: "⭐⭐⭐⭐⭐"
+      text: "Ahorro 2 horas diarias en la cocina. Las cenas están listas en 15 minutos. ¡El método CRISP funciona!",
+      time: "11:01 AM"
     },
     {
       name: "Laura M.",
-      text: "Finalmente puedo hacer postres saludables que mis hijos aman. ¡Gracias!",
-      rating: "⭐⭐⭐⭐⭐"
+      text: "Finalmente puedo hacer postres saludables que mis hijos aman. ¡Gracias! El recetario es muy completo.",
+      time: "12:45 PM"
     }
   ];
 
@@ -25,18 +25,21 @@ const TestimonialsSection: React.FC = () => {
     <section className="bg-[#181617] text-white py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="font-sans text-4xl md:text-5xl font-bold text-center mb-12 text-highlight-gold">
-          TESTIMONIOS
+          TESTIMONIOS DE CLIENTES
         </h2>
+        
+        <p className="font-sans text-xl text-gray-400 text-center mb-10">
+          Mira lo que dicen nuestros clientes satisfechos en sus grupos de chat:
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-[#282425] rounded-xl p-6 shadow-2xl border border-gray-700 transition-transform hover:scale-[1.02]">
-              <Quote className="w-8 h-8 text-cta-primary mb-4" />
-              <p className="font-sans text-gray-300 italic mb-4">"{testimonial.text}"</p>
-              <div className="flex items-center justify-between border-t border-gray-700 pt-4">
-                <div className="text-xl font-bold text-white">{testimonial.name}</div>
-                <div className="text-yellow-400">{testimonial.rating}</div>
-              </div>
+            <div key={index} className="flex justify-center">
+              <WhatsappTestimonialCard 
+                name={testimonial.name}
+                text={testimonial.text}
+                time={testimonial.time}
+              />
             </div>
           ))}
         </div>
