@@ -52,11 +52,13 @@ const SolutionSection: React.FC = () => {
         </div>
 
         {/* Image (40% desktop) */}
-        <div className="lg:col-span-1 relative">
-          {/* Placeholder for Image: AirFryer with dishes coming out */}
-          <div className="bg-gray-300 h-[400px] rounded-tr-md rounded-bl-md flex items-center justify-center text-gray-600 shadow-lg transition-all duration-300 hover:mt-[-41px] mt-0">
-            [Placeholder: AirFryer com pratos saindo]
-          </div>
+        <div className="lg:col-span-1 relative flex justify-center">
+          <img 
+            src="/images/kit-mockup-main.jpeg" 
+            alt="Mockup del libro de recetas Airfryer Mágica" 
+            className="w-full max-w-xs h-auto rounded-xl shadow-2xl border-4 border-highlight-gold/50 object-cover transition-all duration-300"
+            loading="lazy"
+          />
         </div>
       </div>
     </SectionWrapper>
