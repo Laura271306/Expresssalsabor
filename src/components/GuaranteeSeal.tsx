@@ -9,22 +9,23 @@ interface GuaranteeSealProps {
 const GuaranteeSeal: React.FC<GuaranteeSealProps> = ({ className }) => {
   return (
     <div className={cn(
-      "relative w-32 h-32 md:w-40 md:h-40 mx-auto flex items-center justify-center",
+      "relative w-36 h-36 md:w-44 md:h-44 mx-auto flex items-center justify-center p-1", 
+      "rounded-full border-4 border-highlight-gold shadow-2xl shadow-highlight-gold/30", 
+      "bg-dark-bg", 
       className
     )}>
-      {/* Outer Ring (Gold/Highlight) */}
-      <div className="absolute inset-0 rounded-full bg-highlight-gold opacity-20 animate-pulse"></div>
-      
-      {/* Inner Seal (Dark background) */}
-      <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full bg-dark-bg border-4 border-highlight-gold shadow-xl flex flex-col items-center justify-center p-2 text-center">
-        <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 text-cta-primary mb-1" />
-        <p className="font-sans text-white text-xs md:text-sm font-bold leading-tight">
-          GARANTÍA
+      <div className="flex flex-col items-center justify-center text-center p-2">
+        <ShieldCheck className="w-10 h-10 md:w-12 md:h-12 text-cta-primary mb-1" />
+        
+        <p className="font-sans text-gray-300 text-sm md:text-base font-bold leading-tight uppercase">
+          Garantía
         </p>
-        <p className="font-sans text-highlight-gold text-xl md:text-2xl font-extrabold leading-none">
+        
+        <p className="font-serif text-highlight-gold text-3xl md:text-4xl font-extrabold leading-none mt-1">
           7 DÍAS
         </p>
-        <p className="font-sans text-white text-[10px] md:text-xs leading-none mt-0.5">
+        
+        <p className="font-sans text-white text-xs md:text-sm leading-none mt-1">
           100% SATISFACCIÓN
         </p>
       </div>
