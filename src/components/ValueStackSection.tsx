@@ -3,7 +3,6 @@ import { ShieldCheck } from 'lucide-react';
 import SectionWrapper from './SectionWrapper';
 import CtaButton from './CtaButton';
 import { cn } from '@/lib/utils';
-import GuaranteeSeal from './GuaranteeSeal';
 
 const ValueStackSection: React.FC = () => {
   const tableData = [
@@ -84,12 +83,19 @@ const ValueStackSection: React.FC = () => {
             </p>
           </div>
           
-          {/* Garantia Seal */}
-          <div className="mt-6 text-center">
-            <GuaranteeSeal />
-            <p className="font-sans text-white text-sm mt-4">
-              Pruébalo durante 7 días sin riesgo. Si no te convence el contenido, te devolvemos tu dinero.
-            </p>
+          {/* Garantia Box */}
+          <div className="bg-dark-bg p-6 rounded-lg mt-6 border border-highlight-gold/50 text-left">
+            <div className="flex items-center gap-4">
+              <ShieldCheck className="w-12 h-12 text-highlight-gold flex-shrink-0" />
+              <div>
+                <h4 className="font-sans font-bold text-white text-xl md:text-2xl mb-1">
+                  Garantia de 7 Dias
+                </h4>
+                <p className="font-sans text-white text-base leading-snug">
+                  Pruébalo durante 7 días sin riesgo. Si no te convence el contenido, te devolvemos tu dinero.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
