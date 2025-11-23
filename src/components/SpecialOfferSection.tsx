@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import CtaButton from './CtaButton';
 import { Gift, Check } from 'lucide-react';
+import GuaranteeSeal from './GuaranteeSeal';
 
 const SpecialOfferSection: React.FC = () => {
   return (
@@ -46,17 +47,12 @@ const SpecialOfferSection: React.FC = () => {
             95% de descuento – acceso inmediato con pago único
           </p>
           
-          {/* Guarantee Box */}
-          <div className="bg-gray-900 p-4 rounded-lg text-white border border-highlight-gold/50 text-left">
-            <div className="flex items-center gap-3">
-              <Gift className="w-8 h-8 text-highlight-gold flex-shrink-0" />
-              <div>
-                <h4 className="font-sans font-bold text-lg">Garantia de 7 Dias</h4>
-                <p className="font-sans text-sm">
-                  Pruébalo durante 7 días sin riesgo. Si no te convence el contenido, te devolvemos tu dinero.
-                </p>
-              </div>
-            </div>
+          {/* Guarantee Seal */}
+          <div className="mt-6">
+            <GuaranteeSeal className="w-24 h-24 md:w-28 md:h-28" />
+            <p className="font-sans text-gray-600 text-sm mt-2">
+              Pruébalo durante 7 días sin riesgo. Si no te convence el contenido, te devolvemos tu dinero.
+            </p>
           </div>
         </div>
         
