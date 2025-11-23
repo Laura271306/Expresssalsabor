@@ -1,5 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { trackCtaClick } from '@/utils/facebookPixel';
 
 interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
@@ -22,7 +23,11 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
     className
   );
 
-  const handleAnchorClick = (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
+  const handleCtaAction = (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
+    // 1. Track the CTA click for Facebook Pixel
+    trackCtaClick();
+
+    // 2. Handle internal scrolling if applicable
     if (href && href.startsWith('#')) {
       event.preventDefault();
       const targetId = href.substring(1);
@@ -33,43 +38,14 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
       }
     }
     
-    // Ejecutar el onClick original si existe
+    // 3. Execute original onClick if provided
     if (onClick) {
       onClick(event as React.MouseEvent<HTMLButtonElement>);
     }
   };
 
   if (href) {
-    // Si es un anclaje local, usamos un <a> con el manejador de clic personalizado.
-    if (href.startsWith('#')) {
-      // Extraemos props específicas de botón para evitar el error de TS al pasarlas a <a>
-      const { 
-        type, 
-        disabled, 
-        form, 
-        formAction, 
-        formEncType, 
-        formMethod, 
-        formNoValidate, 
-        formTarget, 
-        name, 
-        value, 
-        ...anchorProps 
-      } = props;
-
-      return (
-        <a
-          href={href}
-          className={buttonClasses}
-          onClick={handleAnchorClick}
-          {...((anchorProps as unknown) as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
-        >
-          {children}
-        </a>
-      );
-    }
-
-    // Si es un enlace externo o una ruta completa, se comporta como un <a> normal.
+    // If it's an anchor tag (<a>)
     const { 
       type, 
       disabled, 
@@ -88,6 +64,7 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
       <a
         href={href}
         className={buttonClasses}
+        onClick={handleCtaAction}
         {...((anchorProps as unknown) as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {children}
@@ -98,7 +75,7 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
   return (
     <button
       className={buttonClasses}
-      onClick={onClick}
+      onClick={handleCtaAction}
       {...(props as React.ButtonHTMLAttributes<HTMLButtonElement>)}
     >
       {children}
