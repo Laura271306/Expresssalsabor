@@ -5,6 +5,7 @@ import WhatMakesUsUniqueSection from "@/components/WhatMakesUsUniqueSection";
 import AirfryerMagicaSection from "@/components/AirfryerMagicaSection";
 import QuickPrepSection from "@/components/QuickPrepSection";
 import BenefitsSection from "@/components/BenefitsSection";
+import PriceComparisonBanner from "@/components/PriceComparisonBanner"; // Import new component
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import SmallBonusesSection from "@/components/SmallBonusesSection";
@@ -28,6 +29,7 @@ const Index = () => {
       <AirfryerMagicaSection />
       <QuickPrepSection />
       <BenefitsSection />
+      <PriceComparisonBanner /> {/* New component added here */}
       <TestimonialsSection />
       <BeforeAfterSection />
       
