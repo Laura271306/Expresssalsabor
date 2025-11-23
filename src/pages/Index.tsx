@@ -2,11 +2,10 @@ import UrgencyBanner from "@/components/UrgencyBanner";
 import HeroSection from "@/components/HeroSection";
 import TheProblemSection from "@/components/TheProblemSection";
 import WhatMakesUsUniqueSection from "@/components/WhatMakesUsUniqueSection";
-import SolutionSection from "@/components/SolutionSection"; // Using SolutionSection instead of AirfryerMagicaSection
-import CrispMethodSection from "@/components/CrispMethodSection"; // Importing CrispMethodSection
+import AirfryerMagicaSection from "@/components/AirfryerMagicaSection";
 import QuickPrepSection from "@/components/QuickPrepSection";
 import BenefitsSection from "@/components/BenefitsSection";
-import PriceComparisonBanner from "@/components/PriceComparisonBanner";
+import PriceComparisonBanner from "@/components/PriceComparisonBanner"; // Import new component
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import SmallBonusesSection from "@/components/SmallBonusesSection";
@@ -27,11 +26,10 @@ const Index = () => {
       <HeroSection />
       <TheProblemSection />
       <WhatMakesUsUniqueSection />
-      <SolutionSection /> {/* Using SolutionSection */}
-      <CrispMethodSection /> {/* Adding CrispMethodSection */}
+      <AirfryerMagicaSection />
       <QuickPrepSection />
       <BenefitsSection />
-      <PriceComparisonBanner />
+      <PriceComparisonBanner /> {/* New component added here */}
       <TestimonialsSection />
       <BeforeAfterSection />
       
