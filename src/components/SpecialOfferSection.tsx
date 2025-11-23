@@ -29,7 +29,7 @@ const SpecialOfferSection: React.FC = () => {
 
           {/* Image Placeholder */}
           <img 
-            src="/images/kit-mockup-small.webp" 
+            src="/images/kit-mockup-main.jpeg" 
             alt="Mockup del Kit Completo AirFryer" 
             className="w-full h-48 object-cover rounded-lg mb-6"
             loading="lazy"

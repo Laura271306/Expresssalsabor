@@ -21,7 +21,7 @@ const ValueStackSection: React.FC = () => {
           
           {/* Image Top Placeholder */}
           <img 
-            src="/images/kit-mockup-small.webp" 
+            src="/images/kit-mockup-main.jpeg" 
             alt="Mockup del Kit Completo AirFryer" 
             className="w-full h-48 object-cover rounded-t-xl mb-[-30px]"
             loading="lazy"

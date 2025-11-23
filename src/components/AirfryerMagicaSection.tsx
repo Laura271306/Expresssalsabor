@@ -55,7 +55,7 @@ const AirfryerMagicaSection: React.FC = () => {
           <div className="relative w-full max-w-md">
             {/* Mockup Image */}
             <img 
-              src="/images/airfryer-magica-mockup.webp" 
+              src="/images/kit-mockup-main.jpeg" 
               alt="Mockup del libro de recetas Airfryer Mágica" 
               className="w-full h-auto rounded-xl shadow-2xl border-4 border-highlight-gold/50 object-cover"
               loading="lazy"
