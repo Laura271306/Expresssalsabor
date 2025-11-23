@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => {
             </li>
           </ul>
 
-          <CtaButton href="#link-ancoragem" className="mt-8">
+          <CtaButton href="https://pay.hotmart.com/I102633587P?checkoutMode=10" className="mt-8">
             💚 QUIERO MIS RECETAS AHORA
           </CtaButton>
         </div>
