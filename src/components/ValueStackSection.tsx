@@ -68,6 +68,7 @@ const ValueStackSection: React.FC = () => {
             {/* Savings Message */}
             <p className="font-sans text-xl text-left mb-6">
               <span className="line-through text-urgency-red">Valor total: $103 USD</span>
+              <span className="font-bold text-urgency-red ml-2">(95% OFF)</span>
             </p>
 
             {/* CTA PRINCIPAL */}

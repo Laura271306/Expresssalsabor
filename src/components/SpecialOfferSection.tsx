@@ -17,6 +17,16 @@ const SpecialOfferSection: React.FC = () => {
         {/* Main Offer Card (Light interior) */}
         <div className="bg-white rounded-xl p-8 mb-8 shadow-[0_0_40px_rgba(0,170,84,0.3)] border-4 border-cta-primary text-dark-bg text-center">
           
+          {/* Contador de Urgencia (Placeholder) */}
+          <div className="bg-urgency-red text-white p-3 rounded-lg mb-6 shadow-lg">
+            <p className="font-sans font-bold text-xl">
+              ¡LA OFERTA TERMINA EN!
+            </p>
+            <p className="font-serif text-3xl font-bold mt-1">
+              [00:00:00]
+            </p>
+          </div>
+
           {/* Image Placeholder */}
           <div className="h-48 bg-gray-300 rounded-lg mb-6 flex items-center justify-center text-gray-600">
             [Placeholder: Mockup del Kit]
@@ -34,8 +44,12 @@ const SpecialOfferSection: React.FC = () => {
             </p>
           </div>
           
-          <p className="font-sans text-7xl font-bold text-cta-primary mb-6">
+          {/* 95% Destacado */}
+          <p className="font-sans text-8xl font-extrabold text-urgency-red mb-6 leading-none">
             95%
+          </p>
+          <p className="font-sans text-2xl font-bold text-cta-primary mb-6">
+            DE DESCUENTO
           </p>
 
           <CtaButton href="#link-ancoragem" className="text-xl px-8 py-4 mb-4 mx-auto">
