@@ -1,5 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { Quote } from 'lucide-react';
 
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
@@ -21,20 +22,21 @@ const TestimonialsSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-dark-bg text-white py-20 px-6">
+    <section className="bg-[#181617] text-white py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2 className="font-sans text-4xl md:text-5xl font-bold text-center mb-12 text-highlight-gold">
           TESTIMONIOS
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-800 rounded-lg p-6 shadow-lg">
-              <div className="mb-4">
-                <div className="text-2xl font-bold mb-2">{testimonial.name}</div>
+            <div key={index} className="bg-[#282425] rounded-xl p-6 shadow-2xl border border-gray-700 transition-transform hover:scale-[1.02]">
+              <Quote className="w-8 h-8 text-cta-primary mb-4" />
+              <p className="font-sans text-gray-300 italic mb-4">"{testimonial.text}"</p>
+              <div className="flex items-center justify-between border-t border-gray-700 pt-4">
+                <div className="text-xl font-bold text-white">{testimonial.name}</div>
                 <div className="text-yellow-400">{testimonial.rating}</div>
               </div>
-              <p className="font-sans text-gray-300 italic">"{testimonial.text}"</p>
             </div>
           ))}
         </div>

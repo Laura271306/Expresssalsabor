@@ -1,5 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { CheckCircle } from 'lucide-react';
 
 const CompatibilitySection: React.FC = () => {
   const models = [
@@ -17,8 +18,10 @@ const CompatibilitySection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {models.map((model, index) => (
-            <div key={index} className="bg-white rounded-lg p-6 shadow-lg border-2 border-yellow-500">
-              <div className="text-3xl mb-4">✅</div>
+            <div key={index} className="bg-white rounded-xl p-6 shadow-xl border-b-4 border-cta-primary">
+              <div className="text-3xl mb-4 flex justify-center">
+                <CheckCircle className="w-8 h-8 text-cta-primary" />
+              </div>
               <h3 className="font-sans text-xl font-bold">{model}</h3>
             </div>
           ))}
