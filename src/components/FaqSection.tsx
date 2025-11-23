@@ -48,14 +48,14 @@ const FaqSection: React.FC = () => {
             key={index} 
             value={`item-${index}`} 
             className={cn(
-              "mb-4 rounded-lg border border-gray-200 bg-white shadow-sm",
-              "data-[state=open]:bg-[#F4F4F4]"
+              "mb-4 rounded-xl border border-gray-300 bg-white shadow-lg", // Increased border and shadow for sophistication
+              "data-[state=open]:bg-[#F9F9F9] data-[state=open]:border-highlight-gold/50 transition-all duration-200" // Subtle change on open
             )}
           >
-            <AccordionTrigger className="font-sans text-dark-bg text-lg p-4 hover:no-underline [&>svg]:text-highlight-gold">
+            <AccordionTrigger className="font-sans text-dark-bg text-lg p-4 hover:no-underline [&>svg]:text-cta-primary font-semibold">
               {faq.question}
             </AccordionTrigger>
-            <AccordionContent className="p-4 pt-0 text-dark-bg text-base leading-relaxed">
+            <AccordionContent className="p-4 pt-0 text-dark-bg text-base leading-relaxed border-t border-gray-200">
               {faq.answer}
             </AccordionContent>
           </AccordionItem>

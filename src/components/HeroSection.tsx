@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
             ✨ BESTSELLER: +5,000 Clientes Satisfechos
           </div>
 
-          <h1 className="font-sans text-4xl md:text-6xl font-bold leading-tight text-white">
+          <h1 className="font-serif text-4xl md:text-6xl font-bold leading-tight text-white">
             ¿Cansado de perder tiempo en la cocina y comer siempre lo mismo, sin sabor?
           </h1>
           

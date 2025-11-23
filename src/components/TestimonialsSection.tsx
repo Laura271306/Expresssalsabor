@@ -20,11 +20,11 @@ const TestimonialsSection: React.FC = () => {
   return (
     <section className="bg-[#181617] text-white py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold text-left mb-12 text-highlight-gold">
+        <h2 className="font-serif text-4xl md:text-5xl font-bold text-left mb-12 text-highlight-gold">
           TESTIMONIOS REALES DE NUESTROS CLIENTES
         </h2>
         
-        <p className="font-sans text-xl text-gray-400 text-left mb-10">
+        <p className="font-sans text-xl text-gray-300 text-left mb-10">
           Mira los resultados que están obteniendo con el recetario:
         </p>
 

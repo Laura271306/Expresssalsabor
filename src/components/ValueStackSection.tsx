@@ -28,7 +28,7 @@ const ValueStackSection: React.FC = () => {
           />
 
           <div className="bg-white p-4 rounded-b-xl">
-            <h3 className="font-sans font-semibold text-[#4F4F4F] text-3xl md:text-4xl text-left mt-4">
+            <h3 className="font-serif font-semibold text-[#4F4F4F] text-3xl md:text-4xl text-left mt-4">
               KIT COMPLETO AirFryer
             </h3>
             <p className="font-sans text-[#4F4F4F] text-lg text-left mb-6">
