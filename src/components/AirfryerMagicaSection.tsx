@@ -18,7 +18,7 @@ const AirfryerMagicaSection: React.FC = () => {
             AIRFRYER MÁGICA
           </h2>
           <h3 className="font-sans text-2xl font-bold text-dark-bg mb-6">
-            +1000 Recetas Fáciles, Rápidas y 100% Saludables
+            +600 Recetas Fáciles, Rápidas y 100% Saludables
           </h3>
           
           <p className="font-sans text-xl text-gray-700 mb-6 leading-relaxed">
@@ -27,7 +27,7 @@ const AirfryerMagicaSection: React.FC = () => {
 
           <ul className="list-none p-0">
             <CheckItem>
-              <span className="font-bold text-cta-primary">+1000 recetas sin gluten y sin aceite</span> – desde desayunos rápidos hasta cenas completas y sobremesas deliciosas.
+              <span className="font-bold text-cta-primary">+600 recetas sin gluten y sin aceite</span> – desde desayunos rápidos hasta cenas completas y sobremesas deliciosas, para todos los gustos y edades.
             </CheckItem>
             <CheckItem>
               <span className="font-bold text-cta-primary">Instrucciones paso a paso con fotos y horarios exactos</span> – sigue fácilmente cada preparación sin complicaciones.

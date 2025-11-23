@@ -33,7 +33,7 @@ const SpecialOfferSection: React.FC = () => {
           </div>
 
           <h3 className="font-sans text-2xl font-bold mb-2">KIT COMPLETO AirFryer</h3>
-          <p className="font-sans text-lg mb-4">+1000 recetas sin gluten + bonificaciones incluidas</p>
+          <p className="font-sans text-lg mb-4">+600 recetas sin gluten + bonificaciones incluidas</p>
 
           <div className="mb-6 p-4 bg-gray-100 rounded-lg border border-gray-300">
             <p className="font-sans text-xl mb-2">

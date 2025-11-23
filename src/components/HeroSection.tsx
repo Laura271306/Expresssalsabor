@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
             </li>
             <li className="flex items-start">
               <Check className="w-6 h-6 text-cta-primary mr-3 flex-shrink-0" />
-              <span className="font-sans text-lg">Recetas saludables y deliciosas para toda la familia</span>
+              <span className="font-sans text-lg">Recetas saludables y deliciosas para toda la familia, todos los gustos y edades</span>
             </li>
           </ul>
 
@@ -55,11 +55,11 @@ const HeroSection: React.FC = () => {
               <div className="text-center">
                 <BookOpen className="w-16 h-16 text-highlight-gold mx-auto mb-4" />
                 <h3 className="font-serif text-3xl font-bold text-white mb-2">Placeholder: Foto Familiar con Air Fryer</h3>
-                <p className="font-sans text-xl text-gray-300">1000+ Recetas</p>
+                <p className="font-sans text-xl text-gray-300">+600 Recetas</p>
               </div>
             </div>
-            {/* Floating element for "1000+ recetas" - Hidden as the text is in the placeholder image */}
-            <div className="absolute -top-4 -right-4 bg-urgency-red text-white rounded-full p-3 px-6 font-bold text-lg shadow-xl rotate-3 hidden">
+            {/* Floating element for "+600 recetas" - Now visible */}
+            <div className="absolute -top-4 -right-4 bg-urgency-red text-white rounded-full p-3 px-6 font-bold text-lg shadow-xl rotate-3">
                 +600 Recetas
             </div>
           </div>

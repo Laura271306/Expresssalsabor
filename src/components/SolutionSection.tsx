@@ -20,7 +20,7 @@ const SolutionSection: React.FC = () => {
             airfryer mágica
           </h3>
           <h4 className="font-sans text-dark-bg text-xl mb-6">
-            +1000 Recetas Fáciles, Rápidas y 100% Saludables
+            +600 Recetas Fáciles, Rápidas y 100% Saludables
           </h4>
 
           <p className="font-sans text-dark-bg text-lg leading-relaxed mb-6">
@@ -31,7 +31,7 @@ const SolutionSection: React.FC = () => {
 
           <ul className="list-none p-0">
             <CheckItem>
-              +1000 recetas irresistibles y comprobadas – desde desayunos rápidos hasta cenas completas.
+              +600 recetas irresistibles y comprobadas – desde desayunos rápidos hasta cenas completas.
             </CheckItem>
             <CheckItem>
               Instrucciones paso a paso con fotos – sigue fácilmente cada preparación sin complicaciones.
