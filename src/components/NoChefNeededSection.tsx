@@ -30,14 +30,14 @@ const NoChefNeededSection: React.FC = () => {
   return (
     <section className="bg-light-bg text-dark-bg py-20 px-6 border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold text-center mb-12 text-dark-bg">
+        <h2 className="font-sans text-4xl md:text-5xl font-bold mb-12 text-dark-bg text-left">
           NO NECESITAS SER CHEF
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-xl border-t-4 border-highlight-gold transition-transform hover:scale-[1.02]">
-              <div className="w-12 h-12 bg-highlight-gold/10 rounded-full flex items-center justify-center mb-4 text-highlight-gold">
+              <div className="w-12 h-12 bg-highlight-gold/10 rounded-full flex items-center justify-start mb-4 text-highlight-gold">
                 {feature.icon}
               </div>
               <h3 className="font-sans text-xl font-bold mb-2 text-dark-bg">{feature.title}</h3>
@@ -46,7 +46,7 @@ const NoChefNeededSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-left mt-12">
           <CtaButton 
             href="#link-ancoragem"
             variant="primary" 

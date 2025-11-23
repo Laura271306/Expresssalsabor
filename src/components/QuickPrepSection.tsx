@@ -12,8 +12,8 @@ const QuickPrepSection: React.FC = () => {
 
   return (
     <section className="bg-dark-bg text-white py-20 px-6 border-t border-gray-800">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold mb-12 text-highlight-gold">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="font-sans text-4xl md:text-5xl font-bold mb-12 text-highlight-gold text-left">
           EN SOLO 10–15 MINUTOS PODRÁS PREPARAR
         </h2>
 

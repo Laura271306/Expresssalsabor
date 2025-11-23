@@ -10,8 +10,8 @@ interface CrispStepProps {
 }
 
 const CrispStep: React.FC<CrispStepProps> = ({ icon, title, description }) => (
-  <div className="bg-light-bg p-6 rounded-xl text-center shadow-md">
-    <div className="mx-auto w-12 h-12 flex items-center justify-center bg-cta-primary/10 rounded-full mb-4 text-cta-primary">
+  <div className="bg-light-bg p-6 rounded-xl text-left shadow-md">
+    <div className="w-12 h-12 flex items-center justify-center bg-cta-primary/10 rounded-full mb-4 text-cta-primary">
       {icon}
     </div>
     <h4 className="font-sans font-bold text-dark-bg text-lg mb-1">{title}</h4>
@@ -22,11 +22,11 @@ const CrispStep: React.FC<CrispStepProps> = ({ icon, title, description }) => (
 const CrispMethodSection: React.FC = () => {
   return (
     <SectionWrapper bgColor="dark">
-      <div className="text-center max-w-4xl mx-auto">
-        <h2 className="font-serif text-white text-3xl md:text-4xl mb-4">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="font-serif text-white text-3xl md:text-4xl mb-4 text-left">
           ¿Por qué esto funciona cuando otras recetas fallan?
         </h2>
-        <h3 className="font-sans font-semibold text-highlight-gold text-2xl mb-10">
+        <h3 className="font-sans font-semibold text-highlight-gold text-2xl mb-10 text-left">
           Aplicamos el Sistema C.R.I.S.P.:
         </h3>
 
@@ -38,8 +38,8 @@ const CrispMethodSection: React.FC = () => {
           <CrispStep icon={<Thermometer />} title="PRECALENTAR" description="Protocolo 3-5 min para crocancia consistente" />
         </div>
 
-        <div className="mt-10 bg-mint-green p-6 rounded-lg max-w-xl mx-auto">
-          <p className="font-sans font-bold text-dark-bg text-lg">
+        <div className="mt-10 bg-mint-green p-6 rounded-lg max-w-xl">
+          <p className="font-sans font-bold text-dark-bg text-lg text-left">
             Resultado: platos listos en 10-15 min, incluso si eres principiante.
           </p>
         </div>

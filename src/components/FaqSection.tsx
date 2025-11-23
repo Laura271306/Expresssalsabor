@@ -38,7 +38,7 @@ const faqs = [
 const FaqSection: React.FC = () => {
   return (
     <SectionWrapper bgColor="light">
-      <h2 className="font-sans font-bold text-dark-bg text-3xl md:text-4xl mb-8 md:mb-12 text-center md:text-left">
+      <h2 className="font-sans font-bold text-dark-bg text-3xl md:text-4xl mb-8 md:mb-12 text-left">
         Preguntas Frecuentes
       </h2>
 

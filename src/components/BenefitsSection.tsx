@@ -35,10 +35,10 @@ const BenefitsSection: React.FC = () => {
   return (
     <section className="bg-dark-bg text-white py-20 px-6 border-t border-gray-800">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold text-center mb-4 text-highlight-gold">
+        <h2 className="font-sans text-4xl md:text-5xl font-bold mb-4 text-highlight-gold text-left">
           BENEFICIOS EXCLUSIVOS
         </h2>
-        <p className="font-sans text-xl text-gray-400 text-center mb-12">
+        <p className="font-sans text-xl text-gray-400 mb-12 text-left">
           Descubre cómo este recetario profesional puede transformar tu forma de cocinar y mejorar la vida de toda tu familia.
         </p>
 
@@ -48,7 +48,7 @@ const BenefitsSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-left mt-12">
           <CtaButton href="#link-ancoragem" className="text-xl px-8 py-4">
             💚 SÍ, QUIERO LAS RECETAS
           </CtaButton>

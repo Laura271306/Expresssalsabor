@@ -34,17 +34,17 @@ const SmallBonusesSection: React.FC = () => {
   return (
     <section className="bg-dark-bg text-white py-20 px-6 border-t border-gray-800">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold text-center mb-4 text-highlight-gold">
+        <h2 className="font-sans text-4xl md:text-5xl font-bold mb-4 text-highlight-gold text-left">
           BONOS EXCLUSIVOS INCLUIDOS
         </h2>
-        <p className="font-sans text-xl text-gray-400 text-center mb-12">
+        <p className="font-sans text-xl text-gray-400 mb-12 text-left">
           Acceso a recursos valiosos que potencian tus resultados
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {bonuses.map((bonus, index) => (
             <div key={index} className="bg-[#282425] rounded-xl p-6 shadow-2xl border-2 border-highlight-gold transition-transform hover:scale-[1.02]">
-              <div className="text-4xl text-highlight-gold mb-4 flex items-center justify-center w-12 h-12 bg-highlight-gold/10 rounded-full">
+              <div className="text-4xl text-highlight-gold mb-4 flex items-center justify-start w-12 h-12 bg-highlight-gold/10 rounded-full">
                 {bonus.icon}
               </div>
               <h3 className="font-sans text-xl font-bold mb-2 text-white">{bonus.title}</h3>

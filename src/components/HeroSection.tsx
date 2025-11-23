@@ -1,12 +1,11 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import CtaButton from './CtaButton';
-import { useIsMobile } from '@/hooks/use-mobile';
 import { BookOpen, Check } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
-  const isMobile = useIsMobile();
-
+  // Eliminamos useIsMobile ya que la alineación será siempre 'text-left'
+  
   return (
     <section className="bg-dark-bg text-white py-20 md:py-32 px-6 relative overflow-hidden">
       {/* Sutil fondo de textura para sensación premium */}
@@ -14,10 +13,7 @@ const HeroSection: React.FC = () => {
       
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Contenido de texto */}
-        <div className={cn(
-          "space-y-6 md:space-y-8",
-          isMobile ? "text-center" : "text-left"
-        )}>
+        <div className="space-y-6 md:space-y-8 text-left">
           {/* BESTSELLER Badge */}
           <div className="inline-block bg-cta-primary text-dark-bg font-sans font-bold text-sm px-3 py-1 rounded-full mb-4 shadow-lg">
             ✨ BESTSELLER: +5,000 Clientes Satisfechos
@@ -32,21 +28,21 @@ const HeroSection: React.FC = () => {
           </p>
 
           <ul className="space-y-3 pt-4">
-            <li className="flex items-start justify-center lg:justify-start">
+            <li className="flex items-start">
               <Check className="w-6 h-6 text-cta-primary mr-3 flex-shrink-0" />
               <span className="font-sans text-lg">Más de 600 recetas diseñadas específicamente para Air Fryer</span>
             </li>
-            <li className="flex items-start justify-center lg:justify-start">
+            <li className="flex items-start">
               <Check className="w-6 h-6 text-cta-primary mr-3 flex-shrink-0" />
               <span className="font-sans text-lg">Resultados perfectos en 10-15 minutos</span>
             </li>
-            <li className="flex items-start justify-center lg:justify-start">
+            <li className="flex items-start">
               <Check className="w-6 h-6 text-cta-primary mr-3 flex-shrink-0" />
               <span className="font-sans text-lg">Recetas saludables y deliciosas para toda la familia</span>
             </li>
           </ul>
 
-          <CtaButton href="#link-ancoragem" className="mt-8 mx-auto lg:mx-0">
+          <CtaButton href="#link-ancoragem" className="mt-8">
             💚 QUIERO MIS RECETAS AHORA
           </CtaButton>
         </div>

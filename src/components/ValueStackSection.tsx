@@ -25,10 +25,10 @@ const ValueStackSection: React.FC = () => {
           </div>
 
           <div className="bg-white p-4 rounded-b-xl">
-            <h3 className="font-sans font-semibold text-[#4F4F4F] text-3xl md:text-4xl text-center mt-4">
+            <h3 className="font-sans font-semibold text-[#4F4F4F] text-3xl md:text-4xl text-left mt-4">
               KIT COMPLETO AirFryer
             </h3>
-            <p className="font-sans text-[#4F4F4F] text-lg text-center mb-6">
+            <p className="font-sans text-[#4F4F4F] text-lg text-left mb-6">
               +100 recetas exclusivas + bonificaciones incluidas
             </p>
 
@@ -61,28 +61,30 @@ const ValueStackSection: React.FC = () => {
             </div>
 
             {/* Price Highlight */}
-            <p className="font-sans font-bold text-cta-primary text-3xl text-center mb-2">
+            <p className="font-sans font-bold text-cta-primary text-3xl text-left mb-2">
               🔥 Hoy solo: $5,90 USD
             </p>
             
             {/* Savings Message */}
-            <p className="font-sans text-xl text-center mb-6">
+            <p className="font-sans text-xl text-left mb-6">
               <span className="line-through text-urgency-red">Valor total: $103 USD</span>
             </p>
 
             {/* CTA PRINCIPAL */}
-            <CtaButton href="#" className="mx-auto mb-4">
-              SÍ, QUIERO MIS RECETAS AHORA
-            </CtaButton>
+            <div className="text-left">
+              <CtaButton href="#" className="mb-4">
+                SÍ, QUIERO MIS RECETAS AHORA
+              </CtaButton>
+            </div>
 
             {/* Post-CTA Text */}
-            <p className="font-sans text-lg text-dark-bg text-center mb-6">
+            <p className="font-sans text-lg text-dark-bg text-left mb-6">
               95% de descuento – acceso inmediato con pago único
             </p>
           </div>
           
           {/* Garantia Box */}
-          <div className="bg-dark-bg p-6 rounded-lg mt-6 border border-highlight-gold/50">
+          <div className="bg-dark-bg p-6 rounded-lg mt-6 border border-highlight-gold/50 text-left">
             <div className="flex items-center gap-4">
               <ShieldCheck className="w-12 h-12 text-highlight-gold flex-shrink-0" />
               <div>

@@ -6,7 +6,7 @@ const BeforeAfterSection: React.FC = () => {
   return (
     <section className="bg-light-bg text-dark-bg py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2 className="font-sans text-4xl md:text-5xl font-bold text-left mb-12">
           ANTES Y DESPUÉS
         </h2>
 
