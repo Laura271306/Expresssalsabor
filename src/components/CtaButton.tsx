@@ -38,12 +38,12 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
       ...anchorProps 
     } = props;
     
-    // Usamos 'a' tag para navegación
+    // Usamos 'a' tag para navegación. Usamos 'as unknown' para resolver la incompatibilidad de tipos de eventos (e.g., onCopy) entre HTMLButtonElement y HTMLAnchorElement.
     return (
       <a
         href={href}
         className={buttonClasses}
-        {...(anchorProps as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
+        {...((anchorProps as unknown) as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {children}
       </a>
