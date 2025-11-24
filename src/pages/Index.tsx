@@ -15,8 +15,15 @@ import NoChefNeededSection from "@/components/NoChefNeededSection";
 import SpecialOfferSection from "@/components/SpecialOfferSection";
 import FaqSection from "@/components/FaqSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
+import { useEffect } from "react";
+import { trackViewContent } from "@/utils/facebookPixel";
 
 const Index = () => {
+  useEffect(() => {
+    // Track ViewContent when the page loads
+    trackViewContent();
+  }, []);
+
   return (
     <div className="w-full min-h-screen">
       {/* Barra superior */}
