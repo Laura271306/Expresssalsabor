@@ -27,20 +27,33 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
     // 1. Track the CTA click for Facebook Pixel as InitiateCheckout
     trackInitiateCheckout();
 
-    // 2. Handle internal scrolling if applicable
-    if (href && href.startsWith('#')) {
-      event.preventDefault();
-      const targetId = href.substring(1);
-      const targetElement = document.getElementById(targetId);
-      
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-    
-    // 3. Execute original onClick if provided
+    // 2. Handle original onClick if provided
     if (onClick) {
       onClick(event as React.MouseEvent<HTMLButtonElement>);
+    }
+
+    if (href) {
+      const isExternalLink = !href.startsWith('#') && !href.startsWith('/');
+      
+      if (isExternalLink) {
+        // Prevent default navigation immediately
+        event.preventDefault();
+        
+        // Wait a tiny bit (50ms) to ensure the pixel request is sent, then navigate
+        setTimeout(() => {
+          window.location.href = href;
+        }, 50);
+      } else if (href.startsWith('#')) {
+        // Handle internal scrolling
+        event.preventDefault();
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+      // If it's a standard internal link (not starting with #), let default behavior proceed.
     }
   };
 
