@@ -15,6 +15,7 @@ import NoChefNeededSection from "@/components/NoChefNeededSection";
 import SpecialOfferSection from "@/components/SpecialOfferSection";
 import FaqSection from "@/components/FaqSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
+import TestPurchaseButton from "@/components/TestPurchaseButton"; // Import Test Button
 import { useEffect } from "react";
 import { trackViewContent } from "@/utils/facebookPixel";
 
@@ -29,7 +30,7 @@ const Index = () => {
       {/* Barra superior */}
       <UrgencyBanner />
       
-      {/* Secciones en orden */}
+      {/* Seções em ordem */}
       <HeroSection />
       <TheProblemSection />
       <WhatMakesUsUniqueSection />
@@ -49,6 +50,9 @@ const Index = () => {
       <SpecialOfferSection />
       <FaqSection />
       <FinalCtaSection />
+
+      {/* Botão de Teste de Compra (REMOVER APÓS O TESTE) */}
+      <TestPurchaseButton />
     </div>
   );
 };
