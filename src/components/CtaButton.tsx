@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { trackCtaClick } from '@/utils/facebookPixel';
+import { trackInitiateCheckout } from '@/utils/facebookPixel';
 
 interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
@@ -12,8 +12,8 @@ interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, variant = 'primary', onClick, ...props }) => {
   const baseClasses = "font-sans font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl text-white uppercase tracking-wider inline-flex items-center justify-center text-center";
 
-  // Usando colores definidos: cta-primary (verde) y urgency-red (final)
-  // La animación de pulso se aplica solo al primary
+  // Usando cores definidas: cta-primary (verde) e urgency-red (final)
+  // A animação de pulso se aplica apenas ao primary
   const primaryClasses = "bg-cta-primary hover:bg-green-600 shadow-cta-primary/50 animate-pulse-shadow";
   const finalClasses = "bg-urgency-red hover:bg-red-700 shadow-urgency-red/50";
 
@@ -24,8 +24,8 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
   );
 
   const handleCtaAction = (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
-    // 1. Track the CTA click for Facebook Pixel
-    trackCtaClick();
+    // 1. Track the CTA click for Facebook Pixel as InitiateCheckout
+    trackInitiateCheckout();
 
     // 2. Handle internal scrolling if applicable
     if (href && href.startsWith('#')) {
