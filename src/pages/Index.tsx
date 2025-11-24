@@ -5,7 +5,7 @@ import WhatMakesUsUniqueSection from "@/components/WhatMakesUsUniqueSection";
 import AirfryerMagicaSection from "@/components/AirfryerMagicaSection";
 import QuickPrepSection from "@/components/QuickPrepSection";
 import BenefitsSection from "@/components/BenefitsSection";
-import PriceComparisonBanner from "@/components/PriceComparisonBanner"; // Import new component
+import PriceComparisonBanner from "@/components/PriceComparisonBanner";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import SmallBonusesSection from "@/components/SmallBonusesSection";
@@ -15,7 +15,6 @@ import NoChefNeededSection from "@/components/NoChefNeededSection";
 import SpecialOfferSection from "@/components/SpecialOfferSection";
 import FaqSection from "@/components/FaqSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
-import TestPurchaseButton from "@/components/TestPurchaseButton"; // Import Test Button
 import { useEffect } from "react";
 import { trackViewContent } from "@/utils/facebookPixel";
 
@@ -37,7 +36,7 @@ const Index = () => {
       <AirfryerMagicaSection />
       <QuickPrepSection />
       <BenefitsSection />
-      <PriceComparisonBanner /> {/* New component added here */}
+      <PriceComparisonBanner />
       <TestimonialsSection />
       <BeforeAfterSection />
       
@@ -50,9 +49,6 @@ const Index = () => {
       <SpecialOfferSection />
       <FaqSection />
       <FinalCtaSection />
-
-      {/* Botão de Teste de Compra (REMOVER APÓS O TESTE) */}
-      <TestPurchaseButton />
     </div>
   );
 };
