@@ -14,6 +14,7 @@ import BonusSection from "@/components/BonusSection";
 import CompatibilitySection from "@/components/CompatibilitySection";
 import NoChefNeededSection from "@/components/NoChefNeededSection";
 import SpecialOfferSection from "@/components/SpecialOfferSection";
+import TrustBadgesSection from "@/components/TrustBadgesSection";
 import FaqSection from "@/components/FaqSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
 import { useEffect } from "react";
@@ -35,7 +36,7 @@ const Index = () => {
       <TheProblemSection />
       <WhatMakesUsUniqueSection />
       <AirfryerMagicaSection />
-      <SocialProofSection /> {/* Novo componente adicionado aqui */}
+      <SocialProofSection />
       <QuickPrepSection />
       <BenefitsSection />
       <PriceComparisonBanner />
@@ -49,6 +50,7 @@ const Index = () => {
       <CompatibilitySection />
       <NoChefNeededSection />
       <SpecialOfferSection />
+      <TrustBadgesSection /> {/* Novo componente adicionado aqui */}
       <FaqSection />
       <FinalCtaSection />
     </div>
