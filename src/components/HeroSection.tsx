@@ -54,8 +54,7 @@ const HeroSection: React.FC = () => {
             <img 
               src="/images/hero-airfryer-meal.webp" 
               alt="Air Fryer con comida crujiente y deliciosa" 
-              className="w-full h-auto rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-highlight-gold/50 object-cover"
-              style={{ height: '400px' }}
+              className="w-full h-64 md:h-96 lg:h-auto max-h-[500px] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-highlight-gold/50 object-cover"
               loading="lazy"
             />
             {/* Floating element for "+600 recetas" - Now visible */}
