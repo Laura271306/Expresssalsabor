@@ -15,7 +15,7 @@ const TrustBadgesSection: React.FC = () => {
     <section className="bg-dark-bg py-10 px-6">
       <div className="max-w-4xl mx-auto">
         <h3 className="font-sans text-lg font-bold text-gray-400 text-center mb-8 uppercase">
-          Compra Segura e Garantida
+          Compra Segura y Garantizada
         </h3>
         
         <div className="grid grid-cols-3 gap-4 md:gap-8">

@@ -19,7 +19,7 @@ const PriceComparisonBanner: React.FC = () => {
             Libro físico de recetas: <span className="text-urgency-red">$25-40 USD</span> (Con el mismo contenido)
           </p>
           <p className="font-sans text-base text-gray-700">
-            Y entregamos mucho más. <span className="font-bold text-cta-primary">Descarga rápida y acceso en cualquier lugar</span> por el celular, tablet o computador.
+            Y entregamos mucho más. <span className="font-bold text-cta-primary">Descarga rápida y acceso en cualquier lugar por el móvil, tablet o computadora.</span>
           </p>
         </div>
       </div>

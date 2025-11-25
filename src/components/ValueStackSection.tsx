@@ -10,7 +10,7 @@ const ValueStackSection: React.FC = () => {
     { item: "Menús + listas de compras", value: "US$ 17", isTotal: false },
     { item: "Tablas de tiempos/temperaturas", value: "US$ 12", isTotal: false },
     { item: "Guía de limpieza", value: "US$ 7", isTotal: false },
-    { item: "Bônus exclusivos (4)", value: "US$ 39", isTotal: false },
+    { item: "Bonos exclusivos (4)", value: "US$ 39", isTotal: false },
     { item: "VALOR TOTAL", value: "US$ 103", isTotal: true },
   ];
 
@@ -93,7 +93,7 @@ const ValueStackSection: React.FC = () => {
               <ShieldCheck className="w-12 h-12 text-highlight-gold flex-shrink-0" />
               <div>
                 <h4 className="font-sans font-bold text-white text-xl md:text-2xl mb-1">
-                  Garantia de 14 Dias
+                  Garantía de 14 Días
                 </h4>
                 <p className="font-sans text-white text-base leading-snug">
                   Pruébalo durante 14 días sin riesgo. Si no te convence el contenido, te devolvemos tu dinero.
