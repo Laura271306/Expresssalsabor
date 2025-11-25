@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import TheProblemSection from "@/components/TheProblemSection";
 import WhatMakesUsUniqueSection from "@/components/WhatMakesUsUniqueSection";
 import AirfryerMagicaSection from "@/components/AirfryerMagicaSection";
+import SocialProofSection from "@/components/SocialProofSection";
 import QuickPrepSection from "@/components/QuickPrepSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import PriceComparisonBanner from "@/components/PriceComparisonBanner";
@@ -34,6 +35,7 @@ const Index = () => {
       <TheProblemSection />
       <WhatMakesUsUniqueSection />
       <AirfryerMagicaSection />
+      <SocialProofSection /> {/* Novo componente adicionado aqui */}
       <QuickPrepSection />
       <BenefitsSection />
       <PriceComparisonBanner />
