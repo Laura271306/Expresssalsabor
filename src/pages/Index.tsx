@@ -17,6 +17,7 @@ import SpecialOfferSection from "@/components/SpecialOfferSection";
 import TrustBadgesSection from "@/components/TrustBadgesSection";
 import FaqSection from "@/components/FaqSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
+import GuaranteeSection from "@/components/GuaranteeSection"; // Importando novo componente
 import { useEffect } from "react";
 import { trackViewContent } from "@/utils/facebookPixel";
 
@@ -50,7 +51,8 @@ const Index = () => {
       <CompatibilitySection />
       <NoChefNeededSection />
       <SpecialOfferSection />
-      <TrustBadgesSection /> {/* Novo componente adicionado aqui */}
+      <TrustBadgesSection />
+      <GuaranteeSection /> {/* Adicionado aqui, acima do FAQ */}
       <FaqSection />
       <FinalCtaSection />
     </div>
