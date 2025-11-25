@@ -4,6 +4,16 @@ import CtaButton from './CtaButton';
 import { Gift, Check } from 'lucide-react';
 
 const SpecialOfferSection: React.FC = () => {
+  const valueStack = [
+    { item: "+600 Recetas", value: "US$ 39" },
+    { item: "Guía de Compras Inteligentes", value: "US$ 25" },
+    { item: "Tabla de Tiempos y Temperaturas", value: "US$ 15" },
+    { item: "Menús Semanales", value: "US$ 10" },
+    { item: "+ Bonos Exclusivos", value: "US$ 5" },
+  ];
+
+  const totalValue = 94; // 39 + 25 + 15 + 10 + 5 = 94
+
   return (
     <section className="bg-dark-bg text-white py-20 px-6 border-t border-highlight-gold/20">
       <div className="max-w-md mx-auto">
@@ -25,14 +35,26 @@ const SpecialOfferSection: React.FC = () => {
             loading="lazy"
           />
 
-          <h3 className="font-sans text-2xl font-bold mb-2">KIT COMPLETO AirFryer</h3>
-          <p className="font-sans text-lg mb-4">+600 recetas sin gluten + bonificaciones incluidas</p>
+          <h3 className="font-sans text-2xl font-bold mb-4 text-dark-bg text-left">
+            Valor Total del Kit Completo: <span className="line-through text-gray-500">${totalValue} USD</span>
+          </h3>
 
-          <div className="mb-6 p-4 bg-gray-100 rounded-lg border border-gray-300">
-            <p className="font-sans text-xl mb-2">
-              <span className="line-through text-gray-500">Valor total: $94 USD</span>
+          {/* Detailed Value Stack */}
+          <div className="mb-6 p-4 bg-gray-100 rounded-lg border border-gray-300 text-left">
+            {valueStack.map((item, index) => (
+              <div key={index} className="flex justify-between font-sans text-base text-gray-700 py-1 border-b border-gray-200 last:border-b-0">
+                <span>{item.item}</span>
+                <span className="font-medium">{item.value}</span>
+              </div>
+            ))}
+          </div>
+          
+          {/* Price Highlight */}
+          <div className="mb-6 p-4 bg-cta-primary/10 rounded-lg border border-cta-primary">
+            <p className="font-sans text-xl mb-2 text-dark-bg">
+              <span className="line-through text-gray-500">Valor total: ${totalValue} USD</span>
             </p>
-            <p className="font-sans text-xl text-urgency-red font-bold">
+            <p className="font-sans text-3xl text-urgency-red font-bold">
               🔥 Hoy solo: $5,90 USD
             </p>
           </div>
