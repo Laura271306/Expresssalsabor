@@ -17,7 +17,7 @@ const FinalCtaSection: React.FC = () => {
         </div>
 
         <p className="font-sans text-white text-sm mt-5 mb-10 text-left">
-          Acceso inmediato. Garantia de 7 dias.
+          Acceso inmediato. Garantía de 14 días.
         </p>
 
         <p className="font-sans text-gray-400 text-xs mt-10 text-left">
