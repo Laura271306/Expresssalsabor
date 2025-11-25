@@ -7,22 +7,27 @@ const SmallBonusesSection: React.FC = () => {
     {
       icon: <ListChecks className="w-8 h-8" />,
       title: "Los 10 errores que arruinan tus recetas",
-      description: "Guía esencial para evitar los fallos más comunes y conseguir resultados crujientes siempre."
+      description: "Guía para evitar los fallos más comunes"
     },
     {
       icon: <Cake className="w-8 h-8" />,
       title: "Paquete de postres en 10–12 minutos",
-      description: "Recetas de postres deliciosos y rápidos, listos en minutos para satisfacer tu antojo sin culpa."
+      description: "Deliciosos postres listos en minutos"
+    },
+    {
+      icon: <ShoppingCart className="w-8 h-8" />,
+      title: "Lista inteligente de compras",
+      description: "Optimiza tus compras para ahorrar tiempo y dinero"
     },
     {
       icon: <Leaf className="w-8 h-8" />,
       title: "Paquete especial sin gluten",
-      description: "Recetas deliciosas y seguras, perfectas para dietas especiales o restricciones alimentarias."
+      description: "Recetas deliciosas para dietas especiales"
     },
     {
       icon: <Gift className="w-8 h-8" />,
       title: "Sorpresas adicionales dentro",
-      description: "Acceso a bonos exclusivos y contenido extra que se añade periódicamente sin costo adicional."
+      description: "Bonos exclusivos solo para ti"
     }
   ];
 
@@ -36,7 +41,7 @@ const SmallBonusesSection: React.FC = () => {
           Acceso a recursos valiosos que potencian tus resultados
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {bonuses.map((bonus, index) => (
             <div key={index} className="bg-[#282425] rounded-xl p-6 shadow-2xl border-2 border-highlight-gold transition-transform hover:scale-[1.02]">
               <div className="text-4xl text-highlight-gold mb-4 flex items-center justify-center w-14 h-14 bg-highlight-gold/10 rounded-full">
