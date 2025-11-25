@@ -60,11 +60,11 @@ const SpecialOfferSection: React.FC = () => {
           </div>
           
           {/* 95% Destacado */}
-          <p className="font-sans text-8xl font-extrabold text-urgency-red mb-6 leading-none">
+          <p className="font-sans text-8xl font-extrabold text-urgency-red mb-2 leading-none">
             95%
           </p>
           <p className="font-sans text-2xl font-bold text-cta-primary mb-6">
-            DE DESCUENTO
+            DE DESCUENTO <span className="text-highlight-gold">BLACK FRIDAY</span>
           </p>
 
           <CtaButton href="https://pay.hotmart.com/I102633587P?checkoutMode=10" className="text-xl px-8 py-4 mb-4 mx-auto">
