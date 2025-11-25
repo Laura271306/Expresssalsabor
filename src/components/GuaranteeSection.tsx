@@ -24,26 +24,26 @@ const GuaranteeSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
           <div className="bg-[#282425] p-6 rounded-xl border-t-4 border-cta-primary shadow-xl">
             <h4 className="font-sans text-lg font-bold text-cta-primary mb-3 flex items-center">
-              <Check className="w-5 h-5 mr-2" /> 1. Peça direto pelo site da Hotmart
+              <Check className="w-5 h-5 mr-2" /> 1. Solicita directamente en la plataforma Hotmart
             </h4>
             <p className="font-sans text-sm text-gray-400">
-              O processo é simples e rápido, feito diretamente na plataforma de pagamento.
+              El proceso es simple y rápido, realizado directamente en la plataforma de pago.
             </p>
           </div>
           <div className="bg-[#282425] p-6 rounded-xl border-t-4 border-cta-primary shadow-xl">
             <h4 className="font-sans text-lg font-bold text-cta-primary mb-3 flex items-center">
-              <Check className="w-5 h-5 mr-2" /> 2. Receba o reembolso em até 48 horas
+              <Check className="w-5 h-5 mr-2" /> 2. Recibe el reembolso en hasta 48 horas
             </h4>
             <p className="font-sans text-sm text-gray-400">
-              Após a solicitação, o estorno é processado rapidamente.
+              Tras la solicitud, el reembolso se procesa rápidamente.
             </p>
           </div>
           <div className="bg-[#282425] p-6 rounded-xl border-t-4 border-cta-primary shadow-xl">
             <h4 className="font-sans text-lg font-bold text-cta-primary mb-3 flex items-center">
-              <Check className="w-5 h-5 mr-2" /> 3. Pronto! Seu dinheiro volta à sua conta.
+              <Check className="w-5 h-5 mr-2" /> 3. ¡Listo! Tu dinero vuelve a tu cuenta.
             </h4>
             <p className="font-sans text-sm text-gray-400">
-              Sem burocracia, garantimos sua satisfação total.
+              Sin burocracia, garantizamos tu satisfacción total.
             </p>
           </div>
         </div>
