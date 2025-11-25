@@ -9,7 +9,6 @@ import BenefitsSection from "@/components/BenefitsSection";
 import PriceComparisonBanner from "@/components/PriceComparisonBanner";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
-import SmallBonusesSection from "@/components/SmallBonusesSection";
 import BonusSection from "@/components/BonusSection";
 import CompatibilitySection from "@/components/CompatibilitySection";
 import NoChefNeededSection from "@/components/NoChefNeededSection";
@@ -17,7 +16,7 @@ import SpecialOfferSection from "@/components/SpecialOfferSection";
 import TrustBadgesSection from "@/components/TrustBadgesSection";
 import FaqSection from "@/components/FaqSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
-import GuaranteeSection from "@/components/GuaranteeSection"; // Importando novo componente
+import GuaranteeSection from "@/components/GuaranteeSection";
 import { useEffect } from "react";
 import { trackViewContent } from "@/utils/facebookPixel";
 
@@ -45,14 +44,14 @@ const Index = () => {
       <BeforeAfterSection />
       
       {/* Bonos */}
-      <SmallBonusesSection />
+      {/* SmallBonusesSection removido */}
       <BonusSection />
       
       <CompatibilitySection />
       <NoChefNeededSection />
       <SpecialOfferSection />
       <TrustBadgesSection />
-      <GuaranteeSection /> {/* Adicionado aqui, acima do FAQ */}
+      <GuaranteeSection />
       <FaqSection />
       <FinalCtaSection />
     </div>

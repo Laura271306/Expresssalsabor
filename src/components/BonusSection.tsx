@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShoppingBag, Clock, CalendarCheck } from 'lucide-react';
+import { ShoppingBag, Clock, CalendarCheck, ListChecks, Cake, Leaf, Gift } from 'lucide-react';
 import SectionWrapper from './SectionWrapper';
 import BonusCard from './BonusCard';
 
@@ -24,6 +24,35 @@ const bonuses = [
     originalPrice: "De $25,00",
     imagePosition: 'right' as const,
     icon: <CalendarCheck />,
+  },
+  // Novos bônus adicionados
+  {
+    title: "Los 10 errores que arruinan tus recetas",
+    description: "Guía esencial para identificar y corregir los fallos más comunes que impiden que tus platos queden crujientes y perfectos.",
+    originalPrice: "De $15,00",
+    imagePosition: 'left' as const,
+    icon: <ListChecks />,
+  },
+  {
+    title: "Paquete de postres en 10–12 minutos",
+    description: "Recetas rápidas y deliciosas para satisfacer tu antojo de dulce sin pasar horas en la cocina. ¡Postres listos en un abrir y cerrar de ojos!",
+    originalPrice: "De $18,00",
+    imagePosition: 'right' as const,
+    icon: <Cake />,
+  },
+  {
+    title: "Paquete especial sin gluten",
+    description: "Una colección de recetas aptas para dietas sin gluten, garantizando sabor y salud sin comprometer la textura crujiente de tu Air Fryer.",
+    originalPrice: "De $22,00",
+    imagePosition: 'left' as const,
+    icon: <Leaf />,
+  },
+  {
+    title: "Sorpresas adicionales dentro",
+    description: "Acceso a contenido exclusivo y actualizaciones futuras que te ayudarán a llevar tus habilidades con la Air Fryer al siguiente nivel.",
+    originalPrice: "De $10,00",
+    imagePosition: 'right' as const,
+    icon: <Gift />,
   },
 ];
 
