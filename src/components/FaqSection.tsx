@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: "¿Formato y acceso?",
-    answer: "Formato digital PDF + videos en plataforma privada. Acceso de por vida, sin renovación.",
+    answer: "Formato digital PDF. Acceso de por vida, sin renovación.",
   },
   {
     question: "¿Reembolso?",
