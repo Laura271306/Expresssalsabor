@@ -17,6 +17,7 @@ import TrustBadgesSection from "@/components/TrustBadgesSection";
 import FaqSection from "@/components/FaqSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
+import EasierThanGoogleSection from "@/components/EasierThanGoogleSection";
 import { useEffect } from "react";
 import { trackViewContent } from "@/utils/facebookPixel";
 
@@ -39,6 +40,7 @@ const Index = () => {
       <SocialProofSection />
       <QuickPrepSection />
       <BenefitsSection />
+      <EasierThanGoogleSection />
       <PriceComparisonBanner />
       <TestimonialsSection />
       <BeforeAfterSection />
