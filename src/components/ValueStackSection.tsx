@@ -59,13 +59,13 @@ const ValueStackSection: React.FC = () => {
               {/* Price Today Row */}
               <div className="flex justify-between items-center p-4 bg-[#F4F4F4] border-t-2 border-highlight-gold">
                 <span className="font-sans text-lg font-bold text-dark-bg">PRECIO HOY (95% descuento)</span>
-                <span className="font-sans text-2xl font-bold text-cta-primary">$5,90</span>
+                <span className="font-sans text-2xl font-bold text-cta-primary">$6,90</span>
               </div>
             </div>
 
             {/* Price Highlight */}
             <p className="font-sans font-bold text-cta-primary text-3xl text-left mb-2">
-              🔥 Hoy solo: $5,90 USD
+              🔥 Hoy solo: $6,90 USD
             </p>
             
             {/* Savings Message */}

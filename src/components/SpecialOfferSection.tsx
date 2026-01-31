@@ -55,7 +55,7 @@ const SpecialOfferSection: React.FC = () => {
               <span className="line-through text-gray-500">Valor total: ${totalValue} USD</span>
             </p>
             <p className="font-sans text-3xl text-urgency-red font-bold">
-              🔥 Hoy solo: $5,90 USD
+              🔥 Hoy solo: $6,90 USD
             </p>
           </div>
           
