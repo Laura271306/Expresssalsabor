@@ -67,7 +67,7 @@ const SpecialOfferSection: React.FC = () => {
             DE DESCUENTO <span className="text-highlight-gold">BLACK FRIDAY</span>
           </p>
 
-          <CtaButton href="https://pay.hotmart.com/I102633587P?checkoutMode=10" className="text-xl px-8 py-4 mb-4 mx-auto">
+          <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" className="text-xl px-8 py-4 mb-4 mx-auto">
             SÍ, QUIERO MIS RECETAS AHORA
           </CtaButton>
 
@@ -94,7 +94,7 @@ const SpecialOfferSection: React.FC = () => {
           ¿Aún no estás seguro? Mira lo que dicen nuestros clientes satisfechos 👇
         </p>
         <div className="text-left">
-          <CtaButton href="https://pay.hotmart.com/I102633587P?checkoutMode=10" className="text-xl px-8 py-4 bg-cta-primary hover:bg-green-600 shadow-cta-primary/50">
+          <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" className="text-xl px-8 py-4 bg-cta-primary hover:bg-green-600 shadow-cta-primary/50">
             ACCEDER AHORA - 95% OFF
           </CtaButton>
         </div>

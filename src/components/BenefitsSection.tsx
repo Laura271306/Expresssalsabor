@@ -49,7 +49,7 @@ const BenefitsSection: React.FC = () => {
         </div>
 
         <div className="text-left mt-12">
-          <CtaButton href="https://pay.hotmart.com/I102633587P?checkoutMode=10" className="text-xl px-8 py-4">
+          <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" className="text-xl px-8 py-4">
             💚 SÍ, QUIERO LAS RECETAS
           </CtaButton>
         </div>

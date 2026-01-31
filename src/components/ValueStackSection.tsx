@@ -76,7 +76,7 @@ const ValueStackSection: React.FC = () => {
 
             {/* CTA PRINCIPAL */}
             <div className="text-left">
-              <CtaButton href="https://pay.hotmart.com/I102633587P?checkoutMode=10" className="mb-4">
+              <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" className="mb-4">
                 SÍ, QUIERO MIS RECETAS AHORA
               </CtaButton>
             </div>

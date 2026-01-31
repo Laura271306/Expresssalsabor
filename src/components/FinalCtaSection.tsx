@@ -11,7 +11,7 @@ const FinalCtaSection: React.FC = () => {
         </h2>
 
         <div className="text-left">
-          <CtaButton href="https://pay.hotmart.com/I102633587P?checkoutMode=10" variant="final" className="text-xl px-12 py-6">
+          <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" variant="final" className="text-xl px-12 py-6">
             Empieza hoy
           </CtaButton>
         </div>
