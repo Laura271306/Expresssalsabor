@@ -10,7 +10,7 @@ const GuaranteeSection: React.FC = () => {
         <div className="inline-flex items-center bg-highlight-gold/10 text-highlight-gold p-3 rounded-full mb-6">
           <ShieldCheck className="w-8 h-8 mr-3" />
           <h2 className="font-sans text-2xl md:text-3xl font-bold uppercase tracking-wider">
-            🛡️ GARANTIA INCONDICIONAL DE 14 DIAS
+            🛡️ GARANTIA INCONDICIONAL DE 7 DIAS
           </h2>
         </div>
 

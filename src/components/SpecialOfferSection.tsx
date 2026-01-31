@@ -80,9 +80,9 @@ const SpecialOfferSection: React.FC = () => {
             <div className="flex items-center gap-3">
               <Gift className="w-8 h-8 text-highlight-gold flex-shrink-0" />
               <div>
-                <h4 className="font-sans font-bold text-lg">Garantía de 14 Días</h4>
+                <h4 className="font-sans font-bold text-lg">Garantía de 7 Días</h4>
                 <p className="font-sans text-sm">
-                  Pruébalo durante 14 días sin riesgo. Si no te convence el contenido, te devolvemos tu dinero.
+                  Pruébalo durante 7 días sin riesgo. Si no te convence el contenido, te devolvemos tu dinero.
                 </p>
               </div>
             </div>

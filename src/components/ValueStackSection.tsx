@@ -93,10 +93,10 @@ const ValueStackSection: React.FC = () => {
               <ShieldCheck className="w-12 h-12 text-highlight-gold flex-shrink-0" />
               <div>
                 <h4 className="font-sans font-bold text-white text-xl md:text-2xl mb-1">
-                  Garantía de 14 Días
+                  Garantía de 7 Días
                 </h4>
                 <p className="font-sans text-white text-base leading-snug">
-                  Pruébalo durante 14 días sin riesgo. Si no te convence el contenido, te devolvemos tu dinero.
+                  Pruébalo durante 7 días sin riesgo. Si no te convence el contenido, te devolvemos tu dinero.
                 </p>
               </div>
             </div>

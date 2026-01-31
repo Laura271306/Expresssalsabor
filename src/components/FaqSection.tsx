@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     question: "¿Reembolso?",
-    answer: "Garantía 100% de 14 días. Si no estás satisfecho, devolvemos tu dinero sin preguntas.",
+    answer: "Garantía 100% de 7 días. Si no estás satisfecho, devolvemos tu dinero sin preguntas.",
   },
 ];
 
