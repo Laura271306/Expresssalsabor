@@ -24,13 +24,17 @@ const AirfryerMagicaSection: React.FC = () => {
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark-bg mb-4">
             AIRFRYER MÁGICA
           </h2>
-          <div className="flex flex-wrap gap-4 mb-8">
+          <div className="flex flex-wrap gap-4 mb-4">
             {features.map((f, i) => (
               <span key={i} className="flex items-center gap-2 bg-highlight-gold/10 text-highlight-gold px-3 py-1 rounded-full text-sm font-bold">
                 {f.icon} {f.text}
               </span>
             ))}
           </div>
+
+          <p className="font-sans text-lg font-bold text-cta-primary mb-6 italic">
+            “Pensado para decidir rápido, no para estudiar.”
+          </p>
           
           <p className="font-sans text-xl text-gray-700 mb-2 leading-relaxed">
             No es solo un libro, es el <span className="font-bold text-dark-bg">mapa exacto</span> para que tu freidora deje de ser un adorno y se convierta en tu mejor aliada.

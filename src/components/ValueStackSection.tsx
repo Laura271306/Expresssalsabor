@@ -29,6 +29,10 @@ const ValueStackSection: React.FC = () => {
             <h3 className="font-serif font-semibold text-[#4F4F4F] text-3xl md:text-4xl text-left mt-4">
               KIT COMPLETO AirFryer
             </h3>
+
+            <p className="font-sans text-sm font-bold text-highlight-gold mt-2 mb-4 text-left">
+              “No es para leer, es para usar.”
+            </p>
             
             <div className="border border-gray-300 rounded-md overflow-hidden mb-6 mt-4">
               {tableData.map((row, index) => (
@@ -50,8 +54,8 @@ const ValueStackSection: React.FC = () => {
               <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" className="mb-2">
                 Quiero cocinar rápido, fácil y sin estrés
               </CtaButton>
-              <p className="text-[10px] text-gray-500 text-center font-sans mb-4">
-                No es para leer una vez. Es para usar todas las semanas.
+              <p className="text-[12px] text-gray-600 text-center font-sans font-bold mt-2">
+                Acceso inmediato. Sin complicaciones.
               </p>
             </div>
           </div>

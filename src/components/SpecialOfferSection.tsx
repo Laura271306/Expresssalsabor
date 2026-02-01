@@ -67,9 +67,12 @@ const SpecialOfferSection: React.FC = () => {
             DE DESCUENTO
           </p>
 
-          <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" className="text-xl px-8 py-4 mb-4 mx-auto">
+          <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" className="text-xl px-8 py-4 mb-2 mx-auto">
             SÍ, QUIERO MIS RECETAS AHORA
           </CtaButton>
+          <p className="text-[12px] text-gray-600 font-sans font-bold mb-4">
+            Si no te facilita la vida, no te quedes con esto.
+          </p>
 
           <p className="font-sans text-sm text-gray-600 mb-6">
             95% de descuento – acceso inmediato con pago único
@@ -97,6 +100,9 @@ const SpecialOfferSection: React.FC = () => {
           <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" className="text-xl px-8 py-4 bg-cta-primary hover:bg-green-600 shadow-cta-primary/50">
             ACCEDER AHORA - 95% OFF
           </CtaButton>
+          <p className="text-[12px] text-gray-500 font-sans mt-2">
+            El riesgo no es tuyo.
+          </p>
         </div>
       </div>
     </section>

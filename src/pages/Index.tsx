@@ -21,6 +21,8 @@ import FinalCtaSection from "@/components/FinalCtaSection";
 import RestZone from "@/components/RestZone";
 import CompatibilitySection from "@/components/CompatibilitySection";
 import QuickPrepSection from "@/components/QuickPrepSection";
+import ValueStackSection from "@/components/ValueStackSection";
+import HowItWorksInPractice from "@/components/HowItWorksInPractice";
 import CtaButton from "@/components/CtaButton";
 import { useEffect } from "react";
 import { trackViewContent } from "@/utils/facebookPixel";
@@ -37,16 +39,40 @@ const Index = () => {
       
       <TheProblemSection />
       <BeforeAfterSection />
+
+      {/* Alivio Emocional / Normalización */}
+      <div className="bg-light-bg py-10 px-6 text-center">
+        <p className="font-serif italic text-2xl text-dark-bg/80 max-w-3xl mx-auto leading-relaxed">
+          “Si ya intentaste organizarte y no funcionó, el problema no eras tú. <span className="text-highlight-gold font-bold">Era el método.</span>”
+        </p>
+      </div>
+
       <UserProfilesSection />
       
       <RestZone text="Hasta aquí, ¿ya te viste usando esto en tu día a día?" />
 
       <CrispMethodSection />
       <EasierThanGoogleSection />
+      
+      {/* Repetición Clave 1 */}
+      <div className="bg-white py-6 px-6 text-center">
+        <p className="font-sans text-xl font-bold text-dark-bg">
+          Más sencillo que perderse en Google.
+        </p>
+      </div>
+
       <AirfryerMagicaSection />
       <NoChefNeededSection />
       
       <CompatibilitySection />
+
+      {/* Repetición Clave 2 */}
+      <div className="bg-dark-bg py-6 px-6 text-center border-t border-gray-800">
+        <p className="font-sans text-xl font-bold text-highlight-gold">
+          Funciona incluso si odias cocinar.
+        </p>
+      </div>
+
       <QuickPrepSection />
       
       <SocialProofSection />
@@ -62,6 +88,14 @@ const Index = () => {
       <RestZone text="¿Te imaginas recuperar 40 minutos de tu tarde hoy mismo?" />
 
       <BenefitsSection />
+
+      {/* Repetición Clave 3 */}
+      <div className="bg-light-bg py-6 px-6 text-center border-y border-gray-200">
+        <p className="font-sans text-xl font-bold text-dark-bg">
+          Diseñado para comidas reales de tu rutina diaria.
+        </p>
+      </div>
+
       <TestimonialsSection />
       
       <RestZone text="El miedo a fallar termina cuando tienes el paso a paso exacto." />
@@ -69,6 +103,17 @@ const Index = () => {
       <BonusSection />
       <PriceComparisonBanner />
       <DeliveryMethodSection />
+
+      {/* Frase de decisión + bloque de uso */}
+      <div className="bg-white pt-20 pb-10 px-6 text-center">
+        <p className="font-serif text-3xl font-bold text-dark-bg mb-10">
+          Si esto ya te hace sentido, no necesitas pensarlo tanto.
+        </p>
+      </div>
+      
+      <HowItWorksInPractice />
+      <ValueStackSection />
+      
       <SpecialOfferSection />
       
       <TrustBadgesSection />
