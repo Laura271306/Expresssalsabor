@@ -48,7 +48,7 @@ const NoChefNeededSection: React.FC = () => {
 
         <div className="text-left mt-12">
           <CtaButton 
-            href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10"
+            href="#link-ancoragem"
             variant="primary" 
             className="bg-highlight-gold hover:bg-yellow-600 text-dark-bg text-xl px-8 py-4 shadow-highlight-gold/50"
           >

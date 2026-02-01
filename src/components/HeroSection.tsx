@@ -4,17 +4,12 @@ import CtaButton from './CtaButton';
 import { BookOpen, Check } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
-  // Eliminamos useIsMobile ya que la alineación será siempre 'text-left'
-  
   return (
     <section className="bg-dark-bg text-white py-20 md:py-32 px-6 relative overflow-hidden">
-      {/* Sutil fondo de textura para sensación premium */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff33_1px,transparent_1px)] [background-size:16px_16px]"></div>
       
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-        {/* Contenido de texto */}
         <div className="space-y-6 md:space-y-8 text-left">
-          {/* BESTSELLER Badge */}
           <div className="inline-block bg-cta-primary text-dark-bg font-sans font-bold text-sm px-3 py-1 rounded-full mb-4 shadow-lg">
             ✨ BESTSELLER: +5,000 Clientes Satisfechos
           </div>
@@ -42,15 +37,13 @@ const HeroSection: React.FC = () => {
             </li>
           </ul>
 
-          <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" className="mt-8">
+          <CtaButton href="#link-ancoragem" className="mt-8">
             💚 QUIERO MIS RECETAS AHORA
           </CtaButton>
         </div>
 
-        {/* Imagen Placeholder (Simulando un mockup 3D del libro) */}
         <div className="flex justify-center lg:justify-end">
           <div className="relative w-full max-w-md">
-            {/* High-quality image placeholder - Simulating the image of the family with the air fryer */}
             <img 
               src="/images/hero-airfryer-meal.webp" 
               alt="Air Fryer con comida crujiente y deliciosa" 
@@ -58,7 +51,6 @@ const HeroSection: React.FC = () => {
               style={{ height: '400px' }}
               loading="lazy"
             />
-            {/* Floating element for "+600 recetas" - Now visible */}
             <div className="absolute -top-4 -right-4 bg-urgency-red text-white rounded-full p-3 px-6 font-bold text-lg shadow-xl rotate-3">
                 +600 Recetas
             </div>
