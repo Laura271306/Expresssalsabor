@@ -33,9 +33,13 @@ const HeroSection: React.FC = () => {
             </li>
             <li className="flex items-start">
               <Check className="w-6 h-6 text-cta-primary mr-3 flex-shrink-0" />
-              <span className="font-sans text-lg">Recetas saludables y deliciosas para toda la familia</span>
+              <span className="font-sans text-lg"><strong>No necesitas medir, calcular ni improvisar.</strong></span>
             </li>
           </ul>
+
+          <p className="font-sans text-highlight-gold font-bold text-lg italic">
+            "Si sabes presionar botones, sabes usar este método."
+          </p>
 
           <CtaButton href="#link-ancoragem" className="mt-8">
             Quiero dejar de perder tiempo en la cocina

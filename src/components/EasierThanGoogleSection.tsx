@@ -25,7 +25,7 @@ const EasierThanGoogleSection: React.FC = () => {
   const benefitPoints = [
     { icon: <Clock className="w-5 h-5 text-highlight-gold" />, text: "Tiempos y temperaturas exactas garantizadas." },
     { icon: <Smartphone className="w-5 h-5 text-highlight-gold" />, text: "Acceso de por vida en móvil, tablet o PC." },
-    { icon: <BookOpen className="w-5 h-5 text-highlight-gold" />, text: "Pago único, sin suscripciones ni anuncios." },
+    { icon: <BookOpen className="w-5 h-5 text-highlight-gold" />, text: "Más fácil que seguir un video de YouTube." },
   ];
 
   return (
