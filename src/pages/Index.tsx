@@ -5,14 +5,11 @@ import BeforeAfterSection from "@/components/BeforeAfterSection";
 import CrispMethodSection from "@/components/CrispMethodSection";
 import AirfryerMagicaSection from "@/components/AirfryerMagicaSection";
 import SocialProofSection from "@/components/SocialProofSection";
-import QuickPrepSection from "@/components/QuickPrepSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import CompatibilitySection from "@/components/CompatibilitySection";
 import BonusSection from "@/components/BonusSection";
 import PriceComparisonBanner from "@/components/PriceComparisonBanner";
 import DeliveryMethodSection from "@/components/DeliveryMethodSection";
-import ValueStackSection from "@/components/ValueStackSection";
 import SpecialOfferSection from "@/components/SpecialOfferSection";
 import TrustBadgesSection from "@/components/TrustBadgesSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
@@ -51,19 +48,16 @@ const Index = () => {
         </CtaButton>
       </div>
 
-      <QuickPrepSection />
       <RestZone text="¿Te imaginas recuperar 40 minutos de tu tarde hoy mismo?" />
 
       <BenefitsSection />
       <TestimonialsSection />
       
-      <CompatibilitySection />
       <RestZone text="El miedo a fallar termina cuando tienes el paso a paso exacto." />
       
       <BonusSection />
       <PriceComparisonBanner />
       <DeliveryMethodSection />
-      <ValueStackSection />
       <SpecialOfferSection />
       
       <TrustBadgesSection />

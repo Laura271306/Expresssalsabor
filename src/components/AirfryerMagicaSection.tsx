@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { CookingPot, Check, Zap, Clock, Thermometer } from 'lucide-react';
+import { CookingPot, Check, Zap, Clock, Thermometer, Pizza, Cookie, Beef, Timer } from 'lucide-react';
 import CtaButton from './CtaButton';
 
 const AirfryerMagicaSection: React.FC = () => {
@@ -8,6 +8,13 @@ const AirfryerMagicaSection: React.FC = () => {
     { icon: <Zap className="w-5 h-5" />, text: "Técnicas de chefs" },
     { icon: <Clock className="w-5 h-5" />, text: "Tiempos exactos" },
     { icon: <Thermometer className="w-5 h-5" />, text: "Calor optimizado" },
+  ];
+
+  const recipeTypes = [
+    { title: "Cenas en 12 min", icon: <Beef className="w-5 h-5" /> },
+    { title: "Pizzas crujientes", icon: <Pizza className="w-5 h-5" /> },
+    { title: "Postres Express", icon: <Cookie className="w-5 h-5" /> },
+    { title: "Carnes Doradas", icon: <Timer className="w-5 h-5" /> }
   ];
 
   return (
@@ -28,6 +35,15 @@ const AirfryerMagicaSection: React.FC = () => {
           <p className="font-sans text-xl text-gray-700 mb-6 leading-relaxed">
             No es solo un libro, es el <span className="font-bold text-dark-bg">mapa exacto</span> para que tu freidora deje de ser un adorno y se convierta en tu mejor aliada.
           </p>
+
+          <div className="grid grid-cols-2 gap-4 mb-8">
+            {recipeTypes.map((type, i) => (
+              <div key={i} className="flex items-center gap-3 p-3 bg-light-bg rounded-lg border border-gray-200">
+                <span className="text-highlight-gold">{type.icon}</span>
+                <span className="font-sans font-bold text-sm text-dark-bg">{type.title}</span>
+              </div>
+            ))}
+          </div>
 
           <ul className="space-y-4 mb-8">
             <li className="flex items-start gap-3">
