@@ -50,13 +50,7 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
         const targetElement = document.getElementById(targetId);
         
         if (targetElement) {
-          // Usando window.scrollTo para garantir que a rolagem funcione no contexto da janela/iframe
-          const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY;
-          
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-          });
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
       // If it's a standard internal link (not starting with #), let default behavior proceed.
