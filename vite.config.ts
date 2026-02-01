@@ -8,7 +8,6 @@ export default defineConfig(() => ({
     host: "::",
     port: 8080,
   },
-  base: "/Expressssalabor/",  // <-- coloquei aqui!
   plugins: [dyadComponentTagger(), react()],
   resolve: {
     alias: {
