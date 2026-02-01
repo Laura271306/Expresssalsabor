@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Timer, Pizza, Cookie, Beef } from 'lucide-react';
+import CtaButton from './CtaButton';
 
 const QuickPrepSection: React.FC = () => {
   const recipes = [
@@ -17,7 +18,7 @@ const QuickPrepSection: React.FC = () => {
           EN SOLO 10–15 MINUTOS PODRÁS PREPARAR
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {recipes.map((recipe, index) => (
             <div key={index} className="bg-[#282425] rounded-xl p-6 shadow-xl border border-gray-700 flex items-center gap-4 transition-transform hover:scale-[1.02]">
               <div className="w-10 h-10 flex items-center justify-center flex-shrink-0">
@@ -26,6 +27,12 @@ const QuickPrepSection: React.FC = () => {
               <h3 className="font-sans text-xl font-bold text-white text-left">{recipe.title}</h3>
             </div>
           ))}
+        </div>
+
+        <div className="text-left">
+          <CtaButton href="#link-ancoragem" className="bg-mint-green hover:bg-green-500 text-dark-bg shadow-mint-green/30">
+            🔥 VER RECETAS RÁPIDAS
+          </CtaButton>
         </div>
       </div>
     </section>

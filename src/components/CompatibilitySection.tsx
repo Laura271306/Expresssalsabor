@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { CheckCircle, Zap, CookingPot, Scale } from 'lucide-react';
+import CtaButton from './CtaButton';
 
 const CompatibilitySection: React.FC = () => {
   const models = [
@@ -19,7 +20,7 @@ const CompatibilitySection: React.FC = () => {
           No necesitas una freidora cara. Las recetas funcionan en todos los modelos:
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {models.map((model, index) => (
             <div key={index} className="bg-[#282425] rounded-xl p-6 shadow-xl border border-gray-700 transition-transform hover:scale-[1.02] text-left">
               <div className="w-14 h-14 mb-4 flex justify-center items-center text-highlight-gold bg-highlight-gold/10 rounded-full">
@@ -29,6 +30,12 @@ const CompatibilitySection: React.FC = () => {
               <p className="font-sans text-gray-400 text-sm">{model.description}</p>
             </div>
           ))}
+        </div>
+
+        <div className="text-left">
+          <CtaButton href="#link-ancoragem" className="bg-highlight-gold hover:bg-yellow-600 text-dark-bg">
+            ✔ PROBAR EN MI AIR FRYER
+          </CtaButton>
         </div>
       </div>
     </section>

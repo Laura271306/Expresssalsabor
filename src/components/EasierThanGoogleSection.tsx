@@ -2,6 +2,7 @@ import React from 'react';
 import SectionWrapper from './SectionWrapper';
 import { Search, BookOpen, Clock, Smartphone } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import CtaButton from './CtaButton';
 
 const EasierThanGoogleSection: React.FC = () => {
   const comparisonPoints = [
@@ -56,11 +57,11 @@ const EasierThanGoogleSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow-2xl border border-gray-200">
+        <div className="bg-white p-6 rounded-xl shadow-2xl border border-gray-200 mb-12">
           <h3 className="font-sans text-2xl font-bold text-dark-bg mb-4 text-left">
             Con el Ebook Airfryer Mágica, tú obtienes:
           </h3>
-          <ul className="space-y-3 text-left">
+          <ul className="space-y-3 text-left mb-8">
             {benefitPoints.map((benefit, index) => (
               <li key={index} className="flex items-start">
                 <span className="flex-shrink-0 mt-1 mr-3">{benefit.icon}</span>
@@ -68,6 +69,12 @@ const EasierThanGoogleSection: React.FC = () => {
               </li>
             ))}
           </ul>
+          
+          <div className="text-left">
+            <CtaButton href="#link-ancoragem">
+              📖 ACCESO INMEDIATO AL RECETARIO
+            </CtaButton>
+          </div>
         </div>
       </div>
     </SectionWrapper>

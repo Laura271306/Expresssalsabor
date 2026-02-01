@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { CookingPot, Check } from 'lucide-react';
+import CtaButton from './CtaButton';
 
 const AirfryerMagicaSection: React.FC = () => {
   const CheckItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -25,35 +26,27 @@ const AirfryerMagicaSection: React.FC = () => {
             El recetario digital definitivo para aprovechar al máximo tu freidora de aire y sorprender a tu familia con resultados profesionales en minutos.
           </p>
 
-          <ul className="list-none p-0">
+          <ul className="list-none p-0 mb-8">
             <CheckItem>
-              <span className="font-bold text-cta-primary">+600 recetas sin gluten y sin aceite</span> – desde desayunos rápidos hasta cenas completas y sobremesas deliciosas, para todos los gustos y edades.
+              <span className="font-bold text-cta-primary">+600 recetas sin gluten y sin aceite</span> – desde desayunos rápidos hasta cenas completas y sobremesas deliciosas.
             </CheckItem>
             <CheckItem>
-              <span className="font-bold text-cta-primary">Instrucciones paso a paso con fotos y horarios exactos</span> – sigue fácilmente cada preparación sin complicaciones.
+              <span className="font-bold text-cta-primary">Instrucciones paso a paso con fotos</span> – sigue fácilmente cada preparación sin complicaciones.
             </CheckItem>
             <CheckItem>
-              <span className="font-bold text-cta-primary">Valores nutricionales calculados</span> – cuida tu salud sin renunciar al sabor.
-            </CheckItem>
-            <CheckItem>
-              <span className="font-bold text-cta-primary">Lista de compras inteligente</span> – sabe exactamente qué comprar y en qué cantidad.
-            </CheckItem>
-            <CheckItem>
-              <span className="font-bold text-cta-primary">Menú de 1 mes programado</span> – comida planificada para todo el mes, sin estrés.
-            </CheckItem>
-            <CheckItem>
-              <span className="font-bold text-cta-primary">Compatible con cualquier modelo de Airfryer</span> – no importa cuál tengas, ¡funciona igual!
-            </CheckItem>
-            <CheckItem>
-              <span className="font-bold text-cta-primary">Entrega inmediata</span> – recibe el material al instante y empieza a cocinar hoy mismo.
+              <span className="font-bold text-cta-primary">Compatible con cualquier modelo</span> – no importa cuál tengas, ¡funciona igual!
             </CheckItem>
           </ul>
+
+          <div className="text-left">
+            <CtaButton href="#link-ancoragem" className="text-xl">
+              🚀 QUIERO EMPEZAR AHORA
+            </CtaButton>
+          </div>
         </div>
         
-        {/* Image (40% desktop) */}
         <div className="flex justify-center lg:justify-end">
           <div className="relative w-full max-w-md">
-            {/* Mockup Image */}
             <img 
               src="/images/kit-mockup-main.jpeg" 
               alt="Mockup del libro de recetas Airfryer Mágica" 
