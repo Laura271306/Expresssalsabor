@@ -4,16 +4,16 @@ import ImageTestimonialCard from './ImageTestimonialCard';
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
     { 
-      src: "/testimonials/chat-testimonial-1.jpg", 
-      alt: "Testimonio de Mariana: Pollo y patatas deliciosas en Air Fryer." 
+      src: "/testimonials/whatsapp-chat-1.jpeg", 
+      alt: "Testimonio de cliente 1." 
     },
     { 
-      src: "/testimonials/chat-testimonial-2.jpg", 
-      alt: "Testimonio de Jordana: Tostadas de pizza muy prácticas y excelentes." 
+      src: "/testimonials/whatsapp-chat-2.jpeg", 
+      alt: "Testimonio de cliente 2." 
     },
     { 
-      src: "/testimonials/chat-testimonial-3.jpg", 
-      alt: "Testimonio de Jordana: Receta hecha en 12 minutos, quedó buenísima y ahorró mucho." 
+      src: "/testimonials/whatsapp-chat-3.jpeg", 
+      alt: "Testimonio de cliente 3." 
     },
   ];
 
