@@ -25,7 +25,7 @@ const EasierThanGoogleSection: React.FC = () => {
   const benefitPoints = [
     { icon: <Clock className="w-5 h-5 text-highlight-gold" />, text: "Tiempos y temperaturas exactas garantizadas." },
     { icon: <Smartphone className="w-5 h-5 text-highlight-gold" />, text: "Acceso de por vida en móvil, tablet o PC." },
-    { icon: <BookOpen className="w-5 h-5 text-highlight-gold" />, text: "Más fácil que seguir un video de YouTube." },
+    { icon: <BookOpen className="w-5 h-5 text-highlight-gold" />, text: "Más fácil que buscar recetas en Google." },
   ];
 
   return (
@@ -34,8 +34,8 @@ const EasierThanGoogleSection: React.FC = () => {
         <h2 className="font-sans text-4xl md:text-5xl font-bold mb-4 text-dark-bg text-left">
           MÁS FÁCIL QUE BUSCAR EN GOOGLE
         </h2>
-        <p className="font-sans text-xl text-gray-700 mb-12 text-left">
-          Deja de perder tiempo buscando recetas incompletas.
+        <p className="font-sans text-xl text-gray-700 mb-12 text-left italic">
+          "Olvida el caos de internet; aquí tienes la ruta directa al sabor."
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">

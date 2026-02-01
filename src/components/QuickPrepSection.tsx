@@ -14,9 +14,12 @@ const QuickPrepSection: React.FC = () => {
   return (
     <section className="bg-dark-bg text-white py-20 px-6 border-t border-gray-800">
       <div className="max-w-4xl mx-auto">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold mb-12 text-highlight-gold text-left">
-          EN SOLO 10–15 MINUTOS PODRÁS PREPARAR
+        <h2 className="font-sans text-4xl md:text-5xl font-bold mb-4 text-highlight-gold text-left uppercase">
+          Pensado para tu día a día
         </h2>
+        <p className="font-sans text-xl text-gray-400 mb-12 text-left">
+          No son recetas para "ocasiones especiales" que requieren ingredientes raros. Es comida real para tu rutina diaria, lista en 10–15 minutos.
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {recipes.map((recipe, index) => (

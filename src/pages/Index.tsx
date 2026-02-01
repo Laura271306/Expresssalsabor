@@ -18,6 +18,8 @@ import GuaranteeSection from "@/components/GuaranteeSection";
 import FaqSection from "@/components/FaqSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
 import RestZone from "@/components/RestZone";
+import CompatibilitySection from "@/components/CompatibilitySection";
+import QuickPrepSection from "@/components/QuickPrepSection";
 import CtaButton from "@/components/CtaButton";
 import { useEffect } from "react";
 import { trackViewContent } from "@/utils/facebookPixel";
@@ -41,6 +43,9 @@ const Index = () => {
       <CrispMethodSection />
       <EasierThanGoogleSection />
       <AirfryerMagicaSection />
+      
+      <CompatibilitySection />
+      <QuickPrepSection />
       
       <SocialProofSection />
 
