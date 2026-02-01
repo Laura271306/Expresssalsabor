@@ -32,8 +32,11 @@ const AirfryerMagicaSection: React.FC = () => {
             ))}
           </div>
           
-          <p className="font-sans text-xl text-gray-700 mb-6 leading-relaxed">
+          <p className="font-sans text-xl text-gray-700 mb-2 leading-relaxed">
             No es solo un libro, es el <span className="font-bold text-dark-bg">mapa exacto</span> para que tu freidora deje de ser un adorno y se convierta en tu mejor aliada.
+          </p>
+          <p className="font-sans text-highlight-gold font-bold mb-6">
+            "Pensado para resolver comidas reales, no recetas bonitas."
           </p>
 
           <div className="grid grid-cols-2 gap-4 mb-8">

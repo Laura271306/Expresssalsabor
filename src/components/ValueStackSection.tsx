@@ -44,11 +44,14 @@ const ValueStackSection: React.FC = () => {
             </div>
 
             <div className="text-left">
+              <p className="font-sans text-sm text-dark-bg font-bold mb-4 italic text-center">
+                “Abres, eliges, preparas. Fin.”
+              </p>
               <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" className="mb-2">
                 Quiero cocinar rápido, fácil y sin estrés
               </CtaButton>
               <p className="text-[10px] text-gray-500 text-center font-sans mb-4">
-                Acceso inmediato • Funciona con cualquier air fryer
+                No es para leer una vez. Es para usar todas las semanas.
               </p>
             </div>
           </div>
