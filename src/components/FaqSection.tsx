@@ -9,7 +9,7 @@ import {
 
 const faqs = [
   {
-    question: "¿Por qué pagar por esto si hay recetas gratis en YouTube?",
+    question: "¿Por qué pagar por esto si hay recetas gratis en internet?",
     answer: "En internet pierdes horas buscando y el 70% de las recetas fallan o no dan el tiempo exacto para tu modelo. Aquí tienes un método probado paso a paso para no tirar comida ni dinero a la basura.",
   },
   {
