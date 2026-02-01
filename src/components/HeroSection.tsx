@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
   
   return (
     <section className="bg-dark-bg text-white py-20 md:py-32 px-6 relative overflow-hidden">
-      {/* Sutil fondo de textura para sensación premium */}
+      {/* Sutil fondo de textura para sensação premium */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff33_1px,transparent_1px)] [background-size:16px_16px]"></div>
       
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => {
             </li>
           </ul>
 
-          <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" className="mt-8">
+          <CtaButton href="#link-ancoragem" className="mt-8">
             💚 QUIERO MIS RECETAS AHORA
           </CtaButton>
         </div>
