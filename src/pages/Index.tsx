@@ -25,11 +25,10 @@ import ValueStackSection from "@/components/ValueStackSection";
 import HowItWorksInPractice from "@/components/HowItWorksInPractice";
 import CtaButton from "@/components/CtaButton";
 import { useEffect } from "react";
-import { trackViewContent } from "@/utils/facebookPixel";
 
 const Index = () => {
   useEffect(() => {
-    trackViewContent();
+    // trackViewContent removido conforme solicitado. PageView é disparado no FacebookPixel.tsx
   }, []);
 
   return (
@@ -89,7 +88,7 @@ const Index = () => {
 
       <BenefitsSection />
 
-      {/* Repetición Clave 3 */}
+      {/* Repetição Clave 3 */}
       <div className="bg-light-bg py-6 px-6 text-center border-y border-gray-200">
         <p className="font-sans text-xl font-bold text-dark-bg">
           Diseñado para comidas reales de tu rutina diaria.

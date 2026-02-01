@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { trackInitiateCheckout } from '@/utils/facebookPixel';
+import { trackAddToCart } from '@/utils/facebookPixel';
 
 interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
@@ -24,11 +24,12 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
   const handleCtaAction = (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
     const isAnchor = href?.startsWith('#');
 
-    // SOLO disparamos el Pixel si NO es un ancla interna
+    // Disparamos AddToCart se NÃO for uma âncora interna
     if (href && !isAnchor) {
-      trackInitiateCheckout();
+      // Usando 6.90 USD como valor padrão, conforme a oferta
+      trackAddToCart(6.90, 'USD'); 
     } else if (isAnchor) {
-      console.log('Navegación interna: No se registra conversión.');
+      console.log('Navegação interna: Não se registra conversão.');
     }
 
     if (onClick) {

@@ -6,27 +6,16 @@ export const trackCtaClick = () => {
   }
 };
 
-export const trackViewContent = (contentName?: string, contentIds?: string[]) => {
+export const trackAddToCart = (value: number = 6.90, currency: string = 'USD') => {
   if (typeof window !== 'undefined' && (window as any).fbq) {
-    (window as any).fbq('track', 'ViewContent', {
-      content_name: contentName || 'Airfryer Magica Sales Page',
-      content_ids: contentIds || ['airfryer_magica_kit'],
-      content_type: 'product_group',
-    });
-    console.log('Facebook Pixel: Tracking ViewContent event.');
-  }
-};
-
-export const trackInitiateCheckout = (value: number = 5.90, currency: string = 'USD') => {
-  if (typeof window !== 'undefined' && (window as any).fbq) {
-    (window as any).fbq('track', 'InitiateCheckout', {
+    (window as any).fbq('track', 'AddToCart', {
       value: value,
       currency: currency,
       content_name: 'KIT COMPLETO AirFryer',
       content_ids: ['airfryer_magica_kit'],
       num_items: 1,
     });
-    console.log(`Facebook Pixel: Tracking InitiateCheckout event with value ${value} ${currency}.`);
+    console.log(`Facebook Pixel: Tracking AddToCart event with value ${value} ${currency}.`);
   }
 };
 
