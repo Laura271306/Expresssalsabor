@@ -4,11 +4,13 @@ const PIXEL_ID = '3222655657903008';
 
 const FacebookPixel = () => {
   useEffect(() => {
-    // Check if window is defined (client-side rendering)
     if (typeof window === 'undefined') return;
 
-    // Standard Facebook Pixel initialization script
-    const script = `
+    // Evitar duplicación si ya existe fbq
+    if ((window as any).fbq) return;
+
+    // Script estándar de Meta Pixel
+    const scriptText = `
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -21,29 +23,24 @@ const FacebookPixel = () => {
       fbq('track', 'PageView');
     `;
 
-    // Create a script element
     const pixelScript = document.createElement('script');
-    pixelScript.innerHTML = script;
-    pixelScript.async = true;
-
-    // Create a noscript element for users with JavaScript disabled
+    pixelScript.innerHTML = scriptText;
+    
     const noscript = document.createElement('noscript');
-    noscript.innerHTML = `<img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1"
-    />`;
+    noscript.innerHTML = `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1" />`;
 
-    // Append elements to the body
-    document.body.appendChild(pixelScript);
-    document.body.appendChild(noscript);
+    // Insertar en el HEAD para cumplir con las mejores prácticas
+    document.head.appendChild(pixelScript);
+    document.head.appendChild(noscript);
 
-    // Cleanup function (optional for pixel, but good practice)
     return () => {
-      document.body.removeChild(pixelScript);
-      document.body.removeChild(noscript);
+      // Limpieza opcional para evitar residuos en navegaciones SPA extremas
+      if (document.head.contains(pixelScript)) document.head.removeChild(pixelScript);
+      if (document.head.contains(noscript)) document.head.removeChild(noscript);
     };
   }, []);
 
-  return null; // This component renders nothing visible
+  return null;
 };
 
 export default FacebookPixel;
