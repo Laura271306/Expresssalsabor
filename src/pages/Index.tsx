@@ -18,6 +18,7 @@ import FaqSection from "@/components/FaqSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import EasierThanGoogleSection from "@/components/EasierThanGoogleSection";
+import ValueStackSection from "@/components/ValueStackSection"; // Adicionando o ValueStackSection
 import { useEffect } from "react";
 import { trackViewContent } from "@/utils/facebookPixel";
 
@@ -45,8 +46,10 @@ const Index = () => {
       <TestimonialsSection />
       <BeforeAfterSection />
       
+      {/* Stack de Valor/CTA Principal */}
+      <ValueStackSection />
+      
       {/* Bonos */}
-      {/* SmallBonusesSection removido */}
       <BonusSection />
       
       <CompatibilitySection />
