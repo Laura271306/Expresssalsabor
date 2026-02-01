@@ -7,7 +7,7 @@ const TheProblemSection: React.FC = () => {
   return (
     <section className="bg-dark-bg text-white py-20 px-6 border-t border-gray-800">
       <div className="max-w-4xl mx-auto">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold mb-12 text-urgency-red text-left">
+        <h2 className="font-serif text-4xl md:text-5xl font-bold mb-12 text-urgency-red text-left">
           ❌ El problema no es tu air fryer.
         </h2>
 

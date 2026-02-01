@@ -7,14 +7,14 @@ const BeforeAfterSection: React.FC = () => {
   return (
     <section className="bg-light-bg text-dark-bg py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold text-left mb-12">
+        <h2 className="font-serif text-4xl md:text-5xl font-bold text-left mb-12">
           ¿CÓMO SERÁ TU VIDA A PARTIR DE HOY?
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Antes */}
           <div className="bg-white border-4 border-urgency-red rounded-xl p-8 shadow-xl">
-            <h3 className="font-sans text-3xl font-bold text-urgency-red mb-6 text-center flex items-center justify-center">
+            <h3 className="font-serif text-3xl font-bold text-urgency-red mb-6 text-center flex items-center justify-center">
               <span className="text-4xl mr-3">🔻</span> Tu Rutina Hoy
             </h3>
             <ul className="space-y-6">
@@ -35,7 +35,7 @@ const BeforeAfterSection: React.FC = () => {
 
           {/* Después */}
           <div className="bg-white border-4 border-cta-primary rounded-xl p-8 shadow-xl">
-            <h3 className="font-sans text-3xl font-bold text-cta-primary mb-6 text-center flex items-center justify-center">
+            <h3 className="font-serif text-3xl font-bold text-cta-primary mb-6 text-center flex items-center justify-center">
               <span className="text-4xl mr-3">🔺</span> Tu Nueva Realidad
             </h3>
             <ul className="space-y-6">

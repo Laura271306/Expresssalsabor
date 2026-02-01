@@ -17,7 +17,7 @@ const SpecialOfferSection: React.FC = () => {
   return (
     <section className="bg-dark-bg text-white py-20 px-6 border-t border-highlight-gold/20">
       <div className="max-w-md mx-auto">
-        <h2 className="font-sans text-4xl md:text-5xl font-bold mb-8 text-highlight-gold text-left">
+        <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8 text-highlight-gold text-left">
           OFERTA ESPECIAL
         </h2>
         <p className="font-sans text-lg font-bold mb-8 text-urgency-red text-left">
@@ -35,7 +35,7 @@ const SpecialOfferSection: React.FC = () => {
             loading="lazy"
           />
 
-          <h3 className="font-sans text-2xl font-bold mb-4 text-dark-bg text-left">
+          <h3 className="font-serif text-2xl font-bold mb-4 text-dark-bg text-left">
             Valor Total del Kit Completo: <span className="line-through text-gray-500">${totalValue} USD</span>
           </h3>
 
