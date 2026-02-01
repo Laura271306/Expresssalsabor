@@ -2,6 +2,7 @@ import UrgencyBanner from "@/components/UrgencyBanner";
 import HeroSection from "@/components/HeroSection";
 import TheProblemSection from "@/components/TheProblemSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
+import UserProfilesSection from "@/components/UserProfilesSection";
 import CrispMethodSection from "@/components/CrispMethodSection";
 import EasierThanGoogleSection from "@/components/EasierThanGoogleSection";
 import AirfryerMagicaSection from "@/components/AirfryerMagicaSection";
@@ -33,6 +34,7 @@ const Index = () => {
       
       <TheProblemSection />
       <BeforeAfterSection />
+      <UserProfilesSection />
       
       <RestZone text="Hasta aquí, ¿ya te viste usando esto en tu día a día?" />
 
