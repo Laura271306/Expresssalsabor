@@ -13,20 +13,32 @@ const TheProblemSection: React.FC = () => {
 
         <div className="bg-[#282425] rounded-xl p-8 mb-12 shadow-xl border border-urgency-red/50">
           <h3 className="font-sans text-2xl font-bold mb-6 text-urgency-red flex items-center justify-start">
-            <XCircle className="w-6 h-6 mr-3" /> Problemas más comunes:
+            <XCircle className="w-6 h-6 mr-3" /> Lo que realmente te frustra:
           </h3>
-          <ul className="space-y-4 text-left mb-8">
+          <ul className="space-y-6 text-left mb-8">
             <li className="flex items-start">
               <span className="text-urgency-red mr-3 text-xl font-bold">•</span>
-              <span className="font-sans text-xl text-gray-200">Patatas blandas</span>
+              <span className="font-sans text-xl text-gray-200">
+                El <strong>estrés mental</strong> de llegar a casa cansado y no tener ni idea de qué cocinar que sea rápido y rico.
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-urgency-red mr-3 text-xl font-bold">•</span>
-              <span className="font-sans text-xl text-gray-200">Carnes sin punto</span>
+              <span className="font-sans text-xl text-gray-200">
+                La <strong>frustración</strong> de gastar dinero en ingredientes para que la receta termine siendo incomible o aburrida.
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-urgency-red mr-3 text-xl font-bold">•</span>
-              <span className="font-sans text-xl text-gray-200">Recetas que siempre fallan</span>
+              <span className="font-sans text-xl text-gray-200">
+                La <strong>culpa</strong> de terminar pidiendo delivery caro y poco saludable porque "es más fácil" que pelear con la cocina.
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-urgency-red mr-3 text-xl font-bold">•</span>
+              <span className="font-sans text-xl text-gray-200">
+                Sentir que tienes un aparato de 100 dólares acumulando polvo porque <strong>no sabes cómo sacarle provecho</strong>.
+              </span>
             </li>
           </ul>
           
@@ -40,7 +52,7 @@ const TheProblemSection: React.FC = () => {
             <CheckCircle className="w-6 h-6 mr-3" /> La verdad:
           </h3>
           <p className="font-sans text-xl text-white text-left">
-            La air fryer funciona bien, solo necesitas el método correcto.
+            Tu Air Fryer es una herramienta de libertad, solo te falta la hoja de ruta correcta para dejar de sufrir en la cocina.
           </p>
         </div>
       </div>
