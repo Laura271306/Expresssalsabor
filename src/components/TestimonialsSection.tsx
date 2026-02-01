@@ -4,16 +4,16 @@ import ImageTestimonialCard from './ImageTestimonialCard';
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
     { 
-      src: "/testimonials/whatsapp-chat-3.jpeg", 
+      src: "/testimonials/whatsapp-chat-1.jpg", 
       alt: "Testimonio de Mariana: Pollo y patatas deliciosas en Air Fryer." 
     },
     { 
-      src: "/testimonials/whatsapp-chat-1.jpeg", 
+      src: "/testimonials/whatsapp-chat-2.jpg", 
       alt: "Testimonio de Jordana: Tostadas de pizza muy prácticas y excelentes." 
     },
     { 
-      src: "/testimonials/whatsapp-chat-2.jpeg", 
-      alt: "Testimonio de Jordana: Receta hecha en 12 minutos, quedó buenísima y ahorró mucho." 
+      src: "/testimonials/whatsapp-chat-3.jpg", 
+      alt: "Testimonio de Jordana: Receta hecha en 12 minutos, ficou buenísima y ahorró mucho." 
     },
   ];
 
@@ -25,7 +25,7 @@ const TestimonialsSection: React.FC = () => {
         </h2>
         
         <p className="font-sans text-xl text-gray-300 text-left mb-10">
-          Mira los resultados que están obteniendo con el recetario:
+          Mira los resultados que están obtendo con el recetario:
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
