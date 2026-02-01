@@ -33,12 +33,12 @@ const HeroSection: React.FC = () => {
             </li>
             <li className="flex items-start">
               <Check className="w-6 h-6 text-cta-primary mr-3 flex-shrink-0" />
-              <span className="font-sans text-lg">Recetas saludables y deliciosas para toda la familia, todos los gustos y edades</span>
+              <span className="font-sans text-lg">Recetas saludables y deliciosas para toda la familia</span>
             </li>
           </ul>
 
           <CtaButton href="#link-ancoragem" className="mt-8">
-            💚 QUIERO MIS RECETAS AHORA
+            Quiero dejar de perder tiempo en la cocina
           </CtaButton>
         </div>
 

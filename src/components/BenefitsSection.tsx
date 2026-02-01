@@ -9,25 +9,25 @@ const BenefitsSection: React.FC = () => {
     {
       icon: <Utensils className="w-6 h-6" />,
       title: "Cocina Saludable",
-      description: "Reduce hasta un 80% las calorías al cocinar sin aceite, disfrutando de platos crujientes y sabrosos sin culpa.",
+      description: "Reduce hasta un 80% las calorías al cocinar sin aceite.",
       imageSrc: "/images/benefit-healthy.webp"
     },
     {
       icon: <Users className="w-6 h-6" />,
       title: "Aprobación Familiar",
-      description: "Recetas que conquistan a todos: desde los más pequeños hasta los más exigentes, con versiones saludables de sus platos favoritos.",
+      description: "Recetas que conquistan a todos, incluso a los niños.",
       imageSrc: "/images/benefit-family.webp"
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Ahorro de tiempo",
-      description: "Prepara comidas completas en 15-25 minutos, perfectas para un estilo de vida moderno y sin complicaciones.",
+      description: "Prepara comidas completas en 15-25 minutos.",
       imageSrc: "/images/benefit-time.webp"
     },
     {
       icon: <DollarSign className="w-6 h-6" />,
       title: "Economía Familiar",
-      description: "Recetas con ingredientes económicos que pueden ahorrarte hasta $200 semanales, evitando el gasto en comida rápida.",
+      description: "Ingredientes económicos que ahorran dinero.",
       imageSrc: "/images/benefit-money.webp"
     }
   ];
@@ -39,7 +39,7 @@ const BenefitsSection: React.FC = () => {
           BENEFICIOS EN TU RUTINA
         </h2>
         <p className="font-sans text-xl text-gray-400 mb-12 text-left">
-          Descubre cómo este recetario profesional puede transformar tu forma de cocinar y mejorar la vida de toda tu familia.
+          Descubre cómo este recetario profesional puede transformar tu forma de cocinar.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -50,7 +50,7 @@ const BenefitsSection: React.FC = () => {
 
         <div className="text-left mt-12">
           <CtaButton href="#link-ancoragem" className="text-xl px-8 py-4">
-            💚 SÍ, QUIERO LAS RECETAS
+            Esto es justo lo que necesito
           </CtaButton>
         </div>
       </div>

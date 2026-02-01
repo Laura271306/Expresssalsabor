@@ -1,28 +1,29 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Utensils, Clock, Thermometer, Zap } from 'lucide-react';
+import CtaButton from './CtaButton';
 
 const WhatMakesUsUniqueSection: React.FC = () => {
   const features = [
     {
       icon: <Utensils className="w-7 h-7" />,
-      title: "Recetas específicas para air fryer",
-      description: "Cada receta está diseñada para aprovechar al máximo tu Air Fryer"
+      title: "Recetas específicas",
+      description: "Diseñadas para aprovechar al máximo tu Air Fryer"
     },
     {
       icon: <Clock className="w-7 h-7" />,
       title: "Tiempos exactos",
-      description: "Tiempos precisos para cada alimento y capacidad"
+      description: "Tiempos precisos para cada alimento"
     },
     {
       icon: <Thermometer className="w-7 h-7" />,
       title: "Temperaturas precisas",
-      description: "Temperaturas optimizadas para resultados perfectos"
+      description: "Optimizadas para resultados perfectos"
     },
     {
       icon: <Zap className="w-7 h-7" />,
       title: "Técnicas probadas",
-      description: "Métodos validados por chefs profesionales"
+      description: "Métodos validados por profesionales"
     }
   ];
 
@@ -33,7 +34,7 @@ const WhatMakesUsUniqueSection: React.FC = () => {
           🔥 Qué hace único a Expreso al Sabor
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-xl border-t-4 border-highlight-gold transition-shadow duration-300 hover:shadow-2xl">
               <div className="w-14 h-14 bg-highlight-gold/10 rounded-full flex items-center justify-center mb-4 text-highlight-gold">
@@ -43,6 +44,12 @@ const WhatMakesUsUniqueSection: React.FC = () => {
               <p className="font-sans text-gray-700">{feature.description}</p>
             </div>
           ))}
+        </div>
+
+        <div className="text-left">
+          <CtaButton href="#link-ancoragem">
+            Quiero cocinar sin complicaciones
+          </CtaButton>
         </div>
       </div>
     </section>

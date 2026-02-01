@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { X, Check } from 'lucide-react';
+import CtaButton from './CtaButton';
 
 const BeforeAfterSection: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const BeforeAfterSection: React.FC = () => {
           ANTES Y DESPUÉS
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Antes */}
           <div className="bg-white border-4 border-urgency-red rounded-xl p-8 shadow-xl">
             <h3 className="font-sans text-3xl font-bold text-urgency-red mb-6 text-center flex items-center justify-center">
@@ -23,11 +24,7 @@ const BeforeAfterSection: React.FC = () => {
               </li>
               <li className="flex items-start">
                 <X className="w-6 h-6 text-urgency-red mr-3 flex-shrink-0 mt-1" />
-                <span className="font-sans text-lg">Resultados impredecibles</span>
-              </li>
-              <li className="flex items-start">
-                <X className="w-6 h-6 text-urgency-red mr-3 flex-shrink-0 mt-1" />
-                <span className="font-sans text-lg">Mucha frustración</span>
+                <span className="font-sans text-lg">Mucho tiempo perdido</span>
               </li>
             </ul>
           </div>
@@ -44,14 +41,16 @@ const BeforeAfterSection: React.FC = () => {
               </li>
               <li className="flex items-start">
                 <Check className="w-6 h-6 text-cta-primary mr-3 flex-shrink-0 mt-1" />
-                <span className="font-sans text-lg">10–15 minutos</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="w-6 h-6 text-cta-primary mr-3 flex-shrink-0 mt-1" />
-                <span className="font-sans text-lg">Resultados garantizados</span>
+                <span className="font-sans text-lg">Listo en 10–15 minutos</span>
               </li>
             </ul>
           </div>
+        </div>
+
+        <div className="text-left">
+          <CtaButton href="#link-ancoragem">
+            Quiero el después, no el antes
+          </CtaButton>
         </div>
       </div>
     </section>
