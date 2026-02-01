@@ -7,7 +7,6 @@ import SocialProofSection from "@/components/SocialProofSection";
 import QuickPrepSection from "@/components/QuickPrepSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import PriceComparisonBanner from "@/components/PriceComparisonBanner";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import BonusSection from "@/components/BonusSection";
 import CompatibilitySection from "@/components/CompatibilitySection";
@@ -42,11 +41,10 @@ const Index = () => {
       <BenefitsSection />
       <EasierThanGoogleSection />
       <PriceComparisonBanner />
-      <TestimonialsSection />
+      {/* TestimonialsSection removido */}
       <BeforeAfterSection />
       
       {/* Bonos */}
-      {/* SmallBonusesSection removido */}
       <BonusSection />
       
       <CompatibilitySection />
