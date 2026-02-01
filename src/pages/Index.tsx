@@ -6,6 +6,7 @@ import UserProfilesSection from "@/components/UserProfilesSection";
 import CrispMethodSection from "@/components/CrispMethodSection";
 import EasierThanGoogleSection from "@/components/EasierThanGoogleSection";
 import AirfryerMagicaSection from "@/components/AirfryerMagicaSection";
+import NoChefNeededSection from "@/components/NoChefNeededSection";
 import SocialProofSection from "@/components/SocialProofSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -43,6 +44,7 @@ const Index = () => {
       <CrispMethodSection />
       <EasierThanGoogleSection />
       <AirfryerMagicaSection />
+      <NoChefNeededSection />
       
       <CompatibilitySection />
       <QuickPrepSection />

@@ -34,6 +34,18 @@ const NoChefNeededSection: React.FC = () => {
           NO NECESITAS SER CHEF
         </h2>
 
+        {/* Comparación directa con YouTube */}
+        <div className="bg-white rounded-xl p-8 mb-12 shadow-2xl border-l-8 border-urgency-red">
+            <p className="font-sans text-2xl md:text-3xl font-bold text-dark-bg mb-4 leading-tight">
+                "En YouTube pierdes tiempo buscando. <br className="hidden md:block" />
+                Aquí <span className="text-cta-primary">solo eliges y cocinas</span>."
+            </p>
+            <p className="font-sans text-lg text-gray-600">
+                Olvida los videos largos para recetas que podrías entender en segundos. 
+                Nuestras instrucciones van directo al grano para que recuperes tu tiempo.
+            </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-xl border-t-4 border-highlight-gold transition-transform hover:scale-[1.02]">
