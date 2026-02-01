@@ -1,59 +1,56 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { CookingPot, Check } from 'lucide-react';
+import { CookingPot, Check, Zap, Clock, Thermometer } from 'lucide-react';
 import CtaButton from './CtaButton';
 
 const AirfryerMagicaSection: React.FC = () => {
-  const CheckItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <li className="flex items-start mb-3">
-      <Check className="w-6 h-6 mr-3 text-cta-primary flex-shrink-0 mt-1" />
-      <span className="font-sans text-lg text-gray-700 leading-snug">{children}</span>
-    </li>
-  );
+  const features = [
+    { icon: <Zap className="w-5 h-5" />, text: "Técnicas de chefs" },
+    { icon: <Clock className="w-5 h-5" />, text: "Tiempos exactos" },
+    { icon: <Thermometer className="w-5 h-5" />, text: "Calor optimizado" },
+  ];
 
   return (
     <section className="bg-white py-20 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark-bg mb-6">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark-bg mb-4">
             AIRFRYER MÁGICA
           </h2>
-          <h3 className="font-sans text-2xl font-bold text-dark-bg mb-6">
-            +600 Recetas Fáciles, Rápidas y 100% Saludables
-          </h3>
+          <div className="flex flex-wrap gap-4 mb-8">
+            {features.map((f, i) => (
+              <span key={i} className="flex items-center gap-2 bg-highlight-gold/10 text-highlight-gold px-3 py-1 rounded-full text-sm font-bold">
+                {f.icon} {f.text}
+              </span>
+            ))}
+          </div>
           
           <p className="font-sans text-xl text-gray-700 mb-6 leading-relaxed">
-            El recetario digital definitivo para aprovechar al máximo tu freidora de aire y sorprender a tu familia con resultados profesionales en minutos.
+            No es solo un libro, es el <span className="font-bold text-dark-bg">mapa exacto</span> para que tu freidora deje de ser un adorno y se convierta en tu mejor aliada.
           </p>
 
-          <ul className="list-none p-0 mb-8">
-            <CheckItem>
-              <span className="font-bold text-cta-primary">+600 recetas sin gluten y sin aceite</span> – desde desayunos rápidos hasta cenas completas y sobremesas deliciosas.
-            </CheckItem>
-            <CheckItem>
-              <span className="font-bold text-cta-primary">Instrucciones paso a paso con fotos</span> – sigue fácilmente cada preparación sin complicaciones.
-            </CheckItem>
-            <CheckItem>
-              <span className="font-bold text-cta-primary">Compatible con cualquier modelo</span> – no importa cuál tengas, ¡funciona igual!
-            </CheckItem>
+          <ul className="space-y-4 mb-8">
+            <li className="flex items-start gap-3">
+              <Check className="w-6 h-6 text-cta-primary flex-shrink-0" />
+              <span className="text-lg text-gray-700">+600 recetas probadas (sin fallos)</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Check className="w-6 h-6 text-cta-primary flex-shrink-0" />
+              <span className="text-lg text-gray-700">Paso a paso visual y ultra-rápido</span>
+            </li>
           </ul>
 
-          <div className="text-left">
-            <CtaButton href="#link-ancoragem" className="text-xl">
-              🚀 QUIERO EMPEZAR AHORA
-            </CtaButton>
-          </div>
+          <CtaButton href="#link-ancoragem" className="text-xl">
+            🚀 QUIERO EL MAPA COMPLETO
+          </CtaButton>
         </div>
         
-        <div className="flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-md">
-            <img 
-              src="/images/kit-mockup-main.jpeg" 
-              alt="Mockup del libro de recetas Airfryer Mágica" 
-              className="w-full h-auto rounded-xl shadow-2xl border-4 border-highlight-gold/50 object-cover"
-              loading="lazy"
-            />
-          </div>
+        <div className="relative group">
+          <img 
+            src="/images/kit-mockup-main.jpeg" 
+            alt="Libro Airfryer Mágica" 
+            className="w-full h-auto rounded-xl shadow-2xl border-4 border-highlight-gold/50 transition-transform group-hover:scale-[1.01]"
+          />
         </div>
       </div>
     </section>

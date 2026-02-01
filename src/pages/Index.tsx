@@ -2,15 +2,12 @@ import UrgencyBanner from "@/components/UrgencyBanner";
 import HeroSection from "@/components/HeroSection";
 import TheProblemSection from "@/components/TheProblemSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
-import WhatMakesUsUniqueSection from "@/components/WhatMakesUsUniqueSection";
 import CrispMethodSection from "@/components/CrispMethodSection";
 import AirfryerMagicaSection from "@/components/AirfryerMagicaSection";
 import SocialProofSection from "@/components/SocialProofSection";
 import QuickPrepSection from "@/components/QuickPrepSection";
 import BenefitsSection from "@/components/BenefitsSection";
-import EasierThanGoogleSection from "@/components/EasierThanGoogleSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import NoChefNeededSection from "@/components/NoChefNeededSection";
 import CompatibilitySection from "@/components/CompatibilitySection";
 import BonusSection from "@/components/BonusSection";
 import PriceComparisonBanner from "@/components/PriceComparisonBanner";
@@ -21,51 +18,54 @@ import TrustBadgesSection from "@/components/TrustBadgesSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import FaqSection from "@/components/FaqSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
+import RestZone from "@/components/RestZone";
+import CtaButton from "@/components/CtaButton";
 import { useEffect } from "react";
 import { trackViewContent } from "@/utils/facebookPixel";
 
 const Index = () => {
   useEffect(() => {
-    // Track ViewContent when the page loads
     trackViewContent();
   }, []);
 
   return (
     <div className="w-full min-h-screen">
-      {/* 1. ATENCIÓN Y URGENCIA (Hook) */}
       <UrgencyBanner />
       <HeroSection />
       
-      {/* 2. AGITACIÓN DEL PROBLEMA Y CONTRASTE (Empatía) */}
       <TheProblemSection />
       <BeforeAfterSection />
       
-      {/* 3. LA SOLUCIÓN Y EL MECANISMO ÚNICO (Lógica) */}
-      <WhatMakesUsUniqueSection />
+      <RestZone text="Hasta aquí, ¿ya te viste usando esto en tu día a día?" />
+
       <CrispMethodSection />
       <AirfryerMagicaSection />
       
-      {/* 4. PRUEBA SOCIAL Y ESPECIFICIDAD (Autoridad) */}
       <SocialProofSection />
+
+      {/* CTA Anticipado */}
+      <div className="bg-dark-bg py-10 px-6 text-center border-t border-gray-800">
+        <p className="font-sans text-xl text-gray-400 mb-6 italic">Si esto ya te hace sentido, no necesitas leer todo.</p>
+        <CtaButton href="#link-ancoragem" className="bg-highlight-gold hover:bg-yellow-600 text-dark-bg">
+          ✨ QUIERO EMPEZAR AHORA
+        </CtaButton>
+      </div>
+
       <QuickPrepSection />
-      
-      {/* 5. DESEO Y BENEFICIOS EMOCIONALES (Transformación) */}
+      <RestZone text="¿Te imaginas recuperar 40 minutos de tu tarde hoy mismo?" />
+
       <BenefitsSection />
-      <EasierThanGoogleSection />
       <TestimonialsSection />
       
-      {/* 6. MATANDO OBJECIONES (Seguridad) */}
-      <NoChefNeededSection />
       <CompatibilitySection />
+      <RestZone text="El miedo a fallar termina cuando tienes el paso a paso exacto." />
       
-      {/* 7. VALOR Y OFERTA (The Pitch) */}
       <BonusSection />
       <PriceComparisonBanner />
       <DeliveryMethodSection />
-      <ValueStackSection /> {/* Adicionado aqui para ancoragem */}
+      <ValueStackSection />
       <SpecialOfferSection />
       
-      {/* 8. CIERRE Y SEGURIDAD (Risk Reversal) */}
       <TrustBadgesSection />
       <GuaranteeSection />
       <FaqSection />
