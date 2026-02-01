@@ -17,6 +17,7 @@ import FaqSection from "@/components/FaqSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import EasierThanGoogleSection from "@/components/EasierThanGoogleSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import { useEffect } from "react";
 import { trackViewContent } from "@/utils/facebookPixel";
 
@@ -40,8 +41,8 @@ const Index = () => {
       <QuickPrepSection />
       <BenefitsSection />
       <EasierThanGoogleSection />
+      <TestimonialsSection /> {/* Nova seção adicionada aqui */}
       <PriceComparisonBanner />
-      {/* TestimonialsSection removido */}
       <BeforeAfterSection />
       
       {/* Bonos */}
