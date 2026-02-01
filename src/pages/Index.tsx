@@ -14,6 +14,7 @@ import NoChefNeededSection from "@/components/NoChefNeededSection";
 import CompatibilitySection from "@/components/CompatibilitySection";
 import BonusSection from "@/components/BonusSection";
 import PriceComparisonBanner from "@/components/PriceComparisonBanner";
+import DeliveryMethodSection from "@/components/DeliveryMethodSection";
 import ValueStackSection from "@/components/ValueStackSection";
 import SpecialOfferSection from "@/components/SpecialOfferSection";
 import TrustBadgesSection from "@/components/TrustBadgesSection";
@@ -60,6 +61,7 @@ const Index = () => {
       {/* 7. VALOR Y OFERTA (The Pitch) */}
       <BonusSection />
       <PriceComparisonBanner />
+      <DeliveryMethodSection />
       <ValueStackSection /> {/* Adicionado aqui para ancoragem */}
       <SpecialOfferSection />
       
