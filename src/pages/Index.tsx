@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import TheProblemSection from "@/components/TheProblemSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 import CrispMethodSection from "@/components/CrispMethodSection";
+import EasierThanGoogleSection from "@/components/EasierThanGoogleSection";
 import AirfryerMagicaSection from "@/components/AirfryerMagicaSection";
 import SocialProofSection from "@/components/SocialProofSection";
 import BenefitsSection from "@/components/BenefitsSection";
@@ -36,6 +37,7 @@ const Index = () => {
       <RestZone text="Hasta aquí, ¿ya te viste usando esto en tu día a día?" />
 
       <CrispMethodSection />
+      <EasierThanGoogleSection />
       <AirfryerMagicaSection />
       
       <SocialProofSection />
