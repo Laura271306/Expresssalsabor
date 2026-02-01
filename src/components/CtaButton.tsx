@@ -12,8 +12,6 @@ interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, variant = 'primary', onClick, ...props }) => {
   const baseClasses = "font-sans font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl text-white uppercase tracking-wider inline-flex items-center justify-center text-center";
 
-  // Usando cores definidas: cta-primary (verde) e urgency-red (final)
-  // A animação de pulso se aplica apenas ao primary
   const primaryClasses = "bg-cta-primary hover:bg-green-600 shadow-cta-primary/50 animate-pulse-shadow";
   const finalClasses = "bg-urgency-red hover:bg-red-700 shadow-urgency-red/50";
 
@@ -24,27 +22,21 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
   );
 
   const handleCtaAction = (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
-    // 1. Track the CTA click for Facebook Pixel as InitiateCheckout
-    trackInitiateCheckout();
+    const isAnchor = href?.startsWith('#');
 
-    // 2. Handle original onClick if provided
+    // SOLO disparamos el Pixel si NO es un ancla interna
+    if (href && !isAnchor) {
+      trackInitiateCheckout();
+    } else if (isAnchor) {
+      console.log('Navegación interna: No se registra conversión.');
+    }
+
     if (onClick) {
       onClick(event as React.MouseEvent<HTMLButtonElement>);
     }
 
     if (href) {
-      const isExternalLink = !href.startsWith('#') && !href.startsWith('/');
-      
-      if (isExternalLink) {
-        // Prevent default navigation immediately
-        event.preventDefault();
-        
-        // Wait a tiny bit (50ms) to ensure the pixel request is sent, then navigate
-        setTimeout(() => {
-          window.location.href = href;
-        }, 50);
-      } else if (href.startsWith('#')) {
-        // Handle internal scrolling
+      if (isAnchor) {
         event.preventDefault();
         const targetId = href.substring(1);
         const targetElement = document.getElementById(targetId);
@@ -52,13 +44,20 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+      } else {
+        // Enlaces externos (Checkout)
+        const isExternalLink = !href.startsWith('/');
+        if (isExternalLink) {
+          event.preventDefault();
+          setTimeout(() => {
+            window.location.href = href;
+          }, 50);
+        }
       }
-      // If it's a standard internal link (not starting with #), let default behavior proceed.
     }
   };
 
   if (href) {
-    // If it's an anchor tag (<a>)
     const { 
       type, 
       disabled, 
