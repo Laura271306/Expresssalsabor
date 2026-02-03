@@ -1,30 +1,36 @@
+import React, { useEffect, lazy, Suspense } from "react";
 import UrgencyBanner from "@/components/UrgencyBanner";
 import HeroSection from "@/components/HeroSection";
 import TheProblemSection from "@/components/TheProblemSection";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
-import UserProfilesSection from "@/components/UserProfilesSection";
-import CrispMethodSection from "@/components/CrispMethodSection";
-import EasierThanGoogleSection from "@/components/EasierThanGoogleSection";
-import AirfryerMagicaSection from "@/components/AirfryerMagicaSection";
-import NoChefNeededSection from "@/components/NoChefNeededSection";
-import SocialProofSection from "@/components/SocialProofSection";
-import BenefitsSection from "@/components/BenefitsSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import BonusSection from "@/components/BonusSection";
-import PriceComparisonBanner from "@/components/PriceComparisonBanner";
-import DeliveryMethodSection from "@/components/DeliveryMethodSection";
-import SpecialOfferSection from "@/components/SpecialOfferSection";
-import TrustBadgesSection from "@/components/TrustBadgesSection";
-import GuaranteeSection from "@/components/GuaranteeSection";
-import FaqSection from "@/components/FaqSection";
-import FinalCtaSection from "@/components/FinalCtaSection";
 import RestZone from "@/components/RestZone";
-import CompatibilitySection from "@/components/CompatibilitySection";
-import QuickPrepSection from "@/components/QuickPrepSection";
-import HowItWorksInPractice from "@/components/HowItWorksInPractice";
 import CtaButton from "@/components/CtaButton";
-import { useEffect } from "react";
 import { CHECKOUT_LINK } from "@/lib/constants";
+
+// Lazy Imports (Below the fold)
+const UserProfilesSection = lazy(() => import("@/components/UserProfilesSection"));
+const CrispMethodSection = lazy(() => import("@/components/CrispMethodSection"));
+const EasierThanGoogleSection = lazy(() => import("@/components/EasierThanGoogleSection"));
+const AirfryerMagicaSection = lazy(() => import("@/components/AirfryerMagicaSection"));
+const NoChefNeededSection = lazy(() => import("@/components/NoChefNeededSection"));
+const SocialProofSection = lazy(() => import("@/components/SocialProofSection"));
+const BenefitsSection = lazy(() => import("@/components/BenefitsSection"));
+const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
+const BonusSection = lazy(() => import("@/components/BonusSection"));
+const PriceComparisonBanner = lazy(() => import("@/components/PriceComparisonBanner"));
+const DeliveryMethodSection = lazy(() => import("@/components/DeliveryMethodSection"));
+const SpecialOfferSection = lazy(() => import("@/components/SpecialOfferSection"));
+const TrustBadgesSection = lazy(() => import("@/components/TrustBadgesSection"));
+const GuaranteeSection = lazy(() => import("@/components/GuaranteeSection"));
+const FaqSection = lazy(() => import("@/components/FaqSection"));
+const FinalCtaSection = lazy(() => import("@/components/FinalCtaSection"));
+const CompatibilitySection = lazy(() => import("@/components/CompatibilitySection"));
+const QuickPrepSection = lazy(() => import("@/components/QuickPrepSection"));
+const HowItWorksInPractice = lazy(() => import("@/components/HowItWorksInPractice"));
+
+const LoadingFallback = () => (
+  <div className="h-16 bg-gray-100 animate-pulse"></div>
+);
 
 const Index = () => {
   useEffect(() => {
@@ -46,12 +52,19 @@ const Index = () => {
         </p>
       </div>
 
-      <UserProfilesSection />
+      <Suspense fallback={<LoadingFallback />}>
+        <UserProfilesSection />
+      </Suspense>
       
       <RestZone text="Hasta aquí, ¿ya te viste usando esto en tu día a día?" />
 
-      <CrispMethodSection />
-      <EasierThanGoogleSection />
+      <Suspense fallback={<LoadingFallback />}>
+        <CrispMethodSection />
+      </Suspense>
+      
+      <Suspense fallback={<LoadingFallback />}>
+        <EasierThanGoogleSection />
+      </Suspense>
       
       {/* Repetición Clave 1 */}
       <div className="bg-white py-6 px-6 text-center">
@@ -60,10 +73,17 @@ const Index = () => {
         </p>
       </div>
 
-      <AirfryerMagicaSection />
-      <NoChefNeededSection />
+      <Suspense fallback={<LoadingFallback />}>
+        <AirfryerMagicaSection />
+      </Suspense>
       
-      <CompatibilitySection />
+      <Suspense fallback={<LoadingFallback />}>
+        <NoChefNeededSection />
+      </Suspense>
+      
+      <Suspense fallback={<LoadingFallback />}>
+        <CompatibilitySection />
+      </Suspense>
 
       {/* Repetición Clave 2 */}
       <div className="bg-dark-bg py-6 px-6 text-center border-t border-gray-800">
@@ -72,9 +92,13 @@ const Index = () => {
         </p>
       </div>
 
-      <QuickPrepSection />
+      <Suspense fallback={<LoadingFallback />}>
+        <QuickPrepSection />
+      </Suspense>
       
-      <SocialProofSection />
+      <Suspense fallback={<LoadingFallback />}>
+        <SocialProofSection />
+      </Suspense>
 
       {/* CTA Anticipado (Agora aponta para o checkout) */}
       <div className="bg-dark-bg py-10 px-6 text-center border-t border-gray-800">
@@ -89,7 +113,9 @@ const Index = () => {
 
       <RestZone text="¿Te imaginas recuperar 40 minutos de tu tarde hoy mismo?" />
 
-      <BenefitsSection />
+      <Suspense fallback={<LoadingFallback />}>
+        <BenefitsSection />
+      </Suspense>
 
       {/* Repetição Clave 3 */}
       <div className="bg-light-bg py-6 px-6 text-center border-y border-gray-200">
@@ -98,29 +124,54 @@ const Index = () => {
         </p>
       </div>
 
-      <TestimonialsSection />
+      <Suspense fallback={<LoadingFallback />}>
+        <TestimonialsSection />
+      </Suspense>
       
       <RestZone text="El miedo a fallar termina cuando tienes el paso a paso exacto." />
       
-      <BonusSection />
-      <PriceComparisonBanner />
-      <DeliveryMethodSection />
+      <Suspense fallback={<LoadingFallback />}>
+        <BonusSection />
+      </Suspense>
+      
+      <Suspense fallback={<LoadingFallback />}>
+        <PriceComparisonBanner />
+      </Suspense>
+      
+      <Suspense fallback={<LoadingFallback />}>
+        <DeliveryMethodSection />
+      </Suspense>
 
-      {/* Frase de decisión + bloque de uso */}
+      {/* Frase de decisão + bloco de uso */}
       <div className="bg-white pt-20 pb-10 px-6 text-center">
         <p className="font-serif text-3xl font-bold text-dark-bg mb-10">
           Si esto ya te hace sentido, no necesitas pensarlo tanto.
         </p>
       </div>
       
-      <HowItWorksInPractice />
+      <Suspense fallback={<LoadingFallback />}>
+        <HowItWorksInPractice />
+      </Suspense>
       
-      <SpecialOfferSection />
+      <Suspense fallback={<LoadingFallback />}>
+        <SpecialOfferSection />
+      </Suspense>
       
-      <TrustBadgesSection />
-      <GuaranteeSection />
-      <FaqSection />
-      <FinalCtaSection />
+      <Suspense fallback={<LoadingFallback />}>
+        <TrustBadgesSection />
+      </Suspense>
+      
+      <Suspense fallback={<LoadingFallback />}>
+        <GuaranteeSection />
+      </Suspense>
+      
+      <Suspense fallback={<LoadingFallback />}>
+        <FaqSection />
+      </Suspense>
+      
+      <Suspense fallback={<LoadingFallback />}>
+        <FinalCtaSection />
+      </Suspense>
     </div>
   );
 };
