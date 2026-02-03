@@ -40,8 +40,13 @@ const HeroSection: React.FC = () => {
           <p className="font-sans text-highlight-gold font-bold text-lg italic">
             "Si sabes presionar botones, sabes usar este método."
           </p>
+          
+          {/* Marketing Incentive */}
+          <p className="font-sans text-2xl font-bold text-white pt-4">
+            ¡Descubre la oferta especial antes de que termine!
+          </p>
 
-          <CtaButton href="#link-ancoragem" className="mt-8">
+          <CtaButton href="#link-ancoragem" className="mt-2">
             Quiero dejar de perder tiempo en la cocina
           </CtaButton>
         </div>

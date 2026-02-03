@@ -24,6 +24,7 @@ import QuickPrepSection from "@/components/QuickPrepSection";
 import HowItWorksInPractice from "@/components/HowItWorksInPractice";
 import CtaButton from "@/components/CtaButton";
 import { useEffect } from "react";
+import { CHECKOUT_LINK } from "@/lib/constants";
 
 const Index = () => {
   useEffect(() => {
@@ -75,10 +76,13 @@ const Index = () => {
       
       <SocialProofSection />
 
-      {/* CTA Anticipado */}
+      {/* CTA Anticipado (Agora aponta para o checkout) */}
       <div className="bg-dark-bg py-10 px-6 text-center border-t border-gray-800">
         <p className="font-sans text-xl text-gray-400 mb-6 italic">Si esto ya te hace sentido, no necesitas leer todo.</p>
-        <CtaButton href="#link-ancoragem" className="bg-highlight-gold hover:bg-yellow-600 text-dark-bg">
+        <p className="font-sans text-2xl font-bold text-white mb-4">
+          ¡Aprovecha el 95% de descuento antes de que termine la oferta!
+        </p>
+        <CtaButton href={CHECKOUT_LINK} className="bg-highlight-gold hover:bg-yellow-600 text-dark-bg">
           ✨ QUIERO EMPEZAR AHORA
         </CtaButton>
       </div>

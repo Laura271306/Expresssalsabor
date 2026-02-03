@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import { Utensils, Clock, Thermometer, Zap } from 'lucide-react';
 import CtaButton from './CtaButton';
+import { CHECKOUT_LINK } from '@/lib/constants';
 
 const WhatMakesUsUniqueSection: React.FC = () => {
   const features = [
@@ -47,7 +48,7 @@ const WhatMakesUsUniqueSection: React.FC = () => {
         </div>
 
         <div className="text-left">
-          <CtaButton href="#link-ancoragem">
+          <CtaButton href={CHECKOUT_LINK}>
             Quiero cocinar sin complicaciones
           </CtaButton>
         </div>

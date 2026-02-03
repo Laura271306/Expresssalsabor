@@ -1,0 +1,1 @@
+export const CHECKOUT_LINK = "https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10";

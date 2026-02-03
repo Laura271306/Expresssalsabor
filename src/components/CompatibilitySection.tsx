@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import { CheckCircle, Zap, CookingPot, Scale } from 'lucide-react';
 import CtaButton from './CtaButton';
+import { CHECKOUT_LINK } from '@/lib/constants';
 
 const CompatibilitySection: React.FC = () => {
   const models = [
@@ -33,7 +34,10 @@ const CompatibilitySection: React.FC = () => {
         </div>
 
         <div className="text-left">
-          <CtaButton href="#link-ancoragem" className="bg-highlight-gold hover:bg-yellow-600 text-dark-bg">
+          <p className="font-sans text-xl font-bold text-white mb-4">
+            ¡Aprovecha el descuento de hoy y empieza a cocinar!
+          </p>
+          <CtaButton href={CHECKOUT_LINK} className="bg-highlight-gold hover:bg-yellow-600 text-dark-bg">
             ✔ PROBAR EN MI AIR FRYER
           </CtaButton>
         </div>

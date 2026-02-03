@@ -3,6 +3,7 @@ import SectionWrapper from './SectionWrapper';
 import { Search, BookOpen, Clock, Smartphone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import CtaButton from './CtaButton';
+import { CHECKOUT_LINK } from '@/lib/constants';
 
 const EasierThanGoogleSection: React.FC = () => {
   const comparisonPoints = [
@@ -71,7 +72,7 @@ const EasierThanGoogleSection: React.FC = () => {
           </ul>
           
           <div className="text-left">
-            <CtaButton href="#link-ancoragem">
+            <CtaButton href={CHECKOUT_LINK}>
               📖 ACCESO INMEDIATO AL RECETARIO
             </CtaButton>
           </div>

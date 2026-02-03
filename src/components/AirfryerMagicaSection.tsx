@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import { CookingPot, Check, Zap, Clock, Thermometer, Pizza, Cookie, Beef, Timer } from 'lucide-react';
 import CtaButton from './CtaButton';
+import { CHECKOUT_LINK } from '@/lib/constants';
 
 const AirfryerMagicaSection: React.FC = () => {
   const features = [
@@ -63,7 +64,7 @@ const AirfryerMagicaSection: React.FC = () => {
             </li>
           </ul>
 
-          <CtaButton href="#link-ancoragem" className="text-xl">
+          <CtaButton href={CHECKOUT_LINK} className="text-xl">
             🚀 QUIERO EL MAPA COMPLETO
           </CtaButton>
         </div>

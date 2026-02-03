@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import { Timer, Pizza, Cookie, Beef } from 'lucide-react';
 import CtaButton from './CtaButton';
+import { CHECKOUT_LINK } from '@/lib/constants';
 
 const QuickPrepSection: React.FC = () => {
   const recipes = [
@@ -33,7 +34,7 @@ const QuickPrepSection: React.FC = () => {
         </div>
 
         <div className="text-left">
-          <CtaButton href="#link-ancoragem" className="bg-mint-green hover:bg-green-500 text-dark-bg shadow-mint-green/30">
+          <CtaButton href={CHECKOUT_LINK} className="bg-mint-green hover:bg-green-500 text-dark-bg shadow-mint-green/30">
             🔥 VER RECETAS RÁPIDAS
           </CtaButton>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { trackAddToCart } from '@/utils/facebookPixel';
+import { CHECKOUT_LINK } from '@/lib/constants'; // Importing constant for reference, although not used in the logic itself
 
 interface CtaButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
@@ -24,7 +25,7 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className, href, varian
   const handleCtaAction = (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
     const isAnchor = href?.startsWith('#');
 
-    // Disparamos AddToCart se NÃO for uma âncora interna
+    // Disparamos AddToCart se NÃO for uma âncora interna (ou seja, se for o link de checkout)
     if (href && !isAnchor) {
       // Usando 6.90 USD como valor padrão, conforme a oferta
       trackAddToCart(6.90, 'USD'); 

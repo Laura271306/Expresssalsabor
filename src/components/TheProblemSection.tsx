@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import { XCircle, CheckCircle } from 'lucide-react';
 import CtaButton from './CtaButton';
+import { CHECKOUT_LINK } from '@/lib/constants';
 
 const TheProblemSection: React.FC = () => {
   return (
@@ -42,7 +43,7 @@ const TheProblemSection: React.FC = () => {
             </li>
           </ul>
           
-          <CtaButton href="#link-ancoragem" className="bg-urgency-red hover:bg-red-700">
+          <CtaButton href={CHECKOUT_LINK} className="bg-urgency-red hover:bg-red-700">
             Esto me pasa a mí
           </CtaButton>
         </div>

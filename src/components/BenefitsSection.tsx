@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 import CtaButton from './CtaButton';
 import { Salad, DollarSign, Clock, Heart, Utensils, Users } from 'lucide-react';
 import BenefitImageCard from './BenefitImageCard';
+import { CHECKOUT_LINK } from '@/lib/constants';
 
 const BenefitsSection: React.FC = () => {
   const benefits = [
@@ -49,7 +50,7 @@ const BenefitsSection: React.FC = () => {
         </div>
 
         <div className="text-left mt-12">
-          <CtaButton href="#link-ancoragem" className="text-xl px-8 py-4">
+          <CtaButton href={CHECKOUT_LINK} className="text-xl px-8 py-4">
             Esto es justo lo que necesito
           </CtaButton>
         </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import { X, Check } from 'lucide-react';
 import CtaButton from './CtaButton';
+import { CHECKOUT_LINK } from '@/lib/constants';
 
 const BeforeAfterSection: React.FC = () => {
   return (
@@ -56,7 +57,10 @@ const BeforeAfterSection: React.FC = () => {
         </div>
 
         <div className="text-left">
-          <CtaButton href="#link-ancoragem">
+          <p className="font-sans text-xl font-bold text-dark-bg mb-4">
+            ¡No esperes más para transformar tu cocina!
+          </p>
+          <CtaButton href={CHECKOUT_LINK}>
             Quiero el después, no el antes
           </CtaButton>
         </div>

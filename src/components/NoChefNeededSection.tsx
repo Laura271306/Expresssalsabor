@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import { BookOpen, ListOrdered, ShoppingBag, Zap } from 'lucide-react';
 import CtaButton from './CtaButton';
+import { CHECKOUT_LINK } from '@/lib/constants';
 
 const NoChefNeededSection: React.FC = () => {
   const features = [
@@ -60,7 +61,7 @@ const NoChefNeededSection: React.FC = () => {
 
         <div className="text-left mt-12">
           <CtaButton 
-            href="#link-ancoragem"
+            href={CHECKOUT_LINK}
             variant="primary" 
             className="bg-highlight-gold hover:bg-yellow-600 text-dark-bg text-xl px-8 py-4 shadow-highlight-gold/50"
           >
