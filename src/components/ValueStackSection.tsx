@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 
 const ValueStackSection: React.FC = () => {
   const tableData = [
-    { item: "Colecciones (4)", value: "US$ 28", isTotal: false },
+    { item: "Coleções (4)", value: "US$ 28", isTotal: false },
     { item: "Menús + listas de compras", value: "US$ 17", isTotal: false },
     { item: "Tablas de tiempos/temperaturas", value: "US$ 12", isTotal: false },
     { item: "Guía de limpieza", value: "US$ 7", isTotal: false },
@@ -15,7 +15,7 @@ const ValueStackSection: React.FC = () => {
   ];
 
   return (
-    <SectionWrapper bgColor="dark" id="link-ancoragem">
+    <SectionWrapper bgColor="dark">
       <div className="flex justify-center">
         <div className="w-full max-w-[450px] bg-light-bg rounded-xl shadow-2xl p-5 md:p-8">
           <img 

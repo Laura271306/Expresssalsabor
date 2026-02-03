@@ -15,7 +15,7 @@ const SpecialOfferSection: React.FC = () => {
   const totalValue = 94; // 39 + 25 + 15 + 10 + 5 = 94
 
   return (
-    <section className="bg-dark-bg text-white py-20 px-6 border-t border-highlight-gold/20">
+    <section id="link-ancoragem" className="bg-dark-bg text-white py-20 px-6 border-t border-highlight-gold/20">
       <div className="max-w-md mx-auto">
         <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8 text-highlight-gold text-left">
           OFERTA ESPECIAL
@@ -70,7 +70,7 @@ const SpecialOfferSection: React.FC = () => {
           <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" className="text-xl px-8 py-4 mb-2 mx-auto">
             SÍ, QUIERO MIS RECETAS AHORA
           </CtaButton>
-          <p className="text-[12px] text-gray-600 font-sans font-bold mb-4">
+          <p className="text-[12px] text-gray-600 text-center font-sans font-bold mb-4">
             Si no te facilita la vida, no te quedes con esto.
           </p>
 
