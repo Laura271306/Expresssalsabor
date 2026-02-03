@@ -1,4 +1,4 @@
-import React, { useEffect, lazy, Suspense } from "react";
+import React, { useEffect } from "react";
 import UrgencyBanner from "@/components/UrgencyBanner";
 import HeroSection from "@/components/HeroSection";
 import TheProblemSection from "@/components/TheProblemSection";
@@ -7,34 +7,30 @@ import RestZone from "@/components/RestZone";
 import CtaButton from "@/components/CtaButton";
 import { CHECKOUT_LINK } from "@/lib/constants";
 
-// Lazy Imports (Below the fold)
-const UserProfilesSection = lazy(() => import("@/components/UserProfilesSection"));
-const CrispMethodSection = lazy(() => import("@/components/CrispMethodSection"));
-const EasierThanGoogleSection = lazy(() => import("@/components/EasierThanGoogleSection"));
-const AirfryerMagicaSection = lazy(() => import("@/components/AirfryerMagicaSection"));
-const NoChefNeededSection = lazy(() => import("@/components/NoChefNeededSection"));
-const SocialProofSection = lazy(() => import("@/components/SocialProofSection"));
-const BenefitsSection = lazy(() => import("@/components/BenefitsSection"));
-const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
-const BonusSection = lazy(() => import("@/components/BonusSection"));
-const PriceComparisonBanner = lazy(() => import("@/components/PriceComparisonBanner"));
-const DeliveryMethodSection = lazy(() => import("@/components/DeliveryMethodSection"));
-const SpecialOfferSection = lazy(() => import("@/components/SpecialOfferSection"));
-const TrustBadgesSection = lazy(() => import("@/components/TrustBadgesSection"));
-const GuaranteeSection = lazy(() => import("@/components/GuaranteeSection"));
-const FaqSection = lazy(() => import("@/components/FaqSection"));
-const FinalCtaSection = lazy(() => import("@/components/FinalCtaSection"));
-const CompatibilitySection = lazy(() => import("@/components/CompatibilitySection"));
-const QuickPrepSection = lazy(() => import("@/components/QuickPrepSection"));
-const HowItWorksInPractice = lazy(() => import("@/components/HowItWorksInPractice"));
-
-const LoadingFallback = () => (
-  <div className="h-16 bg-gray-100 animate-pulse"></div>
-);
+// Static Imports (Ensuring all components are available immediately for smooth scrolling)
+import UserProfilesSection from "@/components/UserProfilesSection";
+import CrispMethodSection from "@/components/CrispMethodSection";
+import EasierThanGoogleSection from "@/components/EasierThanGoogleSection";
+import AirfryerMagicaSection from "@/components/AirfryerMagicaSection";
+import NoChefNeededSection from "@/components/NoChefNeededSection";
+import SocialProofSection from "@/components/SocialProofSection";
+import BenefitsSection from "@/components/BenefitsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import BonusSection from "@/components/BonusSection";
+import PriceComparisonBanner from "@/components/PriceComparisonBanner";
+import DeliveryMethodSection from "@/components/DeliveryMethodSection";
+import SpecialOfferSection from "@/components/SpecialOfferSection";
+import TrustBadgesSection from "@/components/TrustBadgesSection";
+import GuaranteeSection from "@/components/GuaranteeSection";
+import FaqSection from "@/components/FaqSection";
+import FinalCtaSection from "@/components/FinalCtaSection";
+import CompatibilitySection from "@/components/CompatibilitySection";
+import QuickPrepSection from "@/components/QuickPrepSection";
+import HowItWorksInPractice from "@/components/HowItWorksInPractice";
 
 const Index = () => {
   useEffect(() => {
-    // trackViewContent removido conforme solicitado. PageView é disparado no FacebookPixel.tsx
+    // PageView is fired in FacebookPixel.tsx
   }, []);
 
   return (
@@ -52,19 +48,12 @@ const Index = () => {
         </p>
       </div>
 
-      <Suspense fallback={<LoadingFallback />}>
-        <UserProfilesSection />
-      </Suspense>
+      <UserProfilesSection />
       
       <RestZone text="Hasta aquí, ¿ya te viste usando esto en tu día a día?" />
 
-      <Suspense fallback={<LoadingFallback />}>
-        <CrispMethodSection />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback />}>
-        <EasierThanGoogleSection />
-      </Suspense>
+      <CrispMethodSection />
+      <EasierThanGoogleSection />
       
       {/* Repetición Clave 1 */}
       <div className="bg-white py-6 px-6 text-center">
@@ -73,17 +62,10 @@ const Index = () => {
         </p>
       </div>
 
-      <Suspense fallback={<LoadingFallback />}>
-        <AirfryerMagicaSection />
-      </Suspense>
+      <AirfryerMagicaSection />
+      <NoChefNeededSection />
       
-      <Suspense fallback={<LoadingFallback />}>
-        <NoChefNeededSection />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback />}>
-        <CompatibilitySection />
-      </Suspense>
+      <CompatibilitySection />
 
       {/* Repetición Clave 2 */}
       <div className="bg-dark-bg py-6 px-6 text-center border-t border-gray-800">
@@ -92,13 +74,9 @@ const Index = () => {
         </p>
       </div>
 
-      <Suspense fallback={<LoadingFallback />}>
-        <QuickPrepSection />
-      </Suspense>
+      <QuickPrepSection />
       
-      <Suspense fallback={<LoadingFallback />}>
-        <SocialProofSection />
-      </Suspense>
+      <SocialProofSection />
 
       {/* CTA Anticipado (Agora aponta para o checkout) */}
       <div className="bg-dark-bg py-10 px-6 text-center border-t border-gray-800">
@@ -113,9 +91,7 @@ const Index = () => {
 
       <RestZone text="¿Te imaginas recuperar 40 minutos de tu tarde hoy mismo?" />
 
-      <Suspense fallback={<LoadingFallback />}>
-        <BenefitsSection />
-      </Suspense>
+      <BenefitsSection />
 
       {/* Repetição Clave 3 */}
       <div className="bg-light-bg py-6 px-6 text-center border-y border-gray-200">
@@ -124,23 +100,13 @@ const Index = () => {
         </p>
       </div>
 
-      <Suspense fallback={<LoadingFallback />}>
-        <TestimonialsSection />
-      </Suspense>
+      <TestimonialsSection />
       
       <RestZone text="El miedo a fallar termina cuando tienes el paso a paso exacto." />
       
-      <Suspense fallback={<LoadingFallback />}>
-        <BonusSection />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback />}>
-        <PriceComparisonBanner />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback />}>
-        <DeliveryMethodSection />
-      </Suspense>
+      <BonusSection />
+      <PriceComparisonBanner />
+      <DeliveryMethodSection />
 
       {/* Frase de decisão + bloco de uso */}
       <div className="bg-white pt-20 pb-10 px-6 text-center">
@@ -149,29 +115,14 @@ const Index = () => {
         </p>
       </div>
       
-      <Suspense fallback={<LoadingFallback />}>
-        <HowItWorksInPractice />
-      </Suspense>
+      <HowItWorksInPractice />
       
-      <Suspense fallback={<LoadingFallback />}>
-        <SpecialOfferSection />
-      </Suspense>
+      <SpecialOfferSection />
       
-      <Suspense fallback={<LoadingFallback />}>
-        <TrustBadgesSection />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback />}>
-        <GuaranteeSection />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback />}>
-        <FaqSection />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback />}>
-        <FinalCtaSection />
-      </Suspense>
+      <TrustBadgesSection />
+      <GuaranteeSection />
+      <FaqSection />
+      <FinalCtaSection />
     </div>
   );
 };
