@@ -21,7 +21,6 @@ import FinalCtaSection from "@/components/FinalCtaSection";
 import RestZone from "@/components/RestZone";
 import CompatibilitySection from "@/components/CompatibilitySection";
 import QuickPrepSection from "@/components/QuickPrepSection";
-import ValueStackSection from "@/components/ValueStackSection";
 import HowItWorksInPractice from "@/components/HowItWorksInPractice";
 import CtaButton from "@/components/CtaButton";
 import { useEffect } from "react";
@@ -111,7 +110,6 @@ const Index = () => {
       </div>
       
       <HowItWorksInPractice />
-      <ValueStackSection />
       
       <SpecialOfferSection />
       
