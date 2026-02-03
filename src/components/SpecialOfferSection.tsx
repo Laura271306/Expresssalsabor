@@ -5,15 +5,15 @@ import { Gift, Check } from 'lucide-react';
 
 const SpecialOfferSection: React.FC = () => {
   const valueStack = [
-    { item: "Recetario Airfryer Mágica (+600 Recetas)", value: "$79.00" },
-    { item: "Guía de Compras Inteligentes (Bono 1)", value: "$29.00" },
-    { item: "Tabla de Tiempos y Temperaturas (Bono 2)", value: "$15.00" },
-    { item: "Paquete de Bônus Exclusivos (Bono 3, 4, 5, 6, 7)", value: "$15.00" },
+    { item: "Recetario Airfryer Mágica (+600 Recetas)", value: "$39.00" },
+    { item: "Guía de Compras Inteligentes (Bono 1)", value: "$15.00" },
+    { item: "Tabla de Tiempos y Temperaturas (Bono 2)", value: "$10.00" },
+    { item: "Paquete de Bônus Exclusivos (Bono 3, 4, 5, 6, 7)", value: "$3.50" },
   ];
 
-  const totalValue = 138.00; 
+  const totalValue = 67.50; 
   const finalPrice = 6.90;
-  const discountPercentage = 95; // (138.00 - 6.90) / 138.00 = 0.95, ou 95%
+  const discountPercentage = 90; // Calculado como 89.77%, arredondado para 90%
 
   return (
     <section id="link-ancoragem" className="bg-dark-bg text-white py-20 px-6 border-t border-highlight-gold/20">
@@ -60,7 +60,7 @@ const SpecialOfferSection: React.FC = () => {
             </p>
           </div>
           
-          {/* 95% Destacado */}
+          {/* 90% Destacado */}
           <p className="font-sans text-8xl font-extrabold text-urgency-red mb-2 leading-none">
             {discountPercentage}%
           </p>
