@@ -5,15 +5,15 @@ import { Gift, Check } from 'lucide-react';
 
 const SpecialOfferSection: React.FC = () => {
   const valueStack = [
-    { item: "+600 Recetas", value: "R$ 39,00" },
-    { item: "Guía de Compras Inteligentes", value: "R$ 15,00" },
-    { item: "Tabla de Tiempos y Temperaturas", value: "R$ 10,00" },
-    { item: "Menús Semanales", value: "R$ 3,50" },
+    { item: "Recetario Airfryer Mágica (+600 Recetas)", value: "$79.00" },
+    { item: "Guía de Compras Inteligentes (Bono 1)", value: "$29.00" },
+    { item: "Tabla de Tiempos y Temperaturas (Bono 2)", value: "$15.00" },
+    { item: "Paquete de Bônus Exclusivos (Bono 3, 4, 5, 6, 7)", value: "$15.00" },
   ];
 
-  const totalValue = 67.50; 
+  const totalValue = 138.00; 
   const finalPrice = 6.90;
-  const discountPercentage = 90; // (67.50 - 6.90) / 67.50 ≈ 89.7%, arredondado para 90%
+  const discountPercentage = 95; // (138.00 - 6.90) / 138.00 = 0.95, ou 95%
 
   return (
     <section id="link-ancoragem" className="bg-dark-bg text-white py-20 px-6 border-t border-highlight-gold/20">
@@ -37,7 +37,7 @@ const SpecialOfferSection: React.FC = () => {
           />
 
           <h3 className="font-serif text-2xl font-bold mb-4 text-dark-bg text-left">
-            Valor Total del Kit Completo: <span className="line-through text-gray-500">R$ {totalValue.toFixed(2).replace('.', ',')}</span>
+            Valor Total del Kit Completo: <span className="line-through text-gray-500">${totalValue.toFixed(2)}</span>
           </h3>
 
           {/* Detailed Value Stack */}
@@ -53,14 +53,14 @@ const SpecialOfferSection: React.FC = () => {
           {/* Price Highlight */}
           <div className="mb-6 p-4 bg-cta-primary/10 rounded-lg border border-cta-primary">
             <p className="font-sans text-xl mb-2 text-dark-bg">
-              <span className="line-through text-gray-500">Valor total: R$ {totalValue.toFixed(2).replace('.', ',')}</span>
+              <span className="line-through text-gray-500">Valor total: ${totalValue.toFixed(2)}</span>
             </p>
             <p className="font-sans text-3xl text-urgency-red font-bold">
-              🔥 Hoy solo: R$ {finalPrice.toFixed(2).replace('.', ',')}
+              🔥 Hoy solo: ${finalPrice.toFixed(2)}
             </p>
           </div>
           
-          {/* 90% Destacado */}
+          {/* 95% Destacado */}
           <p className="font-sans text-8xl font-extrabold text-urgency-red mb-2 leading-none">
             {discountPercentage}%
           </p>
