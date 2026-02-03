@@ -5,14 +5,15 @@ import { Gift, Check } from 'lucide-react';
 
 const SpecialOfferSection: React.FC = () => {
   const valueStack = [
-    { item: "+600 Recetas", value: "US$ 39" },
-    { item: "Guía de Compras Inteligentes", value: "US$ 25" },
-    { item: "Tabla de Tiempos y Temperaturas", value: "US$ 15" },
-    { item: "Menús Semanales", value: "US$ 10" },
-    { item: "+ Bonos Exclusivos", value: "US$ 5" },
+    { item: "+600 Recetas", value: "R$ 39,00" },
+    { item: "Guía de Compras Inteligentes", value: "R$ 15,00" },
+    { item: "Tabla de Tiempos y Temperaturas", value: "R$ 10,00" },
+    { item: "Menús Semanales", value: "R$ 3,50" },
   ];
 
-  const totalValue = 94; // 39 + 25 + 15 + 10 + 5 = 94
+  const totalValue = 67.50; 
+  const finalPrice = 6.90;
+  const discountPercentage = 90; // (67.50 - 6.90) / 67.50 ≈ 89.7%, arredondado para 90%
 
   return (
     <section id="link-ancoragem" className="bg-dark-bg text-white py-20 px-6 border-t border-highlight-gold/20">
@@ -36,7 +37,7 @@ const SpecialOfferSection: React.FC = () => {
           />
 
           <h3 className="font-serif text-2xl font-bold mb-4 text-dark-bg text-left">
-            Valor Total del Kit Completo: <span className="line-through text-gray-500">${totalValue} USD</span>
+            Valor Total del Kit Completo: <span className="line-through text-gray-500">R$ {totalValue.toFixed(2).replace('.', ',')}</span>
           </h3>
 
           {/* Detailed Value Stack */}
@@ -52,16 +53,16 @@ const SpecialOfferSection: React.FC = () => {
           {/* Price Highlight */}
           <div className="mb-6 p-4 bg-cta-primary/10 rounded-lg border border-cta-primary">
             <p className="font-sans text-xl mb-2 text-dark-bg">
-              <span className="line-through text-gray-500">Valor total: ${totalValue} USD</span>
+              <span className="line-through text-gray-500">Valor total: R$ {totalValue.toFixed(2).replace('.', ',')}</span>
             </p>
             <p className="font-sans text-3xl text-urgency-red font-bold">
-              🔥 Hoy solo: $6,90 USD
+              🔥 Hoy solo: R$ {finalPrice.toFixed(2).replace('.', ',')}
             </p>
           </div>
           
-          {/* 95% Destacado */}
+          {/* 90% Destacado */}
           <p className="font-sans text-8xl font-extrabold text-urgency-red mb-2 leading-none">
-            95%
+            {discountPercentage}%
           </p>
           <p className="font-sans text-2xl font-bold text-cta-primary mb-6">
             DE DESCUENTO
@@ -75,7 +76,7 @@ const SpecialOfferSection: React.FC = () => {
           </p>
 
           <p className="font-sans text-sm text-gray-600 mb-6">
-            95% de descuento – acceso inmediato con pago único
+            {discountPercentage}% de descuento – acceso inmediato con pago único
           </p>
           
           {/* Guarantee Box */}
@@ -98,7 +99,7 @@ const SpecialOfferSection: React.FC = () => {
         </p>
         <div className="text-left">
           <CtaButton href="https://pay.hotmart.com/I102633587P?off=y7ekz10e&checkoutMode=10" className="text-xl px-8 py-4 bg-cta-primary hover:bg-green-600 shadow-cta-primary/50">
-            ACCEDER AHORA - 95% OFF
+            ACCEDER AHORA - {discountPercentage}% OFF
           </CtaButton>
           <p className="text-[12px] text-gray-500 font-sans mt-2">
             El riesgo no es tuyo.
