@@ -12,14 +12,12 @@ import { cn } from '@/lib/utils';
 const recipeImages = [
   "/images/recipes/airfryer-14.jpg",
   "/images/recipes/airfry2 (7)_11zon.jpg",
-  "/images/recipes/airfryer-9.jpg",
+  // "/images/recipes/airfryer-9.jpg", <-- REMOVIDA
   "/images/recipes/airfryer-13.jpg",
   "/images/recipes/airfryer-12.jpg",
   "/images/recipes/airfryer-7.jpg",
   "/images/recipes/airfryer-8.jpg",
   "/images/recipes/aifryer-5.jpg",
-  // As imagens anteriores que não foram anexadas novamente, mas estavam no código, foram mantidas.
-  // Se houver necessidade de incluir mais, elas devem ser adicionadas aqui.
   "/images/recipes/airfryer-11.jpg",
   "/images/recipes/airfryer-10.jpg",
   "/images/recipes/aifryer-6.jpg",
@@ -34,10 +32,10 @@ const RecipeCarouselSection: React.FC = () => {
     <SectionWrapper bgColor="light" className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark-bg mb-4">
-          O que você vai conseguir fazer:
+          ¡Esto es lo que vas a lograr!
         </h2>
         <p className="font-sans text-xl text-gray-700 mb-12">
-          Resultados crocantes, saborosos e saudáveis em minutos.
+          Resultados crujientes, sabrosos y saludables en minutos, <span className="font-bold text-cta-primary">sin fallar nunca más.</span>
         </p>
 
         <Carousel
@@ -54,7 +52,7 @@ const RecipeCarouselSection: React.FC = () => {
                   <div className="aspect-square overflow-hidden rounded-xl shadow-2xl border-4 border-highlight-gold/50">
                     <img 
                       src={src} 
-                      alt={`Receita Air Fryer ${index + 1}`} 
+                      alt={`Receta Air Fryer ${index + 1}`} 
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                       loading="lazy"
                     />
