@@ -14,13 +14,15 @@ const recipeImages = [
   "/images/recipes/airfry2 (7)_11zon.jpg",
   "/images/recipes/airfryer-9.jpg",
   "/images/recipes/airfryer-13.jpg",
-  "/images/recipes/airfryer-11.jpg",
   "/images/recipes/airfryer-12.jpg",
-  "/images/recipes/airfryer-10.jpg",
   "/images/recipes/airfryer-7.jpg",
   "/images/recipes/airfryer-8.jpg",
-  "/images/recipes/aifryer-6.jpg",
   "/images/recipes/aifryer-5.jpg",
+  // As imagens anteriores que não foram anexadas novamente, mas estavam no código, foram mantidas.
+  // Se houver necessidade de incluir mais, elas devem ser adicionadas aqui.
+  "/images/recipes/airfryer-11.jpg",
+  "/images/recipes/airfryer-10.jpg",
+  "/images/recipes/aifryer-6.jpg",
   "/images/recipes/airfryer-1.jpg",
   "/images/recipes/airfryer-4.jpg",
   "/images/recipes/aifryer-3.jpg",

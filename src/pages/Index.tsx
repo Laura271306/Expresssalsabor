@@ -27,7 +27,7 @@ import FinalCtaSection from "@/components/FinalCtaSection";
 import CompatibilitySection from "@/components/CompatibilitySection";
 import QuickPrepSection from "@/components/QuickPrepSection";
 import HowItWorksInPractice from "@/components/HowItWorksInPractice";
-import RecipeCarouselSection from "@/components/RecipeCarouselSection"; // New Import
+import RecipeCarouselSection from "@/components/RecipeCarouselSection";
 
 const Index = () => {
   useEffect(() => {
@@ -39,12 +39,12 @@ const Index = () => {
       <UrgencyBanner />
       <HeroSection />
       
-      {/* <RecipeCarouselSection /> */} {/* Temporarily commented out */}
+      <RecipeCarouselSection />
 
       <TheProblemSection />
       <BeforeAfterSection />
 
-      {/* Alivio Emocional / Normalização */}
+      {/* Alivio Emocional / Normalización */}
       <div className="bg-light-bg py-10 px-6 text-center">
         <p className="font-serif italic text-2xl text-dark-bg/80 max-w-3xl mx-auto leading-relaxed">
           “Si ya intentaste organizarte y no funcionó, el problema no eras tú. <span className="text-highlight-gold font-bold">Era el método.</span>”
@@ -105,7 +105,7 @@ const Index = () => {
 
       <TestimonialsSection />
       
-      <RestZone text="El miedo a fallar termina cuando tienes el paso a paso exacto." />
+      <RestZone text="El miedo a fallar termina cuando tienes el paso a passo exacto." />
       
       <BonusSection />
       <PriceComparisonBanner />
