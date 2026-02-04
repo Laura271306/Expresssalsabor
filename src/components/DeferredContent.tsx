@@ -9,7 +9,7 @@ const DeferredContent: React.FC<DeferredContentProps> = ({ children, delay = 500
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    let timeoutId: number;
+    let timeoutId: ReturnType<typeof setTimeout>;
     
     // Load after delay
     timeoutId = setTimeout(() => {

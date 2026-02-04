@@ -1,7 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import CtaButton from './CtaButton';
-import { Check } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   return (
@@ -24,11 +23,11 @@ const HeroSection: React.FC = () => {
 
           <ul className="space-y-3 pt-2 md:pt-4">
             <li className="flex items-start">
-              <Check className="w-5 h-5 md:w-6 md:h-6 text-cta-primary mr-3 flex-shrink-0" />
+              <svg className="w-5 h-5 md:w-6 md:h-6 text-cta-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg>
               <span className="font-sans text-base md:text-lg">Más de 600 recetas diseñadas específicamente para Air Fryer</span>
             </li>
             <li className="flex items-start">
-              <Check className="w-5 h-5 md:w-6 md:h-6 text-cta-primary mr-3 flex-shrink-0" />
+              <svg className="w-5 h-5 md:w-6 md:h-6 text-cta-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg>
               <span className="font-sans text-base md:text-lg">Resultados perfectos en 10-15 minutos</span>
             </li>
           </ul>

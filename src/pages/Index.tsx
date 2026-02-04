@@ -3,7 +3,7 @@ import UrgencyBanner from "@/components/UrgencyBanner";
 import HeroSection from "@/components/HeroSection";
 import DeferredContent from "@/components/DeferredContent";
 
-// Lazy loading components to prioritize the Hero Section (LCP)
+// Lazy loading all sections
 const RecipeCarouselSection = lazy(() => import("@/components/RecipeCarouselSection"));
 const TheProblemSection = lazy(() => import("@/components/TheProblemSection"));
 const SolutionSection = lazy(() => import("@/components/SolutionSection"));
@@ -36,19 +36,15 @@ const Index = () => {
   return (
     <div className="w-full min-h-screen">
       <UrgencyBanner />
-      {/* Critical path: ONLY the Hero Section loads initially */}
+      {/* Critical path: ONLY the Hero Section is rendered initially */}
       <HeroSection />
 
-      {/* Group 1: Immediately visible content after Hero (Recipe Carousel, Problem, Solution) */}
-      <Suspense fallback={<LoadingPlaceholder />}>
-        <RecipeCarouselSection />
-        <TheProblemSection />
-        <SolutionSection />
-      </Suspense>
-
-      {/* Group 2: Content below the fold, loaded aggressively after a short delay/interaction */}
-      <DeferredContent delay={500}>
+      {/* Everything else is deferred until interaction or idle */}
+      <DeferredContent delay={2000}>
         <Suspense fallback={<LoadingPlaceholder />}>
+          <RecipeCarouselSection />
+          <TheProblemSection />
+          <SolutionSection />
           <BeforeAfterSection />
 
           <div className="bg-light-bg py-10 px-6 text-center">
