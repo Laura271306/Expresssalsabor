@@ -10,10 +10,9 @@ import SectionWrapper from './SectionWrapper';
 import { cn } from '@/lib/utils';
 
 const recipeImages = [
+  "/images/recipes/airfryer-13.jpg", // Ahora es la primera foto
   "/images/recipes/airfryer-14.jpg",
   "/images/recipes/airfry2 (7)_11zon.jpg",
-  // "/images/recipes/airfryer-9.jpg", <-- REMOVIDA
-  "/images/recipes/airfryer-13.jpg",
   "/images/recipes/airfryer-12.jpg",
   "/images/recipes/airfryer-7.jpg",
   "/images/recipes/airfryer-8.jpg",
@@ -29,41 +28,43 @@ const recipeImages = [
 
 const RecipeCarouselSection: React.FC = () => {
   return (
-    <SectionWrapper bgColor="light" className="py-16 md:py-24">
+    <SectionWrapper bgColor="light" className="py-12 md:py-24">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark-bg mb-4">
+        <h2 className="font-serif text-3xl md:text-5xl font-bold text-dark-bg mb-4 px-4">
           ¡Esto es lo que vas a lograr!
         </h2>
-        <p className="font-sans text-xl text-gray-700 mb-12">
+        <p className="font-sans text-lg md:text-xl text-gray-700 mb-8 md:mb-12 px-4">
           Resultados crujientes, sabrosos y saludables en minutos, <span className="font-bold text-cta-primary">sin fallar nunca más.</span>
         </p>
 
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-6xl mx-auto"
-        >
-          <CarouselContent className="-ml-4">
-            {recipeImages.map((src, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <div className="aspect-square overflow-hidden rounded-xl shadow-2xl border-4 border-highlight-gold/50">
-                    <img 
-                      src={src} 
-                      alt={`Receta Air Fryer ${index + 1}`} 
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                      loading="lazy"
-                    />
+        <div className="px-10 md:px-0">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {recipeImages.map((src, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <div className="aspect-square overflow-hidden rounded-xl shadow-2xl border-4 border-highlight-gold/50">
+                      <img 
+                        src={src} 
+                        alt={`Receta Air Fryer ${index + 1}`} 
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden md:flex" />
-          <CarouselNext className="hidden md:flex" />
-        </Carousel>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12" />
+            <CarouselNext className="hidden md:flex -right-12" />
+          </Carousel>
+        </div>
       </div>
     </SectionWrapper>
   );
