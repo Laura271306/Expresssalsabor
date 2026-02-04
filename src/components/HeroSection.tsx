@@ -54,7 +54,7 @@ const HeroSection: React.FC = () => {
         <div className="flex justify-center lg:justify-end">
           <div className="relative w-full max-w-md">
             <img 
-              src="/images/kit-mockup-main.jpeg" 
+              src="/images/hero-family-airfryer.png" 
               alt="Familia feliz cocinando con Air Fryer" 
               className="w-full h-auto rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-highlight-gold/50 object-cover"
               style={{ height: '400px' }}
