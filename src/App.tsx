@@ -1,3 +1,4 @@
+import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,7 +6,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import FacebookPixel from "./components/FacebookPixel";
+
+// Lazy load FacebookPixel to defer script execution
+const FacebookPixel = React.lazy(() => import("./components/FacebookPixel"));
 
 const queryClient = new QueryClient();
 
@@ -14,7 +17,10 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <FacebookPixel />
+      {/* Defer loading of Facebook Pixel */}
+      <React.Suspense fallback={null}>
+        <FacebookPixel />
+      </React.Suspense>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
