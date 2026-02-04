@@ -1,102 +1,77 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
 import CtaButton from './CtaButton';
-import { Gift, Check } from 'lucide-react';
+import { ShieldCheck, Zap, Star } from 'lucide-react';
 import { CHECKOUT_LINK } from '@/lib/constants';
 
 const SpecialOfferSection: React.FC = () => {
-  const valueStack = [
-    { item: "+600 Recetas", value: "US$ 39" },
-    { item: "Guía de Compras Inteligentes", value: "US$ 25" },
-    { item: "Tabla de Tiempos y Temperaturas", value: "US$ 15" },
-    { item: "Menús Semanales", value: "US$ 10" },
-    { item: "+ Bonos Exclusivos", value: "US$ 5" },
-  ];
-
-  const totalValue = 94;
-
   return (
-    <section id="link-ancoragem" className="bg-dark-bg text-white py-16 md:py-20 px-4 md:px-6 border-t border-highlight-gold/20 scroll-mt-20">
-      <div className="max-w-md mx-auto">
-        <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6 md:mb-8 text-highlight-gold text-center md:text-left">
-          OFERTA ESPECIAL
-        </h2>
-        <p className="font-sans text-base md:text-lg font-bold mb-8 text-urgency-red text-center md:text-left">
-          ▲ SOLO HOY - ÚLTIMAS 12 PLAZAS
-        </p>
-
-        <div className="bg-white rounded-xl p-6 md:p-8 mb-8 shadow-[0_0_40px_rgba(0,170,84,0.3)] border-4 border-cta-primary text-dark-bg text-center">
-          
-          <img 
-            src="/images/kit-mockup-main.jpeg" 
-            alt="Mockup del Kit Completo AirFryer" 
-            className="w-full h-40 md:h-48 object-cover rounded-lg mb-6"
-            loading="lazy"
-            decoding="async"
-            width="400"
-            height="192" // h-48 is 192px
-          />
-
-          <h3 className="font-serif text-xl md:text-2xl font-bold mb-4 text-dark-bg text-left">
-            Valor Total del Kit: <span className="line-through text-gray-500 font-normal">${totalValue} USD</span>
-          </h3>
-
-          <div className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200 text-left">
-            {valueStack.map((item, index) => (
-              <div key={index} className="flex justify-between font-sans text-sm md:text-base text-gray-700 py-1.5 border-b border-gray-200 last:border-b-0">
-                <span>{item.item}</span>
-                <span className="font-bold">{item.value}</span>
-              </div>
-            ))}
+    <section id="link-ancoragem" className="bg-white py-20 px-6 scroll-mt-20 overflow-hidden relative">
+      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-cta-primary/10 rounded-full blur-3xl"></div>
+      
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="font-serif text-dark-bg text-4xl md:text-6xl font-bold mb-4">
+            TU NUEVA VIDA COMIENZA AQUÍ
+          </h2>
+          <div className="flex justify-center gap-1 mb-6">
+            {[1,2,3,4,5].map(i => <Star key={i} className="w-6 h-6 fill-highlight-gold text-highlight-gold" />)}
+            <span className="ml-3 font-sans font-bold text-gray-500">(2,340+ Alumnos satisfechos)</span>
           </div>
-          
-          <div className="mb-6 p-4 bg-cta-primary/10 rounded-lg border border-cta-primary">
-            <p className="font-sans text-lg mb-1 text-dark-bg">
-              <span className="line-through text-gray-500">Valor total: ${totalValue} USD</span>
-            </p>
-            <p className="font-sans text-2xl md:text-3xl text-urgency-red font-bold">
-              🔥 Hoy solo: $6,90 USD
-            </p>
-          </div>
-          
-          <p className="font-sans text-7xl md:text-8xl font-extrabold text-urgency-red mb-2 leading-none">
-            95%
-          </p>
-          <p className="font-sans text-xl md:text-2xl font-bold text-cta-primary mb-6">
-            DE DESCUENTO
-          </p>
+        </div>
 
-          <CtaButton href={CHECKOUT_LINK} className="w-full text-lg md:text-xl px-4 py-4 mb-3">
-            SÍ, QUIERO MIS RECETAS
-          </CtaButton>
-          
-          <p className="text-[11px] md:text-[12px] text-gray-600 text-center font-sans font-bold mb-6">
-            Pago único. Acceso de por vida.
-          </p>
-          
-          <div className="bg-gray-900 p-4 rounded-lg text-white border border-highlight-gold/50 text-left">
-            <div className="flex items-center gap-3">
-              <Gift className="w-6 h-6 md:w-8 md:h-8 text-highlight-gold flex-shrink-0" />
-              <div>
-                <h4 className="font-sans font-bold text-sm md:text-base">Garantía de 7 Días</h4>
-                <p className="font-sans text-xs text-gray-300">
-                  Si no te gusta, te devolvemos el 100% de tu inversión.
+        <div className="bg-dark-bg rounded-3xl p-8 md:p-12 shadow-2xl relative border-4 border-highlight-gold">
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-urgency-red text-white px-8 py-2 rounded-full font-bold text-lg animate-bounce">
+            ¡ULTIMOS CUPOS DISPONIBLES!
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="font-sans text-white text-2xl font-bold mb-6">LO QUE TE LLEVAS HOY:</h3>
+              <ul className="space-y-4 mb-8">
+                <li className="flex justify-between text-gray-400 border-b border-gray-800 pb-2">
+                  <span>📗 Ebook Airfryer Mágica (+600 Recetas)</span>
+                  <span className="text-white font-bold">$47</span>
+                </li>
+                <li className="flex justify-between text-gray-400 border-b border-gray-800 pb-2">
+                  <span>🎁 Bono: Guía de Compras Inteligentes</span>
+                  <span className="text-cta-primary font-bold">GRATIS</span>
+                </li>
+                <li className="flex justify-between text-gray-400 border-b border-gray-800 pb-2">
+                  <span>🎁 Bono: Tabla de Tiempos y Temperaturas</span>
+                  <span className="text-cta-primary font-bold">GRATIS</span>
+                </li>
+                <li className="flex justify-between text-gray-400 border-b border-gray-800 pb-2">
+                  <span>🎁 Bono: Menús Semanales Express</span>
+                  <span className="text-cta-primary font-bold">GRATIS</span>
+                </li>
+              </ul>
+              
+              <div className="text-center md:text-left">
+                <p className="text-gray-500 line-through text-xl">Precio Regular: $97 USD</p>
+                <p className="text-highlight-gold text-5xl md:text-6xl font-black mt-2">
+                  $6.90 <span className="text-xl font-normal">USD</span>
                 </p>
+                <p className="text-gray-400 text-sm mt-2 font-bold italic">* Pago único, acceso inmediato.</p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <CtaButton href={CHECKOUT_LINK} variant="final" className="w-full text-2xl py-8">
+                SÍ, QUIERO EL ACCESO TOTAL
+              </CtaButton>
+              
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center text-gray-400 text-sm">
+                  <ShieldCheck className="w-6 h-6 mr-3 text-highlight-gold" />
+                  Garantía incondicional de 7 días.
+                </div>
+                <div className="flex items-center text-gray-400 text-sm">
+                  <Zap className="w-6 h-6 mr-3 text-orange-500" />
+                  Acceso vía Hotmart (Plataforma 100% segura)
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div className="text-center md:text-left px-2">
-          <p className="font-sans text-base text-gray-400 mb-6 italic">
-            ¿Aún con dudas? El riesgo es todo nuestro.
-          </p>
-          <CtaButton href={CHECKOUT_LINK} className="w-full text-lg bg-cta-primary hover:bg-green-600 shadow-cta-primary/50">
-            ACCEDER AHORA - 95% OFF
-          </CtaButton>
-          <p className="text-[12px] text-gray-500 font-sans mt-3">
-            * Oferta válida para las próximas 24 horas.
-          </p>
         </div>
       </div>
     </section>

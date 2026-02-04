@@ -1,47 +1,34 @@
 import React from 'react';
 import { ListChecks, Clock, ShoppingCart, CookingPot, Thermometer } from 'lucide-react';
 import SectionWrapper from './SectionWrapper';
-import { cn } from '@/lib/utils';
 
-interface CrispStepProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
-
-const CrispStep: React.FC<CrispStepProps> = ({ icon, title, description }) => (
-  <div className="bg-light-bg p-6 rounded-xl text-left shadow-md">
-    <div className="w-14 h-14 flex items-center justify-center bg-cta-primary/10 rounded-full mb-4 text-cta-primary">
+const CrispStep: React.FC<{ icon: React.ReactNode; title: string; description: string }> = ({ icon, title, description }) => (
+  <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 flex flex-col items-center text-center">
+    <div className="w-16 h-16 bg-highlight-gold/10 rounded-full flex items-center justify-center text-highlight-gold mb-4">
       {icon}
     </div>
-    <h4 className="font-sans font-bold text-dark-bg text-lg mb-1">{title}</h4>
-    <p className="font-sans text-dark-bg text-sm">{description}</p>
+    <h4 className="font-sans font-bold text-dark-bg text-lg mb-2">{title}</h4>
+    <p className="font-sans text-gray-600 text-sm">{description}</p>
   </div>
 );
 
 const CrispMethodSection: React.FC = () => {
   return (
-    <SectionWrapper bgColor="dark">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="font-serif text-white text-3xl md:text-4xl mb-4 text-left">
+    <SectionWrapper bgColor="light">
+      <div className="max-w-5xl mx-auto text-center">
+        <h2 className="font-serif text-dark-bg text-4xl md:text-5xl font-bold mb-6">
           ¿Por qué esto funciona cuando otras recetas fallan?
         </h2>
-        <h3 className="font-sans font-semibold text-highlight-gold text-2xl mb-10 text-left">
-          Aplicamos el Sistema C.R.I.S.P.:
-        </h3>
+        <p className="font-sans text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+          No es suerte. Es ciencia aplicada a tu Air Fryer. Usamos el sistema <span className="text-cta-primary font-bold">C.R.I.S.P.</span> para resultados infalibles:
+        </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
-          <CrispStep icon={<ListChecks className="w-7 h-7" />} title="CLASIFICAR" description="Recetas por objetivo para decidir sin pensar" />
-          <CrispStep icon={<Clock className="w-7 h-7" />} title="RELOJ" description="Tiempos exactos por alimento + ajustes por capacidad" />
-          <CrispStep icon={<ShoppingCart className="w-7 h-7" />} title="INGREDIENTE" description="Sustitutos simples del súper" />
-          <CrispStep icon={<CookingPot className="w-7 h-7" />} title="SAZONAR" description="Combinaciones probadas con menos aceite" />
-          <CrispStep icon={<Thermometer className="w-7 h-7" />} title="PRECALENTAR" description="Protocolo 3-5 min para crocancia consistente" />
-        </div>
-
-        <div className="mt-10 bg-mint-green p-6 rounded-lg max-w-xl">
-          <p className="font-sans font-bold text-dark-bg text-lg text-left">
-            Resultado: platos listos en 10-15 min, incluso si eres principiante.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <CrispStep icon={<ListChecks className="w-8 h-8" />} title="Clasificar" description="Recetas por objetivo y tiempo real" />
+          <CrispStep icon={<Clock className="w-8 h-8" />} title="Reloj" description="Tiempos exactos según la capacidad" />
+          <CrispStep icon={<ShoppingCart className="w-8 h-8" />} title="Ingrediente" description="Sustitutos inteligentes del súper" />
+          <CrispStep icon={<CookingPot className="w-8 h-8" />} title="Sazonar" description="Mezclas que activan el sabor sin grasa" />
+          <CrispStep icon={<Thermometer className="w-8 h-8" />} title="Precalentar" description="Protocolo de 3 min para máxima crocancia" />
         </div>
       </div>
     </SectionWrapper>
