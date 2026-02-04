@@ -17,36 +17,39 @@ const SolutionSection: React.FC = () => {
         {/* Content (60% desktop) */}
         <div className="lg:col-span-1">
           <h3 className="font-serif uppercase text-dark-bg text-3xl md:text-4xl mb-2">
-            airfryer mágica
+            AIRFRYER MÁGICA
           </h3>
-          <h4 className="font-sans text-dark-bg text-xl mb-6">
+          <h4 className="font-sans text-dark-bg text-xl mb-6 font-bold">
             +600 Recetas Fáciles, Rápidas y 100% Saludables
           </h4>
 
           <div className="space-y-4 mb-8">
             <p className="font-sans text-dark-bg text-lg leading-relaxed">
-              El recetario digital <span className="font-bold">DEFINITIVO</span> para aprovechar al máximo tu freidora de aire y sorprender a tu familia con resultados profesionales en minutos.
-            </p>
-            <p className="font-sans text-dark-bg text-lg leading-relaxed">
-              Este no es un recetario más. Es el ÚNICO que incluye:
+              El recetario digital <strong>definitivo</strong> para aprovechar al máximo tu freidora de aire y sorprender a tu familia con resultados profesionales en minutos.
             </p>
           </div>
 
           <ul className="list-none p-0">
             <CheckItem>
-              +600 recetas irresistibles y comprobadas – desde desayunos rápidos hasta cenas completas.
+              +600 recetas sin gluten y sin aceite – desde desayunos rápidos hasta cenas completas y sobremesas deliciosas, para todos los gustos y edades.
             </CheckItem>
             <CheckItem>
-              Instrucciones paso a paso con fotos – sigue fácilmente cada preparación sin complicaciones.
+              Instrucciones paso a paso con fotos y horarios exactos – sigue fácilmente cada preparación sin complicaciones.
             </CheckItem>
             <CheckItem>
               Valores nutricionales calculados – cuida tu salud sin renunciar al sabor.
             </CheckItem>
             <CheckItem>
+              Lista de compras inteligente – sabe exactamente qué comprar y en qué cantidad.
+            </CheckItem>
+            <CheckItem>
+              Menú de 1 mes programado – comida planificada para todo el mes, sin estrés.
+            </CheckItem>
+            <CheckItem>
               Compatible con cualquier modelo de Airfryer – no importa cuál tengas, ¡funciona igual!
             </CheckItem>
             <CheckItem>
-              Método C.R.I.S.P. EXCLUSIVO – la estrategia secreta de chefs profesionales que garantiza resultados perfectos.
+              Entrega inmediata – recibe el material al instante y empieza a cocinar hoy mismo.
             </CheckItem>
           </ul>
         </div>
