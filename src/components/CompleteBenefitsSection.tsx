@@ -13,35 +13,35 @@ const CompleteBenefitsSection: React.FC = () => {
           icon: <BookOpen className="w-6 h-6" />,
           title: "Libro Principal Airfryer Mágica",
           description: "+600 recetas probadas paso a paso",
-          value: "$47",
+          value: "$29",
           bonus: true
         },
         {
           icon: <ShoppingBag className="w-6 h-6" />,
           title: "Guía de Compras Inteligente",
           description: "Lista organizada por categorías y porciones",
-          value: "$25",
+          value: "$15",
           bonus: true
         },
         {
           icon: <Heart className="w-6 h-6" />,
-          title: "Recetas Sin Aceite",
+          title: "Recetas Saludables",
           description: "50+ opciones saludables y deliciosas",
-          value: "$18",
+          value: "$12",
           bonus: true
         },
         {
           icon: <Zap className="w-6 h-6" />,
           title: "Recetas Sin Gluten",
           description: "40+ alternativas seguras para celíacos",
-          value: "$22",
+          value: "$18",
           bonus: true
         },
         {
           icon: <Utensils className="w-6 h-6" />,
           title: "Libro de Postres Express",
           description: "30+ recetas en 10-15 minutos",
-          value: "$15",
+          value: "$10",
           bonus: true
         }
       ]
@@ -53,28 +53,28 @@ const CompleteBenefitsSection: React.FC = () => {
           icon: <Clock className="w-6 h-6" />,
           title: "Tabla de Tiempos Exactos",
           description: "Por tipo de alimento y modelo de Air Fryer",
-          value: "$20",
+          value: "$12",
           bonus: true
         },
         {
           icon: <Calendar className="w-6 h-6" />,
           title: "Plan Mensual Completo",
           description: "30 días de menús planificados y balanceados",
-          value: "$30",
+          value: "$20",
           bonus: true
         },
         {
           icon: <ShoppingBag className="w-6 h-6" />,
           title: "Lista de Compras Inteligente",
           description: "Calcula exactamente lo que necesitas por semana",
-          value: "$12",
+          value: "$8",
           bonus: true
         },
         {
           icon: <Award className="w-6 h-6" />,
           title: "Guía de Técnicas Avanzadas",
           description: "Secretos de chefs profesionales para resultados perfectos",
-          value: "$35",
+          value: "$25",
           bonus: true
         }
       ]

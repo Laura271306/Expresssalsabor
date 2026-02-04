@@ -30,10 +30,10 @@ const ExpertValidationSection: React.FC = () => {
   ];
 
   const stats = [
-    { icon: <Users className="w-6 h-6" />, value: "2,340+", label: "Clientes Satisfechos" },
-    { icon: <Star className="w-6 h-6 fill-cta-primary" />, value: "98%", label: "Tasa de Satisfacción" },
-    { icon: <Clock className="w-6 h-6" />, value: "3 días", label: "Implementación Promedio" },
-    { icon: <Zap className="w-6 h-6" />, value: "10+", label: "Países" }
+    { icon: <Users className="w-6 h-6" />, value: "1,200+", label: "Clientes Satisfechos" },
+    { icon: <Star className="w-6 h-6 fill-cta-primary" />, value: "96%", label: "Tasa de Satisfacción" },
+    { icon: <Clock className="w-6 h-6" />, value: "2 días", label: "Implementación Promedio" },
+    { icon: <Zap className="w-6 h-6" />, value: "8", label: "Países" }
   ];
 
   return (

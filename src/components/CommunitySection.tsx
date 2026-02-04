@@ -6,10 +6,10 @@ import { CHECKOUT_LINK } from '@/lib/constants';
 
 const CommunitySection: React.FC = () => {
   const communityStats = [
-    { icon: <Users className="w-6 h-6" />, value: "2,340+", label: "Miembros Activos" },
-    { icon: <MessageCircle className="w-6 h-6" />, value: "15,000+", label: "Intercambios de Recetas" },
-    { icon: <Award className="w-6 h-6" />, value: "98%", label: "Satisfacción" },
-    { icon: <Star className="w-6 h-6" />, value: "4.9/5", label: "Calificación" }
+    { icon: <Users className="w-6 h-6" />, value: "1,200+", label: "Miembros Activos" },
+    { icon: <MessageCircle className="w-6 h-6" />, value: "8,500+", label: "Intercambios de Recetas" },
+    { icon: <Award className="w-6 h-6" />, value: "96%", label: "Satisfacción" },
+    { icon: <Star className="w-6 h-6" />, value: "4.8/5", label: "Calificación" }
   ];
 
   const benefits = [

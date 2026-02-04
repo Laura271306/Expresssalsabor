@@ -10,8 +10,8 @@ const UrgencyCounterSection: React.FC = () => {
     minutes: 45,
     seconds: 30
   });
-  const [spotsLeft, setSpotsLeft] = useState(17);
-  const [salesToday, setSalesToday] = useState(89);
+  const [spotsLeft, setSpotsLeft] = useState(23);
+  const [salesToday, setSalesToday] = useState(67);
 
   useEffect(() => {
     const timer = setInterval(() => {

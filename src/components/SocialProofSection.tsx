@@ -24,28 +24,28 @@ const SocialProofSection: React.FC = () => {
   const metrics = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
-      value: "2,340+",
-      label: "Ventas Realizadas",
+      value: "1,200+",
+      label: "Clientes Satisfechos"
     },
     {
       icon: <Star className="w-8 h-8 fill-cta-primary" />,
-      value: "98%",
-      label: "de Satisfacción",
+      value: "96%",
+      label: "de Satisfacción"
     },
     {
       icon: <Star className="w-8 h-8 fill-cta-primary" />,
-      value: "1,240",
-      label: "Evaluaciones 5 Estrellas",
+      value: "890",
+      label: "Evaluaciones 5 Estrellas"
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      value: "10+",
-      label: "Países",
+      value: "8",
+      label: "Países"
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      value: "3 días",
-      label: "Implementación Promedio",
+      value: "2 días",
+      label: "Implementación Promedio"
     },
   ];
 
