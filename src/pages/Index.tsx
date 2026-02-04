@@ -1,9 +1,9 @@
 import React, { useEffect, Suspense, lazy } from "react";
 import UrgencyBanner from "@/components/UrgencyBanner";
 import HeroSection from "@/components/HeroSection";
-import RecipeCarouselSection from "@/components/RecipeCarouselSection";
 
-// Lazy loading below-the-fold components to reduce initial JS payload
+// Lazy loading components to prioritize the Hero Section (LCP)
+const RecipeCarouselSection = lazy(() => import("@/components/RecipeCarouselSection"));
 const TheProblemSection = lazy(() => import("@/components/TheProblemSection"));
 const BeforeAfterSection = lazy(() => import("@/components/BeforeAfterSection"));
 const UserProfilesSection = lazy(() => import("@/components/UserProfilesSection"));
@@ -34,12 +34,12 @@ const Index = () => {
   return (
     <div className="w-full min-h-screen">
       <UrgencyBanner />
-      {/* Critical path components loaded directly */}
+      {/* Critical path: ONLY the Hero Section loads initially */}
       <HeroSection />
-      <RecipeCarouselSection />
 
-      {/* Non-critical components wrapped in Suspense for performance */}
+      {/* Everything else is deferred to let the Hero finish as fast as possible */}
       <Suspense fallback={<LoadingPlaceholder />}>
+        <RecipeCarouselSection />
         <TheProblemSection />
         <BeforeAfterSection />
 
