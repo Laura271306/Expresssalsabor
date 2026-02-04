@@ -2,44 +2,43 @@ import React, { useState, useEffect } from 'react';
 
 interface DeferredContentProps {
   children: React.ReactNode;
-  delay?: number; // Delay in ms before loading content
+  delay?: number;
 }
 
-const DeferredContent: React.FC<DeferredContentProps> = ({ children, delay = 500 }) => {
+const DeferredContent: React.FC<DeferredContentProps> = ({ children, delay = 2500 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    let timeoutId: ReturnType<typeof setTimeout>;
+    // Usar requestIdleCallback si está disponible para no bloquear el hilo principal
+    const loadContent = () => setIsLoaded(true);
     
-    // Load after delay
-    timeoutId = setTimeout(() => {
-      setIsLoaded(true);
-    }, delay);
+    let timeoutId: ReturnType<typeof setTimeout>;
 
-    // Load on first interaction (more aggressive)
+    if ('requestIdleCallback' in window) {
+      (window as any).requestIdleCallback(() => {
+        timeoutId = setTimeout(loadContent, delay);
+      });
+    } else {
+      timeoutId = setTimeout(loadContent, delay);
+    }
+
     const handleInteraction = () => {
       clearTimeout(timeoutId);
-      setIsLoaded(true);
-      window.removeEventListener('mousemove', handleInteraction);
-      window.removeEventListener('touchstart', handleInteraction);
+      loadContent();
       window.removeEventListener('scroll', handleInteraction);
     };
 
-    window.addEventListener('mousemove', handleInteraction, { once: true });
-    window.addEventListener('touchstart', handleInteraction, { once: true });
     window.addEventListener('scroll', handleInteraction, { once: true });
 
     return () => {
       clearTimeout(timeoutId);
-      window.removeEventListener('mousemove', handleInteraction);
-      window.removeEventListener('touchstart', handleInteraction);
       window.removeEventListener('scroll', handleInteraction);
     };
   }, [delay]);
 
   if (!isLoaded) {
-    // Render a minimal placeholder to avoid layout shift if possible
-    return <div className="h-20 w-full" />;
+    // Marcador de posición que mantiene el espacio para evitar CLS masivo
+    return <div className="w-full bg-dark-bg" style={{ height: '100vh' }} />;
   }
 
   return <>{children}</>;

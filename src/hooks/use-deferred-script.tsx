@@ -1,33 +1,29 @@
 import * as React from "react";
 
 /**
- * Carga un script después de que el navegador esté inactivo o después de una interacción.
- * Esto es útil para scripts de terceros no críticos como analytics/pixels.
+ * Carga un script después de una inactividad prolongada o interacción.
  */
 export function useDeferredScript(loadScript: () => void) {
   const [shouldLoad, setShouldLoad] = React.useState(false);
 
   React.useEffect(() => {
-    // 1. Cargar después de un breve retraso (inactividad inicial)
-    const timeoutId = setTimeout(() => setShouldLoad(true), 3000);
+    // 1. Cargar después de 5 segundos (mucho más tarde)
+    const timeoutId = setTimeout(() => setShouldLoad(true), 5000);
 
-    // 2. Cargar en la primera interacción del usuario (si ocurre antes del timeout)
+    // 2. Cargar en la primera interacción real (scroll)
     const handleInteraction = () => {
       setShouldLoad(true);
-      window.removeEventListener('mousemove', handleInteraction);
-      window.removeEventListener('touchstart', handleInteraction);
       window.removeEventListener('scroll', handleInteraction);
+      window.removeEventListener('touchstart', handleInteraction);
     };
 
-    window.addEventListener('mousemove', handleInteraction, { once: true });
-    window.addEventListener('touchstart', handleInteraction, { once: true });
     window.addEventListener('scroll', handleInteraction, { once: true });
+    window.addEventListener('touchstart', handleInteraction, { once: true });
 
     return () => {
       clearTimeout(timeoutId);
-      window.removeEventListener('mousemove', handleInteraction);
-      window.removeEventListener('touchstart', handleInteraction);
       window.removeEventListener('scroll', handleInteraction);
+      window.removeEventListener('touchstart', handleInteraction);
     };
   }, []);
 

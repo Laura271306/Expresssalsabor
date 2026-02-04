@@ -5,12 +5,8 @@ const PIXEL_ID = '886272914152692';
 
 const FacebookPixel = () => {
   const loadPixel = useCallback(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || (window as any).fbq) return;
 
-    // Evitar duplicación si ya existe fbq
-    if ((window as any).fbq) return;
-
-    // Script estándar de Meta Pixel
     const scriptText = `
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -26,16 +22,9 @@ const FacebookPixel = () => {
 
     const pixelScript = document.createElement('script');
     pixelScript.innerHTML = scriptText;
+    pixelScript.async = true;
     
-    const noscript = document.createElement('noscript');
-    noscript.innerHTML = `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1" />`;
-
-    // Insertar en el HEAD para cumplir con las mejores prácticas
     document.head.appendChild(pixelScript);
-    document.head.appendChild(noscript);
-
-    // No necesitamos devolver una función de limpieza aquí ya que el script se carga de forma diferida
-    // y solo se ejecuta una vez.
   }, []);
 
   useDeferredScript(loadPixel);
