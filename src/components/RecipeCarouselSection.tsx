@@ -8,9 +8,10 @@ import {
 } from "@/components/ui/carousel";
 import SectionWrapper from './SectionWrapper';
 import { cn } from '@/lib/utils';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const recipeImages = [
-  "/images/recipes/airfryer-13.jpg", // Ahora es la primera foto
+  "/images/recipes/airfryer-13.jpg",
   "/images/recipes/airfryer-14.jpg",
   "/images/recipes/airfry2 (7)_11zon.jpg",
   "/images/recipes/airfryer-12.jpg",
@@ -33,9 +34,16 @@ const RecipeCarouselSection: React.FC = () => {
         <h2 className="font-serif text-3xl md:text-5xl font-bold text-dark-bg mb-4 px-4">
           ¡Esto es lo que vas a lograr!
         </h2>
-        <p className="font-sans text-lg md:text-xl text-gray-700 mb-8 md:mb-12 px-4">
+        <p className="font-sans text-lg md:text-xl text-gray-700 mb-4 px-4">
           Resultados crujientes, sabrosos y saludables en minutos, <span className="font-bold text-cta-primary">sin fallar nunca más.</span>
         </p>
+
+        {/* Swipe Indicator for Mobile/Tablet */}
+        <div className="flex items-center justify-center gap-2 mb-8 text-highlight-gold font-bold animate-pulse">
+          <ChevronLeft className="w-5 h-5" />
+          <span className="font-sans text-sm uppercase tracking-widest">Desliza para ver más</span>
+          <ChevronRight className="w-5 h-5" />
+        </div>
 
         <div className="px-10 md:px-0">
           <Carousel
