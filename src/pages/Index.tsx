@@ -30,6 +30,11 @@ const CompatibilityGuideSection = lazy(() => import("@/components/CompatibilityG
 const UrgencyCounterSection = lazy(() => import("@/components/UrgencyCounterSection"));
 const CommunitySection = lazy(() => import("@/components/CommunitySection"));
 
+// Emotional sections
+const SuccessStoriesSection = lazy(() => import("@/components/SuccessStoriesSection"));
+const EmotionalImpactSection = lazy(() => import("@/components/EmotionalImpactSection"));
+const TimeTransformationSection = lazy(() => import("@/components/TimeTransformationSection"));
+
 const LoadingPlaceholder = () => <div className="h-20 w-full animate-pulse bg-gray-100" />;
 
 const Index = () => {
@@ -59,6 +64,11 @@ const Index = () => {
           
           <RecipeCarouselSection />
           <ResultsGallerySection />
+          
+          {/* Emotional sections */}
+          <SuccessStoriesSection />
+          <EmotionalImpactSection />
+          <TimeTransformationSection />
           
           <BenefitsSection />
           <CompleteBenefitsSection />
