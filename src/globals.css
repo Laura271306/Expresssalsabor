@@ -3,6 +3,22 @@
 @tailwind utilities;
 
 @layer base {
+  /* Definición de la fuente Baskervville (asumiendo archivos locales en public/fonts/) */
+  @font-face {
+    font-family: 'Baskervville';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Baskervville-Regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Baskervville';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Baskervville-Italic.woff2') format('woff2');
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
