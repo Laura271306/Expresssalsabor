@@ -75,6 +75,8 @@ const AirfryerMagicaSection: React.FC = () => {
             alt="Libro Airfryer Mágica" 
             className="w-full h-auto rounded-xl shadow-2xl border-4 border-highlight-gold/50 transition-transform group-hover:scale-[1.01]"
             loading="lazy"
+            width="450"
+            height="450"
           />
         </div>
       </div>
