@@ -37,7 +37,7 @@ const CrispMethodSection: React.FC = () => {
           <CrispStep 
             icon={<ShoppingCart className="w-8 h-8" />} 
             title="Ingredientes Accesibles" 
-            description="Sustitutos inteligentes del súper que encuentras en cualquier esquina y a bajo precio." 
+            description="Productos comunes que encuentras en cualquier supermercado, sin ingredientes raros ni caros." 
           />
           <CrispStep 
             icon={<CookingPot className="w-8 h-8" />} 
