@@ -13,7 +13,7 @@ const SolutionSection: React.FC = () => {
 
   return (
     <SectionWrapper bgColor="light" border>
-      <div className="grid lg:grid-cols-[60%_40%] gap-12 items-start">
+      <div className="grid lg:grid-cols-[60%_40%] gap-12 items-center">
         {/* Content (60% desktop) */}
         <div className="lg:col-span-1">
           <h3 className="font-serif uppercase text-dark-bg text-3xl md:text-4xl mb-2">
@@ -56,9 +56,9 @@ const SolutionSection: React.FC = () => {
           <div className="relative group">
             <img 
               src="/images/solution-main.png" 
-              alt="Kit Completo Airfryer Mágica" 
-              width="450"
-              height="450"
+              alt="Familia disfrutando recetas de Airfryer Mágica" 
+              width="600"
+              height="600"
               className="w-full h-auto rounded-xl shadow-2xl border-4 border-highlight-gold/30 transition-transform group-hover:scale-[1.02]"
               loading="lazy"
             />
