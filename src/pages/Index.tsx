@@ -27,6 +27,7 @@ import FinalCtaSection from "@/components/FinalCtaSection";
 import CompatibilitySection from "@/components/CompatibilitySection";
 import QuickPrepSection from "@/components/QuickPrepSection";
 import HowItWorksInPractice from "@/components/HowItWorksInPractice";
+import RecipeCarouselSection from "@/components/RecipeCarouselSection"; // New Import
 
 const Index = () => {
   useEffect(() => {
@@ -38,6 +39,8 @@ const Index = () => {
       <UrgencyBanner />
       <HeroSection />
       
+      <RecipeCarouselSection /> {/* New Section Added Here */}
+
       <TheProblemSection />
       <BeforeAfterSection />
 
