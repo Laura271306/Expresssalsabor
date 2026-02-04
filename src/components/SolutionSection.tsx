@@ -23,11 +23,14 @@ const SolutionSection: React.FC = () => {
             +600 Recetas Fáciles, Rápidas y 100% Saludables
           </h4>
 
-          <p className="font-sans text-dark-bg text-lg leading-relaxed mb-6">
-            El recetario digital <span className="font-bold">DEFINITIVO</span> para aprovechar al máximo tu freidora de aire y sorprender a tu familia con resultados profesionales en minutos.
-            <br /><br />
-            Este no es un recetario más. Es el ÚNICO que incluye:
-          </p>
+          <div className="space-y-4 mb-8">
+            <p className="font-sans text-dark-bg text-lg leading-relaxed">
+              El recetario digital <span className="font-bold">DEFINITIVO</span> para aprovechar al máximo tu freidora de aire y sorprender a tu familia con resultados profesionales en minutos.
+            </p>
+            <p className="font-sans text-dark-bg text-lg leading-relaxed">
+              Este no es un recetario más. Es el ÚNICO que incluye:
+            </p>
+          </div>
 
           <ul className="list-none p-0">
             <CheckItem>
@@ -45,17 +48,20 @@ const SolutionSection: React.FC = () => {
             <CheckItem>
               Método C.R.I.S.P. EXCLUSIVO – la estrategia secreta de chefs profesionales que garantiza resultados perfectos.
             </CheckItem>
-            <CheckItem>
-              Entrega inmediata – recibe el material al instante y empieza a cocinar hoy mismo.
-            </CheckItem>
           </ul>
         </div>
 
         {/* Image (40% desktop) */}
-        <div className="lg:col-span-1 relative">
-          {/* Placeholder for Image: AirFryer with dishes coming out */}
-          <div className="bg-gray-300 h-[400px] rounded-tr-md rounded-bl-md flex items-center justify-center text-gray-600 shadow-lg transition-all duration-300 hover:mt-[-41px] mt-0">
-            [Placeholder: AirFryer com pratos saindo]
+        <div className="lg:col-span-1">
+          <div className="relative group">
+            <img 
+              src="/images/solution-main.png" 
+              alt="Kit Completo Airfryer Mágica" 
+              width="450"
+              height="450"
+              className="w-full h-auto rounded-xl shadow-2xl border-4 border-highlight-gold/30 transition-transform group-hover:scale-[1.02]"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection";
 // Lazy loading components to prioritize the Hero Section (LCP)
 const RecipeCarouselSection = lazy(() => import("@/components/RecipeCarouselSection"));
 const TheProblemSection = lazy(() => import("@/components/TheProblemSection"));
+const SolutionSection = lazy(() => import("@/components/SolutionSection"));
 const BeforeAfterSection = lazy(() => import("@/components/BeforeAfterSection"));
 const UserProfilesSection = lazy(() => import("@/components/UserProfilesSection"));
 const RestZone = lazy(() => import("@/components/RestZone"));
@@ -41,6 +42,7 @@ const Index = () => {
       <Suspense fallback={<LoadingPlaceholder />}>
         <RecipeCarouselSection />
         <TheProblemSection />
+        <SolutionSection />
         <BeforeAfterSection />
 
         <div className="bg-light-bg py-10 px-6 text-center">

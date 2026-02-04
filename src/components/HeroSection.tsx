@@ -49,9 +49,10 @@ const HeroSection: React.FC = () => {
             <img 
               src="/images/kit-mockup-main.jpeg" 
               alt="Kit Completo Air Fryer" 
+              width="450"
+              height="450"
               className="w-full h-auto rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-highlight-gold/50 object-cover"
               style={{ maxHeight: '450px' }}
-              // Performance: Hero image should load eagerly and with high priority
               loading="eager"
               fetchPriority="high"
             />
