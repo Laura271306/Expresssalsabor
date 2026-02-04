@@ -43,7 +43,7 @@ const SolutionSection: React.FC = () => {
               <strong>Valores nutricionales calculados</strong> – cuida tu salud sin renunciar al sabor.
             </CheckItem>
             <CheckItem>
-              <strong>Lista de compras inteligente</strong> – sabe exactamente qué comprar y en qué cantidad.
+              <strong>Lista de compras inteligente</strong> – sabrás exactamente qué comprar y en qué cantidad.
             </CheckItem>
             <CheckItem>
               <strong>Menú de 1 mes programado</strong> – comida planificada para todo el mes, <strong>sin estrés</strong>.
