@@ -31,10 +31,13 @@ const SolutionSection: React.FC = () => {
 
           <ul className="list-none p-0">
             <CheckItem>
-              <strong>+600 recetas sin gluten y sin aceite</strong> – desde desayunos rápidos hasta cenas completas y sobremesas deliciosas.
+              <strong>+600 recetas variadas y probadas</strong> – desde desayunos rápidos hasta cenas completas y sobremesas deliciosas para todos los gustos.
             </CheckItem>
             <CheckItem>
-              Instrucciones <strong>paso a paso con fotos</strong> y <strong>horarios exactos</strong> – sigue cada preparación sin complicaciones.
+              <strong>Recetarios adicionales de regalo</strong> – Guías especializadas <strong>sin gluten y sin aceite</strong> incluidas como adición exclusiva.
+            </CheckItem>
+            <CheckItem>
+              Instrucciones <strong>paso a paso con fotos</strong> y <strong>horarios exactos</strong> – sigue fácilmente cada preparación sin complicaciones.
             </CheckItem>
             <CheckItem>
               <strong>Valores nutricionales calculados</strong> – cuida tu salud sin renunciar al sabor.
