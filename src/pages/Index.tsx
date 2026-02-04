@@ -28,6 +28,7 @@ import CompatibilitySection from "@/components/CompatibilitySection";
 import QuickPrepSection from "@/components/QuickPrepSection";
 import HowItWorksInPractice from "@/components/HowItWorksInPractice";
 import RecipeCarouselSection from "@/components/RecipeCarouselSection";
+import AuthoritySection from "@/components/AuthoritySection";
 
 const Index = () => {
   useEffect(() => {
@@ -56,6 +57,7 @@ const Index = () => {
       <RestZone text="Hasta aquí, ¿ya te viste usando esto en tu día a día?" />
 
       <CrispMethodSection />
+      <AuthoritySection /> {/* Added Authority Section here */}
       <EasierThanGoogleSection />
       
       {/* Repetición Clave 1 */}
