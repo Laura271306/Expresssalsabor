@@ -14,6 +14,7 @@ const ImageTestimonialCard: React.FC<ImageTestimonialCardProps> = ({ src, alt })
         alt={alt} 
         className="w-full h-auto object-cover"
         loading="lazy"
+        decoding="async"
         width="400"
         height="400"
       />

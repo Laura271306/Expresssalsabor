@@ -67,6 +67,7 @@ const SolutionSection: React.FC = () => {
               height="600"
               className="w-full h-auto rounded-xl shadow-2xl border-4 border-highlight-gold/30 transition-transform group-hover:scale-[1.02]"
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

@@ -32,6 +32,7 @@ const SpecialOfferSection: React.FC = () => {
             alt="Mockup del Kit Completo AirFryer" 
             className="w-full h-40 md:h-48 object-cover rounded-lg mb-6"
             loading="lazy"
+            decoding="async"
             width="400"
             height="192" // h-48 is 192px
           />

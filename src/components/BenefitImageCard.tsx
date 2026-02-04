@@ -18,6 +18,7 @@ const BenefitImageCard: React.FC<BenefitImageCardProps> = ({ imageSrc, icon, tit
           alt={`Imagen para el beneficio: ${title}`} 
           className="w-full h-full object-cover"
           loading="lazy"
+          decoding="async"
           width="400" // Assuming a reasonable width for a card image
           height="160" // h-40 is 160px
         />

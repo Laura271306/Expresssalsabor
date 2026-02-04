@@ -63,6 +63,7 @@ const RecipeCarouselSection: React.FC = () => {
                         // Performance: Eager load only the first image of the carousel as it's likely visible
                         loading={index === 0 ? "eager" : "lazy"}
                         fetchPriority={index === 0 ? "high" : "low"}
+                        decoding="async"
                         width="400"
                         height="400"
                       />

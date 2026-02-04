@@ -28,6 +28,7 @@ const BonusCard: React.FC<BonusCardProps> = ({ title, description, originalPrice
           alt="Caja de regalo dorada" 
           className="w-full h-full object-cover"
           loading="lazy"
+          decoding="async"
           width="200" // Assuming a width for 1/3 of max-w-3xl (approx 200px)
           height="160" // h-40 is 160px
         />
