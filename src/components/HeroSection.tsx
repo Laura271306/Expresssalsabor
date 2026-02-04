@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import CtaButton from './CtaButton';
-import { BookOpen, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   return (
@@ -31,10 +31,6 @@ const HeroSection: React.FC = () => {
               <Check className="w-5 h-5 md:w-6 md:h-6 text-cta-primary mr-3 flex-shrink-0" />
               <span className="font-sans text-base md:text-lg">Resultados perfectos en 10-15 minutos</span>
             </li>
-            <li className="flex items-start">
-              <Check className="w-5 h-5 md:w-6 md:h-6 text-cta-primary mr-3 flex-shrink-0" />
-              <span className="font-sans text-base md:text-lg"><strong>No necesitas medir, calcular ni improvisar.</strong></span>
-            </li>
           </ul>
 
           <p className="font-sans text-highlight-gold font-bold text-base md:text-lg italic">
@@ -42,9 +38,6 @@ const HeroSection: React.FC = () => {
           </p>
           
           <div className="pt-2 md:pt-4">
-            <p className="font-sans text-xl md:text-2xl font-bold text-white mb-4">
-              ¡Descubre la oferta especial antes de que termine!
-            </p>
             <CtaButton href="#link-ancoragem" className="w-full md:w-auto">
               Quiero dejar de perder tiempo
             </CtaButton>
@@ -58,7 +51,9 @@ const HeroSection: React.FC = () => {
               alt="Kit Completo Air Fryer" 
               className="w-full h-auto rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-highlight-gold/50 object-cover"
               style={{ maxHeight: '450px' }}
-              loading="lazy"
+              // Performance: Hero image should load eagerly and with high priority
+              loading="eager"
+              fetchPriority="high"
             />
             <div className="absolute -top-4 -right-2 md:-right-4 bg-urgency-red text-white rounded-full p-2 px-4 md:p-3 md:px-6 font-bold text-base md:text-lg shadow-xl rotate-3">
                 +600 Recetas

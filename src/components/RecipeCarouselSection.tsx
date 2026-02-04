@@ -7,7 +7,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import SectionWrapper from './SectionWrapper';
-import { cn } from '@/lib/utils';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const recipeImages = [
@@ -38,7 +37,6 @@ const RecipeCarouselSection: React.FC = () => {
           Resultados crujientes, sabrosos y saludables en minutos, <span className="font-bold text-cta-primary">sin fallar nunca más.</span>
         </p>
 
-        {/* Swipe Indicator for Mobile/Tablet */}
         <div className="flex items-center justify-center gap-2 mb-8 text-highlight-gold font-bold animate-pulse">
           <ChevronLeft className="w-5 h-5" />
           <span className="font-sans text-sm uppercase tracking-widest">Desliza para ver más</span>
@@ -57,12 +55,14 @@ const RecipeCarouselSection: React.FC = () => {
               {recipeImages.map((src, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                    <div className="aspect-square overflow-hidden rounded-xl shadow-2xl border-4 border-highlight-gold/50">
+                    <div className="aspect-square overflow-hidden rounded-xl shadow-2xl border-4 border-highlight-gold/50 bg-gray-100">
                       <img 
                         src={src} 
                         alt={`Receta Air Fryer ${index + 1}`} 
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                        loading="lazy"
+                        // Performance: Eager load only the first image of the carousel as it's likely visible
+                        loading={index === 0 ? "eager" : "lazy"}
+                        fetchPriority={index === 0 ? "high" : "low"}
                       />
                     </div>
                   </div>
