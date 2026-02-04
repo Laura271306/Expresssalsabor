@@ -7,32 +7,30 @@ interface BonusCardProps {
   description: string;
   originalPrice: string;
   imagePosition: 'left' | 'right';
-  icon: React.ReactNode; // Keeping icon prop but not using it for the visual, only for potential future use
+  icon: React.ReactNode;
 }
 
 const BonusCard: React.FC<BonusCardProps> = ({ title, description, originalPrice, imagePosition, icon }) => {
   return (
     <div className={cn(
       "relative p-6 rounded-xl shadow-2xl w-full",
-      "bg-[#282425] border border-highlight-gold/50", // Dark background, subtle gold border
+      "bg-[#282425] border border-highlight-gold/50",
       "flex items-center gap-6",
       imagePosition === 'right' ? 'flex-row-reverse' : 'flex-row',
       "max-w-3xl mx-auto"
     )}>
-      {/* Image Placeholder (Now using the uploaded image) */}
       <div className={cn(
         "w-1/3 h-40 flex items-center justify-center flex-shrink-0 rounded-lg overflow-hidden",
-        "bg-transparent" // Remove background color as the image has its own dark background
+        "bg-transparent"
       )}>
         <img 
           src="/images/bonus-gift.jpeg" 
           alt="Caja de regalo dorada" 
           className="w-full h-full object-cover"
-          loading="lazy" // Added lazy loading
+          loading="lazy"
         />
       </div>
 
-      {/* Content */}
       <div className="w-2/3">
         <h4 className="font-serif text-highlight-gold text-2xl md:text-3xl mb-2 leading-tight">
           {title}

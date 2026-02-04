@@ -13,7 +13,7 @@ const ImageTestimonialCard: React.FC<ImageTestimonialCardProps> = ({ src, alt })
         src={src} 
         alt={alt} 
         className="w-full h-auto object-cover"
-        loading="lazy" // Added lazy loading
+        loading="lazy"
       />
     </div>
   );
