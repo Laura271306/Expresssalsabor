@@ -31,7 +31,7 @@ const SolutionSection: React.FC = () => {
 
           <ul className="list-none p-0">
             <CheckItem>
-              <strong>+600 recetas variadas y probadas</strong> – desde desayunos rápidos hasta cenas completas y sobremesas deliciosas para todos los gustos.
+              <strong>+600 recetas variadas y probadas</strong> – desde desayunos rápidos hasta cenas completas y <strong>sobremesas deliciosas</strong> para todos los gustos.
             </CheckItem>
             <CheckItem>
               <strong>Recetarios adicionales de regalo</strong> – Guías especializadas <strong>sin gluten y sin aceite</strong> incluidas como adición exclusiva.
