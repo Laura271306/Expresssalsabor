@@ -25,31 +25,31 @@ const SolutionSection: React.FC = () => {
 
           <div className="space-y-4 mb-8">
             <p className="font-sans text-dark-bg text-lg leading-relaxed">
-              El recetario digital <strong>definitivo</strong> para aprovechar al máximo tu freidora de aire y sorprender a tu familia con resultados profesionales en minutos.
+              El recetario digital <strong>definitivo</strong> para <strong>aprovechar al máximo</strong> tu freidora de aire y <strong>sorprender a tu familia</strong> con <strong>resultados profesionales en minutos</strong>.
             </p>
           </div>
 
           <ul className="list-none p-0">
             <CheckItem>
-              +600 recetas sin gluten y sin aceite – desde desayunos rápidos hasta cenas completas y sobremesas deliciosas, para todos los gustos y edades.
+              <strong>+600 recetas sin gluten y sin aceite</strong> – desde desayunos rápidos hasta cenas completas y sobremesas deliciosas.
             </CheckItem>
             <CheckItem>
-              Instrucciones paso a paso con fotos y horarios exactos – sigue fácilmente cada preparación sin complicaciones.
+              Instrucciones <strong>paso a paso con fotos</strong> y <strong>horarios exactos</strong> – sigue cada preparación sin complicaciones.
             </CheckItem>
             <CheckItem>
-              Valores nutricionales calculados – cuida tu salud sin renunciar al sabor.
+              <strong>Valores nutricionales calculados</strong> – cuida tu salud sin renunciar al sabor.
             </CheckItem>
             <CheckItem>
-              Lista de compras inteligente – sabe exactamente qué comprar y en qué cantidad.
+              <strong>Lista de compras inteligente</strong> – sabe exactamente qué comprar y en qué cantidad.
             </CheckItem>
             <CheckItem>
-              Menú de 1 mes programado – comida planificada para todo el mes, sin estrés.
+              <strong>Menú de 1 mes programado</strong> – comida planificada para todo el mes, <strong>sin estrés</strong>.
             </CheckItem>
             <CheckItem>
-              Compatible con cualquier modelo de Airfryer – no importa cuál tengas, ¡funciona igual!
+              Compatible con <strong>cualquier modelo de Airfryer</strong> – no importa cuál tengas, <strong>¡funciona igual!</strong>
             </CheckItem>
             <CheckItem>
-              Entrega inmediata – recibe el material al instante y empieza a cocinar hoy mismo.
+              <strong>Entrega inmediata</strong> – recibe el material al instante y <strong>empieza a cocinar hoy mismo</strong>.
             </CheckItem>
           </ul>
         </div>
