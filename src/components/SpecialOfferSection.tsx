@@ -33,7 +33,7 @@ const SpecialOfferSection: React.FC = () => {
             src="/images/kit-mockup-main.jpeg" 
             alt="Mockup del Kit Completo AirFryer" 
             className="w-full h-48 object-cover rounded-lg mb-6"
-            loading="lazy"
+            loading="lazy" // Added lazy loading
           />
 
           <h3 className="font-serif text-2xl font-bold mb-4 text-dark-bg text-left">

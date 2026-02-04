@@ -28,6 +28,7 @@ const BonusCard: React.FC<BonusCardProps> = ({ title, description, originalPrice
           src="/images/bonus-gift.jpeg" 
           alt="Caja de regalo dorada" 
           className="w-full h-full object-cover"
+          loading="lazy" // Added lazy loading
         />
       </div>
 
