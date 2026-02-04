@@ -74,6 +74,7 @@ const AirfryerMagicaSection: React.FC = () => {
             src="/images/kit-mockup-main.jpeg" 
             alt="Libro Airfryer Mágica" 
             className="w-full h-auto rounded-xl shadow-2xl border-4 border-highlight-gold/50 transition-transform group-hover:scale-[1.01]"
+            loading="lazy" // Added lazy loading
           />
         </div>
       </div>

@@ -17,7 +17,7 @@ const BenefitImageCard: React.FC<BenefitImageCardProps> = ({ imageSrc, icon, tit
           src={imageSrc} 
           alt={`Imagen para el beneficio: ${title}`} 
           className="w-full h-full object-cover"
-          loading="lazy"
+          loading="lazy" // Added lazy loading
         />
       </div>
 
