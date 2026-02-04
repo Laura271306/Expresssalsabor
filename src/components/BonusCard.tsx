@@ -1,7 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Gift } from 'lucide-react';
-import OptimizedImage from './OptimizedImage';
 
 interface BonusCardProps {
   title: string;
@@ -24,12 +23,14 @@ const BonusCard: React.FC<BonusCardProps> = ({ title, description, originalPrice
         "w-1/3 h-40 flex items-center justify-center flex-shrink-0 rounded-lg overflow-hidden",
         "bg-transparent"
       )}>
-        <OptimizedImage 
+        <img 
           src="/images/bonus-gift.jpeg" 
           alt="Caja de regalo dorada" 
           className="w-full h-full object-cover"
-          width={200} // Assuming a width for 1/3 of max-w-3xl (approx 200px)
-          height={160} // h-40 is 160px
+          loading="lazy"
+          decoding="async"
+          width="200" // Assuming a width for 1/3 of max-w-3xl (approx 200px)
+          height="160" // h-40 is 160px
         />
       </div>
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { Check } from 'lucide-react';
 import SectionWrapper from './SectionWrapper';
 import { cn } from '@/lib/utils';
-import OptimizedImage from './OptimizedImage';
 
 const SolutionSection: React.FC = () => {
   const CheckItem: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -61,12 +60,14 @@ const SolutionSection: React.FC = () => {
         {/* Image (40% desktop) */}
         <div className="lg:col-span-1">
           <div className="relative group">
-            <OptimizedImage 
+            <img 
               src="/images/solution-main.png" 
               alt="Familia disfrutando recetas de Airfryer Mágica" 
-              width={600}
-              height={600}
+              width="600"
+              height="600"
               className="w-full h-auto rounded-xl shadow-2xl border-4 border-highlight-gold/30 transition-transform group-hover:scale-[1.02]"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

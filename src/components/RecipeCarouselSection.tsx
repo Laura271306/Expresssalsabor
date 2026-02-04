@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/carousel";
 import SectionWrapper from './SectionWrapper';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import OptimizedImage from './OptimizedImage';
 
 const recipeImages = [
   "/images/recipes/airfryer-13.jpg",
@@ -57,14 +56,16 @@ const RecipeCarouselSection: React.FC = () => {
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
                     <div className="aspect-square overflow-hidden rounded-xl shadow-2xl border-4 border-highlight-gold/50 bg-gray-100">
-                      <OptimizedImage 
+                      <img 
                         src={src} 
                         alt={`Receta Air Fryer ${index + 1}`} 
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                         // Performance: Eager load only the first image of the carousel as it's likely visible
-                        priority={index === 0}
-                        width={400}
-                        height={400}
+                        loading={index === 0 ? "eager" : "lazy"}
+                        fetchPriority={index === 0 ? "high" : "low"}
+                        decoding="async"
+                        width="400"
+                        height="400"
                       />
                     </div>
                   </div>

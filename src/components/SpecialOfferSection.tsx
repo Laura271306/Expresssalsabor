@@ -3,7 +3,6 @@ import { cn } from '@/lib/utils';
 import CtaButton from './CtaButton';
 import { Gift, Check } from 'lucide-react';
 import { CHECKOUT_LINK } from '@/lib/constants';
-import OptimizedImage from './OptimizedImage';
 
 const SpecialOfferSection: React.FC = () => {
   const valueStack = [
@@ -28,12 +27,14 @@ const SpecialOfferSection: React.FC = () => {
 
         <div className="bg-white rounded-xl p-6 md:p-8 mb-8 shadow-[0_0_40px_rgba(0,170,84,0.3)] border-4 border-cta-primary text-dark-bg text-center">
           
-          <OptimizedImage 
+          <img 
             src="/images/kit-mockup-main.jpeg" 
             alt="Mockup del Kit Completo AirFryer" 
             className="w-full h-40 md:h-48 object-cover rounded-lg mb-6"
-            width={400}
-            height={192} // h-48 is 192px
+            loading="lazy"
+            decoding="async"
+            width="400"
+            height="192" // h-48 is 192px
           />
 
           <h3 className="font-serif text-xl md:text-2xl font-bold mb-4 text-dark-bg text-left">

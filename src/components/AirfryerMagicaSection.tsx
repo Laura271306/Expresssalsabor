@@ -3,7 +3,6 @@ import { cn } from '@/lib/utils';
 import { CookingPot, Check, Zap, Clock, Thermometer, Pizza, Cookie, Beef, Timer } from 'lucide-react';
 import CtaButton from './CtaButton';
 import { CHECKOUT_LINK } from '@/lib/constants';
-import OptimizedImage from './OptimizedImage';
 
 const AirfryerMagicaSection: React.FC = () => {
   const features = [
@@ -71,12 +70,14 @@ const AirfryerMagicaSection: React.FC = () => {
         </div>
         
         <div className="relative group">
-          <OptimizedImage 
+          <img 
             src="/images/kit-mockup-main.jpeg" 
             alt="Libro Airfryer Mágica" 
             className="w-full h-auto rounded-xl shadow-2xl border-4 border-highlight-gold/50 transition-transform group-hover:scale-[1.01]"
-            width={450}
-            height={450}
+            loading="lazy"
+            decoding="async"
+            width="450"
+            height="450"
           />
         </div>
       </div>
