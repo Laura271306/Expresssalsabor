@@ -39,12 +39,12 @@ const Index = () => {
       <UrgencyBanner />
       <HeroSection />
       
-      <RecipeCarouselSection /> {/* New Section Added Here */}
+      {/* <RecipeCarouselSection /> */} {/* Temporarily commented out */}
 
       <TheProblemSection />
       <BeforeAfterSection />
 
-      {/* Alivio Emocional / Normalización */}
+      {/* Alivio Emocional / Normalização */}
       <div className="bg-light-bg py-10 px-6 text-center">
         <p className="font-serif italic text-2xl text-dark-bg/80 max-w-3xl mx-auto leading-relaxed">
           “Si ya intentaste organizarte y no funcionó, el problema no eras tú. <span className="text-highlight-gold font-bold">Era el método.</span>”
