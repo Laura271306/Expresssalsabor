@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import CtaButton from './CtaButton';
 import { Check } from 'lucide-react';
+import OptimizedImage from './OptimizedImage';
 
 const HeroSection: React.FC = () => {
   return (
@@ -46,15 +47,14 @@ const HeroSection: React.FC = () => {
 
         <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
           <div className="relative w-full max-w-sm md:max-w-md">
-            <img 
+            <OptimizedImage 
               src="/images/kit-mockup-main.jpeg" 
               alt="Kit Completo Air Fryer" 
-              width="450"
-              height="450"
+              width={450}
+              height={450}
+              priority={true}
               className="w-full h-auto rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-highlight-gold/50 object-cover"
               style={{ maxHeight: '450px' }}
-              loading="eager"
-              fetchPriority="high"
             />
             <div className="absolute -top-4 -right-2 md:-right-4 bg-urgency-red text-white rounded-full p-2 px-4 md:p-3 md:px-6 font-bold text-base md:text-lg shadow-xl rotate-3">
                 +600 Recetas

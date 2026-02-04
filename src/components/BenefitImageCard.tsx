@@ -1,5 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
+import OptimizedImage from './OptimizedImage';
 
 interface BenefitImageCardProps {
   imageSrc: string;
@@ -13,14 +14,12 @@ const BenefitImageCard: React.FC<BenefitImageCardProps> = ({ imageSrc, icon, tit
     <div className="bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200 transition-transform duration-300 hover:scale-[1.02]">
       {/* Image Area */}
       <div className="h-40 bg-gray-300 flex items-center justify-center text-gray-600 overflow-hidden">
-        <img 
+        <OptimizedImage 
           src={imageSrc} 
           alt={`Imagen para el beneficio: ${title}`} 
           className="w-full h-full object-cover"
-          loading="lazy"
-          decoding="async"
-          width="400" // Assuming a reasonable width for a card image
-          height="160" // h-40 is 160px
+          width={400} // Assuming a reasonable width for a card image
+          height={160} // h-40 is 160px
         />
       </div>
 
