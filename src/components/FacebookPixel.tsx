@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useCallback } from 'react';
+import { useDeferredScript } from '@/hooks/use-deferred-script';
 
 const PIXEL_ID = '886272914152692';
 
 const FacebookPixel = () => {
-  useEffect(() => {
+  const loadPixel = useCallback(() => {
     if (typeof window === 'undefined') return;
 
     // Evitar duplicación si ya existe fbq
@@ -33,12 +34,11 @@ const FacebookPixel = () => {
     document.head.appendChild(pixelScript);
     document.head.appendChild(noscript);
 
-    return () => {
-      // Limpieza opcional para evitar residuos en navegaciones SPA extremas
-      if (document.head.contains(pixelScript)) document.head.removeChild(pixelScript);
-      if (document.head.contains(noscript)) document.head.removeChild(noscript);
-    };
+    // No necesitamos devolver una función de limpieza aquí ya que el script se carga de forma diferida
+    // y solo se ejecuta una vez.
   }, []);
+
+  useDeferredScript(loadPixel);
 
   return null;
 };

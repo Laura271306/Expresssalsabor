@@ -1,6 +1,7 @@
-import React, { useEffect, Suspense, lazy } from "react";
+import React, { Suspense, lazy } from "react";
 import UrgencyBanner from "@/components/UrgencyBanner";
 import HeroSection from "@/components/HeroSection";
+import DeferredContent from "@/components/DeferredContent";
 
 // Lazy loading components to prioritize the Hero Section (LCP)
 const RecipeCarouselSection = lazy(() => import("@/components/RecipeCarouselSection"));
@@ -38,55 +39,61 @@ const Index = () => {
       {/* Critical path: ONLY the Hero Section loads initially */}
       <HeroSection />
 
-      {/* Everything else is deferred to let the Hero finish as fast as possible */}
+      {/* Group 1: Immediately visible content after Hero (Recipe Carousel, Problem, Solution) */}
       <Suspense fallback={<LoadingPlaceholder />}>
         <RecipeCarouselSection />
         <TheProblemSection />
         <SolutionSection />
-        <BeforeAfterSection />
-
-        <div className="bg-light-bg py-10 px-6 text-center">
-          <p className="font-serif italic text-2xl text-dark-bg/80 max-w-3xl mx-auto leading-relaxed">
-            “Si ya intentaste organizarte y no funcionó, el problema no eras tú. <span className="text-highlight-gold font-bold">Era el método.</span>”
-          </p>
-        </div>
-
-        <UserProfilesSection />
-        <RestZone text="Hasta aquí, ¿ya te viste usando esto en tu día a día?" />
-        <CrispMethodSection />
-        <AuthoritySection />
-        <EasierThanGoogleSection />
-
-        <div className="bg-white py-6 px-6 text-center">
-          <p className="font-sans text-xl font-bold text-dark-bg">
-            Más sencillo que perderse en Google.
-          </p>
-        </div>
-
-        <AirfryerMagicaSection />
-        <NoChefNeededSection />
-        <CompatibilitySection />
-
-        <div className="bg-dark-bg py-6 px-6 text-center border-t border-gray-800">
-          <p className="font-sans text-xl font-bold text-highlight-gold">
-            Funciona incluso si odias cocinar.
-          </p>
-        </div>
-
-        <QuickPrepSection />
-        <SocialProofSection />
-        <BenefitsSection />
-        <TestimonialsSection />
-        <BonusSection />
-        <PriceComparisonBanner />
-        <DeliveryMethodSection />
-        <HowItWorksInPractice />
-        <SpecialOfferSection />
-        <TrustBadgesSection />
-        <GuaranteeSection />
-        <FaqSection />
-        <FinalCtaSection />
       </Suspense>
+
+      {/* Group 2: Content below the fold, loaded aggressively after a short delay/interaction */}
+      <DeferredContent delay={500}>
+        <Suspense fallback={<LoadingPlaceholder />}>
+          <BeforeAfterSection />
+
+          <div className="bg-light-bg py-10 px-6 text-center">
+            <p className="font-serif italic text-2xl text-dark-bg/80 max-w-3xl mx-auto leading-relaxed">
+              “Si ya intentaste organizarte y no funcionó, el problema no eras tú. <span className="text-highlight-gold font-bold">Era el método.</span>”
+            </p>
+          </div>
+
+          <UserProfilesSection />
+          <RestZone text="Hasta aquí, ¿ya te viste usando esto en tu día a día?" />
+          <CrispMethodSection />
+          <AuthoritySection />
+          <EasierThanGoogleSection />
+
+          <div className="bg-white py-6 px-6 text-center">
+            <p className="font-sans text-xl font-bold text-dark-bg">
+              Más sencillo que perderse en Google.
+            </p>
+          </div>
+
+          <AirfryerMagicaSection />
+          <NoChefNeededSection />
+          <CompatibilitySection />
+
+          <div className="bg-dark-bg py-6 px-6 text-center border-t border-gray-800">
+            <p className="font-sans text-xl font-bold text-highlight-gold">
+              Funciona incluso si odias cocinar.
+            </p>
+          </div>
+
+          <QuickPrepSection />
+          <SocialProofSection />
+          <BenefitsSection />
+          <TestimonialsSection />
+          <BonusSection />
+          <PriceComparisonBanner />
+          <DeliveryMethodSection />
+          <HowItWorksInPractice />
+          <SpecialOfferSection />
+          <TrustBadgesSection />
+          <GuaranteeSection />
+          <FaqSection />
+          <FinalCtaSection />
+        </Suspense>
+      </DeferredContent>
     </div>
   );
 };
