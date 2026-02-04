@@ -16,7 +16,7 @@ const SpecialOfferSection: React.FC = () => {
   const totalValue = 94; // 39 + 25 + 15 + 10 + 5 = 94
 
   return (
-    <section id="link-ancoragem" className="bg-dark-bg text-white py-20 px-6 border-t border-highlight-gold/20">
+    <section id="link-ancoragem" className="bg-dark-bg text-white py-20 px-6 border-t border-highlight-gold/20 scroll-mt-20">
       <div className="max-w-md mx-auto">
         <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8 text-highlight-gold text-left">
           OFERTA ESPECIAL
@@ -33,7 +33,7 @@ const SpecialOfferSection: React.FC = () => {
             src="/images/kit-mockup-main.jpeg" 
             alt="Mockup del Kit Completo AirFryer" 
             className="w-full h-48 object-cover rounded-lg mb-6"
-            loading="lazy" // Added lazy loading
+            loading="lazy"
           />
 
           <h3 className="font-serif text-2xl font-bold mb-4 text-dark-bg text-left">
@@ -76,7 +76,7 @@ const SpecialOfferSection: React.FC = () => {
           </p>
 
           <p className="font-sans text-sm text-gray-600 mb-6">
-            95% de descuento – acceso inmediato con pago único
+            95% de desconto – acesso imediato con pago único
           </p>
           
           {/* Guarantee Box */}
