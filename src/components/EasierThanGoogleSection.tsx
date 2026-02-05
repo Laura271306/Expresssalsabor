@@ -1,49 +1,79 @@
 import React from 'react';
 import SectionWrapper from './SectionWrapper';
-import { XCircle, CheckCircle2 } from 'lucide-react';
+import { Search, BookOpen, Clock, Smartphone } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import CtaButton from './CtaButton';
+import { CHECKOUT_LINK } from '@/lib/constants';
 
 const EasierThanGoogleSection: React.FC = () => {
+  const comparisonPoints = [
+    {
+      icon: <Search className="w-6 h-6 text-urgency-red" />,
+      title: "Búsqueda sin fin",
+      description: "En Google, pasas horas buscando, comparando y filtrando recetas que rara vez funcionan en tu Air Fryer.",
+      bgColor: "bg-urgency-red/10",
+      borderColor: "border-urgency-red"
+    },
+    {
+      icon: <BookOpen className="w-6 h-6 text-cta-primary" />,
+      title: "Solución Completa",
+      description: "Con el Ebook, tienes +600 recetas probadas, tiempos exactos y planificación de comidas, todo en un solo lugar.",
+      bgColor: "bg-cta-primary/10",
+      borderColor: "border-cta-primary"
+    }
+  ];
+
+  const benefitPoints = [
+    { icon: <Clock className="w-5 h-5 text-highlight-gold" />, text: "Tiempos y temperaturas exactas garantizadas." },
+    { icon: <Smartphone className="w-5 h-5 text-highlight-gold" />, text: "Acceso de por vida en móvil, tablet o PC." },
+    { icon: <BookOpen className="w-5 h-5 text-highlight-gold" />, text: "Más fácil que buscar recetas en Google." },
+  ];
+
   return (
-    <SectionWrapper bgColor="dark">
+    <SectionWrapper bgColor="light" border>
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-serif text-white text-4xl md:text-5xl font-bold mb-12 text-center md:text-left">
-          Internet está lleno de recetas que <span className="text-urgency-red underline">no funcionan</span>
+        <h2 className="font-sans text-4xl md:text-5xl font-bold mb-4 text-dark-bg text-left">
+          MÁS FÁCIL QUE BUSCAR EN GOOGLE
         </h2>
+        <p className="font-sans text-xl text-gray-700 mb-12 text-left italic">
+          "Olvida el caos de internet; aquí tienes la ruta directa al sabor."
+        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="bg-[#282425] p-8 rounded-2xl border-l-8 border-urgency-red">
-              <h3 className="font-sans font-bold text-urgency-red text-2xl mb-4 flex items-center">
-                <XCircle className="w-6 h-6 mr-3" /> El Caos de Internet
-              </h3>
-              <ul className="space-y-4 text-gray-400">
-                <li>• Pierdes 45 min buscando un video que valga la pena.</li>
-                <li>• Tiempos de cocción que queman tu comida.</li>
-                <li>• Ingredientes caros que solo consigues en otros países.</li>
-                <li>• Publicidad molesta y videos de 20 min para algo simple.</li>
-              </ul>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {comparisonPoints.map((point, index) => (
+            <div 
+              key={index} 
+              className={cn(
+                "p-6 rounded-xl shadow-lg border-t-4",
+                point.bgColor,
+                point.borderColor
+              )}
+            >
+              <div className="flex items-center mb-3">
+                {point.icon}
+                <h3 className="font-sans text-xl font-bold text-dark-bg ml-3">{point.title}</h3>
+              </div>
+              <p className="font-sans text-gray-700">{point.description}</p>
             </div>
+          ))}
+        </div>
 
-            <div className="bg-cta-primary/10 p-8 rounded-2xl border-l-8 border-cta-primary">
-              <h3 className="font-sans font-bold text-cta-primary text-2xl mb-4 flex items-center">
-                <CheckCircle2 className="w-6 h-6 mr-3" /> El Método Airfryer Mágica
-              </h3>
-              <ul className="space-y-4 text-white">
-                <li>• Abres el PDF y eliges en menos de 30 segundos.</li>
-                <li>• Tiempos probados en +10 marcas diferentes.</li>
-                <li>• Ingredientes que ya tienes en tu nevera.</li>
-                <li>• Sin videos largos: directo al grano para que comas ya.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center md:text-left space-y-6">
-            <h3 className="font-serif text-3xl text-highlight-gold italic">
-              "Tu tiempo vale más que $6.90. Deja de buscar y empieza a disfrutar."
-            </h3>
-            <CtaButton href="#link-ancoragem">
-              QUIERO EL MÉTODO ORGANIZADO
+        <div className="bg-white p-6 rounded-xl shadow-2xl border border-gray-200 mb-12">
+          <h3 className="font-sans text-2xl font-bold text-dark-bg mb-4 text-left">
+            Con el Ebook Airfryer Mágica, tú obtienes:
+          </h3>
+          <ul className="space-y-3 text-left mb-8">
+            {benefitPoints.map((benefit, index) => (
+              <li key={index} className="flex items-start">
+                <span className="flex-shrink-0 mt-1 mr-3">{benefit.icon}</span>
+                <span className="font-sans text-lg text-dark-bg">{benefit.text}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <div className="text-left">
+            <CtaButton href={CHECKOUT_LINK}>
+              📖 ACCESO INMEDIATO AL RECETARIO
             </CtaButton>
           </div>
         </div>

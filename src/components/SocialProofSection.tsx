@@ -24,28 +24,28 @@ const SocialProofSection: React.FC = () => {
   const metrics = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
-      value: "1,200+",
-      label: "Clientes Satisfechos"
+      value: "2,340+",
+      label: "Ventas Realizadas",
     },
     {
       icon: <Star className="w-8 h-8 fill-cta-primary" />,
-      value: "96%",
-      label: "de Satisfacción"
+      value: "98%",
+      label: "de Satisfacción",
     },
     {
       icon: <Star className="w-8 h-8 fill-cta-primary" />,
-      value: "890",
-      label: "Evaluaciones 5 Estrellas"
+      value: "1,240",
+      label: "Evaluaciones 5 Estrellas",
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      value: "8",
-      label: "Países"
+      value: "10+",
+      label: "Países",
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      value: "2 días",
-      label: "Implementación Promedio"
+      value: "3 días",
+      label: "Implementación Promedio",
     },
   ];
 
@@ -53,7 +53,7 @@ const SocialProofSection: React.FC = () => {
     <section className="bg-dark-bg text-white py-10 px-6 border-t border-b border-gray-800">
       <div className="max-w-7xl mx-auto">
         <h2 className="font-sans text-xl font-bold text-white text-center mb-8 uppercase tracking-widest">
-          Un valor total de $149
+          Nuestros Resultados Hablan por Sí Mismos
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8">
           {metrics.map((metric, index) => (
