@@ -4,7 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import DeferredContent from "@/components/DeferredContent";
 
 // Seções principais
-const SocialProofSection = lazy(() => import("@/components/SocialProofSection"));
 const TheProblemSection = lazy(() => import("@/components/TheProblemSection"));
 const CrispMethodSection = lazy(() => import("@/components/CrispMethodSection"));
 const EasierThanGoogleSection = lazy(() => import("@/components/EasierThanGoogleSection"));
@@ -47,7 +46,6 @@ const Index = () => {
       <DeferredContent delay={1000}>
         <Suspense fallback={<LoadingPlaceholder />}>
           {/* Seção 1: Problema e Solução */}
-          <SocialProofSection />
           <TheProblemSection />
           
           <div className="bg-light-bg py-16 px-6 text-center">
