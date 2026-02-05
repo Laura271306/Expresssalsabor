@@ -7,19 +7,12 @@ import Index from "./pages/Index";
 import LandingPage from "./pages/LandingPage";
 import NotFound from "./pages/NotFound";
 
-// Lazy load FacebookPixel to defer script execution
-const FacebookPixel = React.lazy(() => import("./components/FacebookPixel"));
-
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Sonner />
-      {/* Defer loading of Facebook Pixel */}
-      <React.Suspense fallback={null}>
-        <FacebookPixel />
-      </React.Suspense>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
