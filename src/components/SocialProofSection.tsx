@@ -53,7 +53,7 @@ const SocialProofSection: React.FC = () => {
     <section className="bg-dark-bg text-white py-10 px-6 border-t border-b border-gray-800">
       <div className="max-w-7xl mx-auto">
         <h2 className="font-sans text-xl font-bold text-white text-center mb-8 uppercase tracking-widest">
-          Nuestros Resultados Hablan por Sí Mismos
+          Nuestros Resultados Reales
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8">
           {metrics.map((metric, index) => (

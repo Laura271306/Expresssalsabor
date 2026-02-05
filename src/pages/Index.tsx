@@ -3,37 +3,32 @@ import UrgencyBanner from "@/components/UrgencyBanner";
 import HeroSection from "@/components/HeroSection";
 import DeferredContent from "@/components/DeferredContent";
 
-// Lazy load all components for better performance
+// Seções principais
 const SocialProofSection = lazy(() => import("@/components/SocialProofSection"));
 const TheProblemSection = lazy(() => import("@/components/TheProblemSection"));
 const CrispMethodSection = lazy(() => import("@/components/CrispMethodSection"));
 const EasierThanGoogleSection = lazy(() => import("@/components/EasierThanGoogleSection"));
-const RecipeCarouselSection = lazy(() => import("@/components/RecipeCarouselSection"));
+
+// Seções de benefícios (sem repetição)
 const BenefitsSection = lazy(() => import("@/components/BenefitsSection"));
+const CompleteBenefitsSection = lazy(() => import("@/components/CompleteBenefitsSection"));
+
+// Seções de objeções e dúvidas
+const CommonObjectionsSection = lazy(() => import("@/components/CommonObjectionsSection"));
+const ExpertValidationSection = lazy(() => import("@/components/ExpertValidationSection"));
+const CompatibilityGuideSection = lazy(() => import("@/components/CompatibilityGuideSection"));
+
+// Seções de prova social (mais realistas)
 const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
-const BonusSection = lazy(() => import("@/components/BonusSection"));
+const ResultsGallerySection = lazy(() => import("@/components/ResultsGallerySection"));
+
+// Seções de oferta
 const SpecialOfferSection = lazy(() => import("@/components/SpecialOfferSection"));
 const GuaranteeSection = lazy(() => import("@/components/GuaranteeSection"));
 const FaqSection = lazy(() => import("@/components/FaqSection"));
 const FinalCtaSection = lazy(() => import("@/components/FinalCtaSection"));
 const TrustBadgesSection = lazy(() => import("@/components/TrustBadgesSection"));
 const DeliveryMethodSection = lazy(() => import("@/components/DeliveryMethodSection"));
-
-// New sections
-const CompleteBenefitsSection = lazy(() => import("@/components/CompleteBenefitsSection"));
-const ResultsGallerySection = lazy(() => import("@/components/ResultsGallerySection"));
-const InteractiveQuizSection = lazy(() => import("@/components/InteractiveQuizSection"));
-const SavingsCalculatorSection = lazy(() => import("@/components/SavingsCalculatorSection"));
-const ExpertValidationSection = lazy(() => import("@/components/ExpertValidationSection"));
-const LiveDemoSection = lazy(() => import("@/components/LiveDemoSection"));
-const CompatibilityGuideSection = lazy(() => import("@/components/CompatibilityGuideSection"));
-const UrgencyCounterSection = lazy(() => import("@/components/UrgencyCounterSection"));
-const CommunitySection = lazy(() => import("@/components/CommunitySection"));
-
-// Emotional sections
-const SuccessStoriesSection = lazy(() => import("@/components/SuccessStoriesSection"));
-const EmotionalImpactSection = lazy(() => import("@/components/EmotionalImpactSection"));
-const TimeTransformationSection = lazy(() => import("@/components/TimeTransformationSection"));
 
 const LoadingPlaceholder = () => <div className="h-20 w-full animate-pulse bg-gray-100" />;
 
@@ -45,6 +40,7 @@ const Index = () => {
       
       <DeferredContent delay={1000}>
         <Suspense fallback={<LoadingPlaceholder />}>
+          {/* Seção 1: Problema e Solução */}
           <SocialProofSection />
           <TheProblemSection />
           
@@ -58,37 +54,26 @@ const Index = () => {
           <CrispMethodSection />
           <EasierThanGoogleSection />
           
-          {/* New interactive sections */}
-          <InteractiveQuizSection />
-          <SavingsCalculatorSection />
-          
-          <RecipeCarouselSection />
-          <ResultsGallerySection />
-          
-          {/* Emotional sections */}
-          <SuccessStoriesSection />
-          <EmotionalImpactSection />
-          <TimeTransformationSection />
-          
+          {/* Seção 2: Benefícios Principais */}
           <BenefitsSection />
           <CompleteBenefitsSection />
           
-          <ExpertValidationSection />
-          <LiveDemoSection />
-          
+          {/* Seção 3: Prova Social Real */}
           <TestimonialsSection />
-          <BonusSection />
+          <ResultsGallerySection />
           
+          {/* Seção 4: Objeções e Dúvidas */}
+          <CommonObjectionsSection />
+          <ExpertValidationSection />
           <CompatibilityGuideSection />
-          <DeliveryMethodSection />
           
-          {/* Urgency and community sections */}
-          <UrgencyCounterSection />
-          <CommunitySection />
-          
+          {/* Seção 5: Oferta e Garantia */}
           <SpecialOfferSection />
           <TrustBadgesSection />
           <GuaranteeSection />
+          <DeliveryMethodSection />
+          
+          {/* Seção 6: FAQ e CTA Final */}
           <FaqSection />
           <FinalCtaSection />
         </Suspense>
