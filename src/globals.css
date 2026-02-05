@@ -3,6 +3,22 @@
 @tailwind utilities;
 
 @layer base {
+  /* Definición de la fuente Baskervville (asumiendo archivos locales en public/fonts/) */
+  @font-face {
+    font-family: 'Baskervville';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Baskervville-Regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Baskervville';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Baskervville-Italic.woff2') format('woff2');
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -49,6 +65,15 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom Sales Page Colors */
+    --color-cta-primary: 150 100% 33%; /* #00AA54 */
+    --color-highlight: 40 75% 44%; /* #C38B1B */
+    --color-dark-bg: 350 10% 9%; /* #181415 */
+    --color-light-bg: 0 0% 93%; /* #ECECEC */
+    --color-body-text: 0 0% 96%; /* #F4F4F4 */
+    --color-urgency: 2 70% 53%; /* #D74039 */
+    --color-mint-green: 150 40% 64%; /* #7ECDA7 */
   }
 
   .dark {
@@ -96,6 +121,21 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    /* Setting global background to white/light gray as per prompt */
+    @apply bg-white text-foreground;
   }
+}
+
+/* Custom animation for CTA pulse */
+@keyframes pulse-shadow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 170, 84, 0.7); /* Using #00AA54 directly for animation */
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(0, 170, 84, 0);
+  }
+}
+
+.animate-pulse-shadow {
+  animation: pulse-shadow 1.5s infinite;
 }

@@ -1,13 +1,56 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dyad-generated-app</title>
+    <title>Airfryer Mágica - Expreso al Sabor</title>
+    
+    <!-- Preconexiones para scripts de terceros -->
+    <link rel="preconnect" href="https://connect.facebook.net">
+    <link rel="preconnect" href="https://pay.hotmart.com">
+
+    <!-- Precarga de imagen LCP y Fuentes -->
+    <link rel="preload" as="image" href="/images/kit-mockup-main.jpeg" fetchpriority="high">
+    <link rel="preload" href="/fonts/Baskervville-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <style>
+      /* CSS Crítico para evitar FCP lento */
+      :root {
+        --color-dark-bg: #181415;
+        --color-cta-primary: #00AA54;
+        --color-urgency: #D74039;
+      }
+      body {
+        margin: 0;
+        background-color: var(--color-dark-bg);
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+      .critical-banner {
+        background-color: var(--color-urgency);
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        font-weight: bold;
+      }
+      .critical-hero {
+        background-color: var(--color-dark-bg);
+        color: white;
+        padding: 3rem 1.5rem;
+        min-height: 400px;
+      }
+    </style>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Skeleton estático para FCP instantáneo -->
+      <div class="critical-banner">⚡️ OFERTA LIMITADA – ÚLTIMAS PLAZAS DISPONIBLES</div>
+      <div class="critical-hero">
+        <div style="max-width: 1280px; margin: 0 auto;">
+          <h1 style="font-size: 2rem; margin-bottom: 1rem;">Cargando tu experiencia culinaria...</h1>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
