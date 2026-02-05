@@ -9,6 +9,9 @@ const TheProblemSection = lazy(() => import("@/components/TheProblemSection"));
 const CrispMethodSection = lazy(() => import("@/components/CrispMethodSection"));
 const EasierThanGoogleSection = lazy(() => import("@/components/EasierThanGoogleSection"));
 
+// Quiz interativo
+const InteractiveQuizSection = lazy(() => import("@/components/InteractiveQuizSection"));
+
 // Seções de benefícios (sem repetição)
 const BenefitsSection = lazy(() => import("@/components/BenefitsSection"));
 const CompleteBenefitsSection = lazy(() => import("@/components/CompleteBenefitsSection"));
@@ -37,6 +40,9 @@ const Index = () => {
     <div className="w-full min-h-screen font-sans selection:bg-cta-primary selection:text-white">
       <UrgencyBanner />
       <HeroSection />
+      
+      {/* Quiz abaixo do HERO */}
+      <InteractiveQuizSection />
       
       <DeferredContent delay={1000}>
         <Suspense fallback={<LoadingPlaceholder />}>

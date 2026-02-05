@@ -27,31 +27,78 @@ const SpecialOfferSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="font-sans text-white text-2xl font-bold mb-6">LO QUE TE LLEVAS HOY:</h3>
-              <ul className="space-y-4 mb-8">
-                <li className="flex justify-between text-gray-400 border-b border-gray-800 pb-2">
-                  <span>📗 Ebook Airfryer Mágica (+600 Recetas)</span>
-                  <span className="text-white font-bold">$47</span>
-                </li>
-                <li className="flex justify-between text-gray-400 border-b border-gray-800 pb-2">
-                  <span>🎁 Bono: Guía de Compras Inteligentes</span>
-                  <span className="text-cta-primary font-bold">GRATIS</span>
-                </li>
-                <li className="flex justify-between text-gray-400 border-b border-gray-800 pb-2">
-                  <span>🎁 Bono: Tabla de Tiempos y Temperaturas</span>
-                  <span className="text-cta-primary font-bold">GRATIS</span>
-                </li>
-                <li className="flex justify-between text-gray-400 border-b border-gray-800 pb-2">
-                  <span>🎁 Bono: Menús Semanales Express</span>
-                  <span className="text-cta-primary font-bold">GRATIS</span>
-                </li>
-              </ul>
               
-              <div className="text-center md:text-left">
-                <p className="text-gray-500 line-through text-xl">Precio Regular: $97 USD</p>
-                <p className="text-highlight-gold text-5xl md:text-6xl font-black mt-2">
-                  $6.90 <span className="text-xl font-normal">USD</span>
-                </p>
-                <p className="text-gray-400 text-sm mt-2 font-bold italic">* Pago único, acceso inmediato.</p>
+              {/* Ebooks Principales */}
+              <div className="mb-8">
+                <h4 className="font-sans text-lg font-bold text-highlight-gold mb-4">📚 Ebooks Principales:</h4>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex justify-between border-b border-gray-800 pb-2">
+                    <span>📗 Libro Principal Airfryer Mágica (+600 Recetas)</span>
+                    <span className="text-white font-bold">$47</span>
+                  </li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2">
+                    <span>🛒 Guía de Compras Inteligente</span>
+                    <span className="text-cta-primary font-bold">GRATIS</span>
+                  </li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2">
+                    <span>❤️ Recetas Saludables</span>
+                    <span className="text-cta-primary font-bold">GRATIS</span>
+                  </li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2">
+                    <span>⚡ Recetas Sin Gluten</span>
+                    <span className="text-cta-primary font-bold">GRATIS</span>
+                  </li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2">
+                    <span>🍰 Libro de Postres Express</span>
+                    <span className="text-cta-primary font-bold">GRATIS</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Ferramentas Práticas */}
+              <div className="mb-8">
+                <h4 className="font-sans text-lg font-bold text-highlight-gold mb-4">🔧 Ferramentas Práticas:</h4>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex justify-between border-b border-gray-800 pb-2">
+                    <span>⏰ Tabla de Tiempos Exactos</span>
+                    <span className="text-cta-primary font-bold">GRATIS</span>
+                  </li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2">
+                    <span>📅 Plan Mensual Completo</span>
+                    <span className="text-cta-primary font-bold">GRATIS</span>
+                  </li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2">
+                    <span>🛒 Lista de Compras Inteligente</span>
+                    <span className="text-cta-primary font-bold">GRATIS</span>
+                  </li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2">
+                    <span>🏆 Guía de Técnicas Avanzadas</span>
+                    <span className="text-cta-primary font-bold">GRATIS</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Benefícios Exclusivos */}
+              <div>
+                <h4 className="font-sans text-lg font-bold text-highlight-gold mb-4">🎁 Benefícios Exclusivos:</h4>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex justify-between border-b border-gray-800 pb-2">
+                    <span>🔓 Acceso de Por Vida</span>
+                    <span className="text-cta-primary font-bold">ILIMITADO</span>
+                  </li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2">
+                    <span>⚡ Compatibilidad Total</span>
+                    <span className="text-cta-primary font-bold">GARANTIZADO</span>
+                  </li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2">
+                    <span>🚀 Entrega Inmediata</span>
+                    <span className="text-cta-primary font-bold">INSTANTÁNEO</span>
+                  </li>
+                  <li className="flex justify-between border-b border-gray-800 pb-2">
+                    <span>🛡️ Garantía de 7 Días</span>
+                    <span className="text-cta-primary font-bold">SEGURO</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
@@ -71,6 +118,15 @@ const SpecialOfferSection: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Preço final */}
+          <div className="mt-8 text-center">
+            <p className="font-sans text-gray-500 line-through text-xl mb-2">Precio Regular: $149 USD</p>
+            <p className="text-highlight-gold text-5xl md:text-6xl font-black">
+              $67 <span className="text-xl font-normal">USD</span>
+            </p>
+            <p className="font-sans text-sm mt-2 font-bold italic">* Pago único, acceso inmediato.</p>
           </div>
         </div>
       </div>

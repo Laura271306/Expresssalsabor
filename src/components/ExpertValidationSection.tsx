@@ -1,39 +1,13 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Award, Star, CheckCircle, Users, Clock, Zap } from 'lucide-react';
+import { Award, Star, CheckCircle, Clock } from 'lucide-react';
 import CtaButton from './CtaButton';
 import { CHECKOUT_LINK } from '@/lib/constants';
 
 const ExpertValidationSection: React.FC = () => {
-  const experts = [
-    {
-      name: "Chef María Rodríguez",
-      title: "Chef Ejecutiva",
-      quote: "El método C.R.I.S.P. es revolucionario. Simplifica la cocina sin sacrificar calidad.",
-      avatar: "/images/experts/chef-maria.jpg",
-      rating: 5
-    },
-    {
-      name: "Dr. Carlos Mendez",
-      title: "Nutricionista",
-      quote: "Reduce hasta 80% de grasas comparado con métodos tradicionales. Es saludable y delicioso.",
-      avatar: "/images/experts/dr-carlos.jpg",
-      rating: 5
-    },
-    {
-      name: "Ana Torres",
-      title: "Especialista en Tiempo",
-      quote: "Ahorró 15 horas semanales en cocina. El mejor retorno de inversión en bienestar.",
-      avatar: "/images/experts/ana-torres.jpg",
-      rating: 5
-    }
-  ];
-
   const stats = [
-    { icon: <Users className="w-6 h-6" />, value: "1,200+", label: "Clientes Satisfechos" },
-    { icon: <Star className="w-6 h-6 fill-cta-primary" />, value: "96%", label: "Tasa de Satisfacción" },
-    { icon: <Clock className="w-6 h-6" />, value: "2 días", label: "Implementación Promedio" },
-    { icon: <Zap className="w-6 h-6" />, value: "8", label: "Países" }
+    { icon: <Star className="w-6 h-6" />, value: "96%", label: "Tasa de Satisfacción" },
+    { icon: <Clock className="w-6 h-6" />, value: "3 días", label: "Implementación Promedio" }
   ];
 
   return (
@@ -61,37 +35,7 @@ const ExpertValidationSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Expertos */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {experts.map((expert, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
-              <div className="flex items-center mb-4">
-                <img 
-                  src={expert.avatar} 
-                  alt={expert.name} 
-                  className="w-16 h-16 rounded-full object-cover mr-4"
-                />
-                <div>
-                  <h4 className="font-sans font-bold text-dark-bg">{expert.name}</h4>
-                  <p className="font-sans text-sm text-gray-600">{expert.title}</p>
-                  <div className="flex gap-1 mt-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star 
-                        key={i} 
-                        className={`w-4 h-4 ${i < expert.rating ? 'fill-cta-primary text-cta-primary' : 'text-gray-300'}`} 
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <p className="font-serif text-gray-700 italic leading-relaxed">
-                "{expert.quote}"
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Validación científica */}
+        {/* Validação científica */}
         <div className="bg-gradient-to-r from-cta-primary/10 to-highlight-gold/10 rounded-2xl p-8 border border-highlight-gold/30">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>

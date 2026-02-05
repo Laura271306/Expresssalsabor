@@ -1,49 +1,10 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { CheckCircle, XCircle, Info, Zap, Scale, Clock } from 'lucide-react';
+import { CheckCircle, Zap, Scale, Clock } from 'lucide-react';
 import CtaButton from './CtaButton';
 import { CHECKOUT_LINK } from '@/lib/constants';
 
 const CompatibilityGuideSection: React.FC = () => {
-  const brands = [
-    {
-      name: "Ninja",
-      models: ["Foodi", "Air Fryer", "Dual Zone"],
-      compatible: true,
-      features: ["Tecnología DualZone", "Cesta extraíble", "Control digital"]
-    },
-    {
-      name: "Philips",
-      models: ["Avance Collection", "Daily Collection", "Premium"],
-      compatible: true,
-      features: ["Tecnología RapidAir", "Control táctil", "Capacidad variable"]
-    },
-    {
-      name: "Cosori",
-      models: ["Air Fryer Max", "Smart", "Touchscreen"],
-      compatible: true,
-      features: ["App integrada", "Recetas preprogramadas", "Gran capacidad"]
-    },
-    {
-      name: "Insignia",
-      models: ["4.5 Qt", "5.3 Qt", "6 Qt"],
-      compatible: true,
-      features: ["Precio accesible", "Funciones básicas", "Fácil limpieza"]
-    },
-    {
-      name: "Hamilton Beach",
-      models: ["3 Qt", "5 Qt", "6 Qt"],
-      compatible: true,
-      features: ["Diseño compacto", "Control simple", "Buen rendimiento"]
-    },
-    {
-      name: "Cuisinart",
-      models: ["TOA-60", "AF-400", "TOA-65"],
-      compatible: true,
-      features: ["Calidad premium", "Múltiples funciones", "Garantía extendida"]
-    }
-  ];
-
   const features = [
     {
       icon: <Scale className="w-6 h-6" />,
@@ -85,63 +46,6 @@ const CompatibilityGuideSection: React.FC = () => {
               <p className="font-sans text-gray-600">{feature.description}</p>
             </div>
           ))}
-        </div>
-
-        {/* Marcas compatibles */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-12 border border-gray-200">
-          <h3 className="font-sans text-2xl font-bold text-dark-bg mb-6 text-center">
-            Marcas y Modelos Compatibles
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {brands.map((brand, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
-                <div className="flex items-center justify-between mb-3">
-                  <h4 className="font-sans font-bold text-dark-bg">{brand.name}</h4>
-                  {brand.compatible ? (
-                    <CheckCircle className="w-5 h-5 text-cta-primary" />
-                  ) : (
-                    <XCircle className="w-5 h-5 text-urgency-red" />
-                  )}
-                </div>
-                <div className="mb-3">
-                  <p className="font-sans text-sm text-gray-600 mb-1">Modelos:</p>
-                  <div className="flex flex-wrap gap-1">
-                    {brand.models.map((model, modelIndex) => (
-                      <span key={modelIndex} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
-                        {model}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                {brand.features && (
-                  <div>
-                    <p className="font-sans text-sm text-gray-600 mb-1">Características:</p>
-                    <ul className="space-y-1">
-                      {brand.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-2 text-xs text-gray-600">
-                          <CheckCircle className="w-3 h-3 text-cta-primary flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-6 p-4 bg-cta-primary/10 rounded-lg border border-cta-primary/30">
-            <div className="flex items-start gap-3">
-              <Info className="w-5 h-5 text-cta-primary flex-shrink-0 mt-0.5" />
-              <div>
-                <p className="font-sans text-sm text-gray-700">
-                  ¿No encuentras tu modelo? <strong>Contáctanos</strong> y verificaremos la compatibilidad. 
-                  El método C.R.I.S.P. funciona con cualquier tecnología de circulación de aire.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Garantía de compatibilidad */}
